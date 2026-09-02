@@ -1,0 +1,49 @@
+task,n_vars,variant,topology,cx,single_qubit,depth,size,width,transpile_s,objective_scope,initialization
+channel,6,quadratic_lower_bound,line16,49,114,70,169,16,0.007298999931663275,pairwise interactions only,uniform computational state
+channel,6,quadratic_lower_bound,grid4x4,43,66,60,115,16,0.0023257910506799817,pairwise interactions only,uniform computational state
+channel,6,exact_full_x,line16,65,101,95,172,16,0.004994791001081467,complete enumerated objective including overflow,uniform computational state
+channel,6,exact_full_x,grid4x4,43,70,81,119,16,0.0031636670464649796,complete enumerated objective including overflow,uniform computational state
+channel,8,quadratic_lower_bound,line16,97,183,103,288,16,0.00490249996073544,pairwise interactions only,uniform computational state
+channel,8,quadratic_lower_bound,grid4x4,76,102,105,186,16,0.0029772910056635737,pairwise interactions only,uniform computational state
+channel,8,exact_full_x,line16,152,176,173,336,16,0.00718366599176079,complete enumerated objective including overflow,uniform computational state
+channel,8,exact_full_x,grid4x4,99,123,145,230,16,0.00666629197075963,complete enumerated objective including overflow,uniform computational state
+channel,12,quadratic_lower_bound,line16,221,347,172,580,16,0.00815191597212106,pairwise interactions only,uniform computational state
+channel,12,quadratic_lower_bound,grid4x4,202,232,215,446,16,0.006278916960582137,pairwise interactions only,uniform computational state
+channel,12,exact_full_x,line16,304,299,207,615,16,0.1844330410240218,complete enumerated objective including overflow,uniform computational state
+channel,12,exact_full_x,grid4x4,252,259,226,523,16,0.18652975000441074,complete enumerated objective including overflow,uniform computational state
+placement,6,quadratic_lower_bound,line16,49,114,70,169,16,0.002504875068552792,pairwise interactions only,uniform computational state
+placement,6,quadratic_lower_bound,grid4x4,43,66,60,115,16,0.0020612089429050684,pairwise interactions only,uniform computational state
+placement,6,exact_full_x,line16,49,80,86,135,16,0.0032082500401884317,complete enumerated objective including overflow,uniform computational state
+placement,6,exact_full_x,grid4x4,34,70,57,110,16,0.003156042075715959,complete enumerated objective including overflow,uniform computational state
+placement,6,exact_full_onehot,line16,194,489,477,689,16,0.017943582963198423,complete enumerated objective including overflow,uniform one-hot state
+placement,6,exact_full_onehot,grid4x4,135,422,423,563,16,0.01152470801025629,complete enumerated objective including overflow,uniform one-hot state
+placement,8,quadratic_lower_bound,line16,97,183,103,288,16,0.0036230830010026693,pairwise interactions only,uniform computational state
+placement,8,quadratic_lower_bound,grid4x4,76,102,105,186,16,0.0025662920670583844,pairwise interactions only,uniform computational state
+placement,8,exact_full_x,line16,140,158,156,306,16,0.006974040996283293,complete enumerated objective including overflow,uniform computational state
+placement,8,exact_full_x,grid4x4,80,134,108,222,16,0.005735625047236681,complete enumerated objective including overflow,uniform computational state
+placement,8,exact_full_onehot,line16,688,1473,1525,2169,16,0.04151354206260294,complete enumerated objective including overflow,uniform one-hot state
+placement,8,exact_full_onehot,grid4x4,407,1187,1372,1602,16,0.03552899998612702,complete enumerated objective including overflow,uniform one-hot state
+placement,12,quadratic_lower_bound,line16,286,244,198,542,16,0.006822791998274624,pairwise interactions only,uniform computational state
+placement,12,quadratic_lower_bound,grid4x4,180,192,193,384,16,0.0047543339896947145,pairwise interactions only,uniform computational state
+placement,12,exact_full_x,line16,311,323,301,646,16,0.2820341669721529,complete enumerated objective including overflow,uniform computational state
+placement,12,exact_full_x,grid4x4,178,248,215,438,16,0.2811547089368105,complete enumerated objective including overflow,uniform computational state
+placement,12,exact_full_onehot,line16,8927,17127,18765,26066,16,1.077931083040312,complete enumerated objective including overflow,uniform one-hot state
+placement,12,exact_full_onehot,grid4x4,5117,13203,16999,18332,16,1.112591875018552,complete enumerated objective including overflow,uniform one-hot state
+routing,6,quadratic_lower_bound,line16,28,72,54,106,16,0.0019363330211490393,pairwise interactions only,uniform computational state
+routing,6,quadratic_lower_bound,grid4x4,22,56,33,84,16,0.0017177079571411014,pairwise interactions only,uniform computational state
+routing,6,exact_full_x,line16,35,85,61,126,16,0.0029923749389126897,complete enumerated objective including overflow,uniform computational state
+routing,6,exact_full_x,grid4x4,24,65,52,95,16,0.002718042000196874,complete enumerated objective including overflow,uniform computational state
+routing,6,exact_full_onehot,line16,170,480,448,656,16,0.012838916969485581,complete enumerated objective including overflow,uniform one-hot state
+routing,6,exact_full_onehot,grid4x4,124,426,430,556,16,0.01158191601280123,complete enumerated objective including overflow,uniform one-hot state
+routing,8,quadratic_lower_bound,line16,93,190,119,291,16,0.00349183299113065,pairwise interactions only,uniform computational state
+routing,8,quadratic_lower_bound,grid4x4,71,105,102,184,16,0.0026883749524131417,pairwise interactions only,uniform computational state
+routing,8,exact_full_x,line16,182,265,249,455,16,0.007959833019413054,complete enumerated objective including overflow,uniform computational state
+routing,8,exact_full_x,grid4x4,103,164,165,275,16,0.006489083054475486,complete enumerated objective including overflow,uniform computational state
+routing,8,exact_full_onehot,line16,735,1534,1594,2277,16,0.0447134580463171,complete enumerated objective including overflow,uniform one-hot state
+routing,8,exact_full_onehot,grid4x4,434,1302,1467,1744,16,0.035687500028871,complete enumerated objective including overflow,uniform one-hot state
+routing,12,quadratic_lower_bound,line16,246,328,198,586,16,0.006496292073279619,pairwise interactions only,uniform computational state
+routing,12,quadratic_lower_bound,grid4x4,160,195,173,367,16,0.004574083955958486,pairwise interactions only,uniform computational state
+routing,12,exact_full_x,line16,713,670,759,1395,16,0.16680212505161762,complete enumerated objective including overflow,uniform computational state
+routing,12,exact_full_x,grid4x4,373,396,497,781,16,0.1611529999645427,complete enumerated objective including overflow,uniform computational state
+routing,12,exact_full_onehot,line16,9361,18152,19591,27525,16,0.9725984999677166,complete enumerated objective including overflow,uniform one-hot state
+routing,12,exact_full_onehot,grid4x4,5350,13332,17260,18694,16,0.9696774580515921,complete enumerated objective including overflow,uniform one-hot state

@@ -1,0 +1,16 @@
+{
+  "script_sha256": "6c38cef7d858a601995bebf8de7e3b596d804779dcf2325e67c63f1f88267631",
+  "depth_rows": 162,
+  "transfer_rows": 540,
+  "penalty_rows": 600,
+  "staleness_rows": 15,
+  "queue_replay_rows": 36720,
+  "queue_source_commit": "a614f9167035eee579e981f709af56fa64171ea9",
+  "frontier_rows": 45,
+  "mip_groups": 6,
+  "claims": {
+    "qaoa": "exact statevector simulation",
+    "queue": "public trace replay",
+    "mip_time": "measured local wall clock; not production controller latency"
+  }
+}

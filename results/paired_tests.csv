@@ -1,0 +1,4 @@
+task,comparison,n,median_qaoa_gap,median_local_search_gap,wilcoxon_stat,p_value
+channel,qaoa_gap_greater_than_local_search,120,0.0,0.0,3630.0,0.5
+placement,qaoa_gap_greater_than_local_search,120,0.0,0.0,3747.0,0.3640664851976513
+routing,qaoa_gap_greater_than_local_search,120,0.0,0.0,3570.0,0.5715547887936914

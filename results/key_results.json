@@ -1,0 +1,13 @@
+{
+  "instances": 360,
+  "raw_rows": 2880,
+  "qaoa_mean_success_probability": 0.032070001685191946,
+  "qaoa_median_success_probability": 0.022819603953771,
+  "qaoa_optimal_rate": 0.9916666666666667,
+  "annealing_optimal_rate": 0.8972222222222223,
+  "local_search_optimal_rate": 0.9944444444444445,
+  "transfer_best_shots_nominal": 1024,
+  "transfer_best_mean_utility_nominal": -1.4899047884877206,
+  "transfer_best_optimal_rate_nominal": 0.9,
+  "transfer_best_on_time_rate_nominal": 0.2833333333333333
+}

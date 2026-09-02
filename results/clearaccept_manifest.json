@@ -1,0 +1,10 @@
+{
+  "created_unix": 1788275179.90376,
+  "elapsed_s": 25.26415991783142,
+  "python": "3.14.6",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "processor": "arm",
+  "seeds": 30,
+  "shot_replicates": 30,
+  "evidence": "local CPU, exact statevector, trace-derived; no QPU measurement"
+}

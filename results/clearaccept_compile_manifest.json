@@ -1,0 +1,18 @@
+{
+  "qiskit": "2.3.1",
+  "python": "3.14.6",
+  "seed_transpiler": 20260901,
+  "optimization_level": 3,
+  "targets": [
+    "16-qubit bidirectional line",
+    "4x4 bidirectional grid"
+  ],
+  "basis_gates": [
+    "rz",
+    "sx",
+    "x",
+    "cx"
+  ],
+  "evidence": "deterministic compilation on GenericBackendV2; not hardware execution",
+  "encoding_scope": "quadratic interaction circuit; nonlinear overflow/slack logic omitted"
+}

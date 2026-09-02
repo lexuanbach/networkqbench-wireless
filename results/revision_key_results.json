@@ -1,0 +1,101 @@
+{
+  "equivalence_margin": 0.05,
+  "qaoa_minus_local_mean_quality_loss": -0.014803851382229009,
+  "qaoa_minus_local_ci": [
+    -0.04514075394226483,
+    0.0018239917871070914
+  ],
+  "equivalent_within_margin": true,
+  "median_shots_95pct": 130,
+  "p90_shots_95pct": 783,
+  "median_shots_99pct": 200,
+  "hard_n16": [
+    {
+      "n_vars": 16,
+      "algorithm": "annealing",
+      "instances": 30,
+      "optimal_rate": 0.2,
+      "mean_gap": 0.38285182714571697,
+      "mean_utility": -1.2162506551861696
+    },
+    {
+      "n_vars": 16,
+      "algorithm": "exact",
+      "instances": 30,
+      "optimal_rate": 1.0,
+      "mean_gap": 0.0,
+      "mean_utility": -3.586921389235902e-06
+    },
+    {
+      "n_vars": 16,
+      "algorithm": "local_search",
+      "instances": 30,
+      "optimal_rate": 0.8666666666666667,
+      "mean_gap": 0.026880366586086238,
+      "mean_utility": -0.026894462723643354
+    },
+    {
+      "n_vars": 16,
+      "algorithm": "mean_field",
+      "instances": 30,
+      "optimal_rate": 0.4666666666666667,
+      "mean_gap": 0.1075507772343238,
+      "mean_utility": -0.7802831493587047
+    },
+    {
+      "n_vars": 16,
+      "algorithm": "qaoa",
+      "instances": 30,
+      "optimal_rate": 0.5666666666666667,
+      "mean_gap": 0.14582915042674913,
+      "mean_utility": -2.899834436300479
+    }
+  ],
+  "abilene": [
+    {
+      "algorithm": "annealing",
+      "windows": 30,
+      "optimal_rate": 0.5666666666666667,
+      "on_time_rate": 1.0,
+      "mean_utility": -0.389444531404009,
+      "next_max_utilization": 0.9610689503249191,
+      "next_overflow": 0.2895924105071167
+    },
+    {
+      "algorithm": "exact",
+      "windows": 30,
+      "optimal_rate": 1.0,
+      "on_time_rate": 1.0,
+      "mean_utility": -5.517891878800107e-09,
+      "next_max_utilization": 0.9545205099360989,
+      "next_overflow": 0.2212919873021622
+    },
+    {
+      "algorithm": "local_search",
+      "windows": 30,
+      "optimal_rate": 0.9666666666666667,
+      "on_time_rate": 1.0,
+      "mean_utility": -0.005435278414110929,
+      "next_max_utilization": 0.94834759942758,
+      "next_overflow": 0.2212919873021622
+    },
+    {
+      "algorithm": "mean_field",
+      "windows": 30,
+      "optimal_rate": 0.9666666666666667,
+      "on_time_rate": 1.0,
+      "mean_utility": -0.0033557340028269465,
+      "next_max_utilization": 0.9545205099360989,
+      "next_overflow": 0.2212919873021622
+    },
+    {
+      "algorithm": "qaoa",
+      "windows": 30,
+      "optimal_rate": 0.9,
+      "on_time_rate": 1.0,
+      "mean_utility": -0.09790233535274616,
+      "next_max_utilization": 0.9591804631899535,
+      "next_overflow": 0.2212919873021622
+    }
+  ]
+}

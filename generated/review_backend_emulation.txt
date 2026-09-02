@@ -1,0 +1,9 @@
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Task & Inst. & Ideal opt. mass & Noisy frequency & Opt. return & CX \\
+\midrule
+Channel & 5 & 0.147 & 0.076 & 100.0\% & 87 \\
+Placement & 5 & 0.056 & 0.033 & 100.0\% & 97 \\
+Routing & 5 & 0.048 & 0.034 & 100.0\% & 66 \\
+\bottomrule
+\end{tabular}

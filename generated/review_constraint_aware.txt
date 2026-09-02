@@ -1,0 +1,10 @@
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Task & Mixer & Feas. mass & Opt. mass & Opt. return & Fit s \\
+\midrule
+Placement & One-hot XY & 0.891 & 0.0447 & 100.0\% & 0.041 \\
+Placement & Standard X & 0.144 & 0.0031 & 100.0\% & 0.021 \\
+Routing & One-hot XY & 0.232 & 0.0244 & 80.0\% & 0.039 \\
+Routing & Standard X & 0.031 & 0.0039 & 100.0\% & 0.022 \\
+\bottomrule
+\end{tabular}

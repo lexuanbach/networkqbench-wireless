@@ -1,0 +1,13 @@
+\newcommand{\ReviewFeasGain}{+0.521}
+\newcommand{\ReviewFeasGainLo}{+0.465}
+\newcommand{\ReviewFeasGainHi}{+0.576}
+\newcommand{\ReviewOptMassGain}{+0.2005}
+\newcommand{\ReviewOptMassGainLo}{+0.1365}
+\newcommand{\ReviewOptMassGainHi}{+0.2681}
+\newcommand{\ReviewClosedStations}{24}
+\newcommand{\ReviewClosedTransitions}{1128}
+\newcommand{\ReviewRollingVsQaoa}{+0.012}
+\newcommand{\ReviewRollingVsQaoaLo}{+0.002}
+\newcommand{\ReviewRollingVsQaoaHi}{+0.026}
+\newcommand{\ReviewMilpVsRolling}{+0.008}
+\newcommand{\ReviewEmuInstances}{15}

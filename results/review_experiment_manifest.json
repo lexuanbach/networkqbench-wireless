@@ -1,0 +1,9 @@
+{
+  "created_unix": 1788337754.814091,
+  "elapsed_s": 36.939226150512695,
+  "python": "3.14.6",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "constraint_seeds": 10,
+  "closed_loop_stations": 24,
+  "evidence": "measured local CPU, exact statevector, and trace-replayed service; no QPU measurement"
+}
