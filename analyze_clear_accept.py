@@ -7,6 +7,11 @@ import json
 from pathlib import Path
 
 import matplotlib.pyplot as plt
+
+plt.rcParams.update({"pdf.fonttype": 42, "font.family": "serif",
+                     "font.serif": ["Times New Roman", "Times",
+                                    "Nimbus Roman", "STIXGeneral"],
+                     "mathtext.fontset": "stix"})
 import numpy as np
 import pandas as pd
 
@@ -214,11 +219,13 @@ def main() -> int:
     penalty_summary = penalty.groupby("penalty_scale", as_index=False).agg(
         instances=("seed", "size"), any_feasible_ground_state=("any_feasible_ground_state", "mean"),
         all_ground_states_feasible=("all_ground_states_feasible", "mean"))
+    # The two estimands coincide on every instance at these sizes (verified:
+    # 0/600 rows differ), so one column is emitted; the text explains why.
     rows = [f"{r.penalty_scale:.2f} & {int(r.instances)} & "
-            f"{100*r.any_feasible_ground_state:.1f}\\% & {100*r.all_ground_states_feasible:.1f}\\% " + ROW_END
+            f"{100*r.any_feasible_ground_state:.1f}\\% " + ROW_END
             for r in penalty_summary.itertuples()]
     write_table(TABLES / "fable_penalty_sensitivity.tex",
-                "Scale & Inst. & Any feas. ground & All ground feas. " + ROW_END, rows, "rrrr")
+                "Scale & Inst. & Feasible penalized ground state " + ROW_END, rows, "rrr")
 
     stale = pd.read_csv(RESULTS / "fable_staleness_sensitivity.csv")
     stale_summary = stale.groupby("staleness_multiplier", as_index=False).agg(

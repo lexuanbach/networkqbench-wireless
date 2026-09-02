@@ -7,6 +7,11 @@ from pathlib import Path
 import json
 
 import matplotlib.pyplot as plt
+
+plt.rcParams.update({"pdf.fonttype": 42, "font.family": "serif",
+                     "font.serif": ["Times New Roman", "Times",
+                                    "Nimbus Roman", "STIXGeneral"],
+                     "mathtext.fontset": "stix"})
 import numpy as np
 import pandas as pd
 from scipy.stats import bootstrap, wilcoxon
