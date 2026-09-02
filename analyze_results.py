@@ -107,7 +107,7 @@ def main() -> int:
     # Figure 1: optimal-solution rate by task.
     alg_order = ["exact", "local_search", "mean_field", "annealing", "random", "qaoa"]
     tasks = ["channel", "placement", "routing"]
-    fig, axes = plt.subplots(1, 3, figsize=(10.5, 3.2), sharey=True)
+    fig, axes = plt.subplots(1, 3, figsize=(3.5, 1.7), sharey=True)
     for ax, task in zip(axes, tasks):
         g = summary[summary.task == task].set_index("algorithm").reindex(alg_order)
         rates, lower, upper = [], [], []
@@ -116,54 +116,63 @@ def main() -> int:
             rate = float(observations.mean())
             lo, hi = wilson_interval(int(observations.sum()), len(observations))
             rates.append(rate); lower.append(rate - lo); upper.append(hi - rate)
-        ax.bar(range(len(g)), rates, yerr=np.array([lower, upper]), capsize=2,
+        ax.bar(range(len(g)), rates, yerr=np.array([lower, upper]), capsize=1.5,
                color=["#333333", "#4C78A8", "#72B7B2", "#59A14F", "#F28E2B", "#B279A2"],
-               error_kw={"elinewidth": 0.8})
-        ax.set_title(task.capitalize())
-        ax.set_xticks(range(len(g)), ["Exact", "Local", "Mean-field", "SA", "Random", "QAOA"], rotation=35, ha="right")
+               error_kw={"elinewidth": 0.6})
+        ax.set_title(task.capitalize(), fontsize=7)
+        ax.set_xticks(range(len(g)))
+        ax.set_xticklabels(["Exact", "Local", "Mean-f.", "SA", "Rand.", "QAOA"],
+                           rotation=55, ha="right", fontsize=5.5)
+        ax.tick_params(axis="y", labelsize=6)
         ax.set_ylim(0, 1.05)
-        ax.grid(axis="y", alpha=0.25)
-    axes[0].set_ylabel("Optimal-solution rate")
+        ax.grid(axis="y", alpha=0.25, lw=0.3)
+    axes[0].set_ylabel("optimal-solution rate", fontsize=7)
     fig.tight_layout()
     fig.savefig(FIGURES / "optimal_rate.pdf", bbox_inches="tight")
     fig.savefig(FIGURES / "optimal_rate.png", dpi=220, bbox_inches="tight")
     plt.close(fig)
 
-    # Figure 2: modeled operational utility by QPU deployment profile.
+    # Combined column figure: (a) QAOA optimum-mass scaling,
+    # (b) modeled operational utility by QPU deployment profile.
     q = profile[profile.algorithm == "qaoa"].copy()
-    fig, ax = plt.subplots(figsize=(6.5, 3.5))
+    qstatic = static[static.algorithm == "qaoa"]
+    fig, (axa, axb) = plt.subplots(1, 2, figsize=(3.5, 1.8))
+    for task, g in qstatic.groupby("task"):
+        agg = g.groupby("n_vars").success_prob.agg(["mean", "std", "count"]).reset_index()
+        err = 1.96 * agg["std"].fillna(0) / np.sqrt(agg["count"])
+        axa.errorbar(agg.n_vars, agg["mean"], yerr=err, marker="o", ms=2.5,
+                     lw=1, capsize=2, label=task.capitalize())
+    axa.set_xlabel("binary variables", fontsize=7)
+    axa.set_ylabel("$P$(optimum)", fontsize=7)
+    axa.set_yscale("log")
+    axa.tick_params(labelsize=6)
+    axa.set_xticks([6, 8, 10, 12])
+    axa.grid(alpha=0.25, which="both", lw=0.3)
+    axa.legend(frameon=False, fontsize=5, handlelength=1.2,
+               labelspacing=0.3, loc="lower left")
+    axa.set_title("(a) optimum mass", fontsize=7)
+
     x = np.arange(len(tasks))
     width = 0.24
     for j, prof in enumerate(["optimistic", "nominal", "stressed"]):
         vals = q[q.profile == prof].set_index("task").reindex(tasks).mean_utility
-        ax.bar(x + (j - 1) * width, vals, width, label=prof.capitalize())
-    # Add measured-local annealing utility as reference.
+        axb.bar(x + (j - 1) * width, vals, width, label=prof.capitalize())
     ref = profile[(profile.algorithm == "annealing")].set_index("task").reindex(tasks).mean_utility
-    ax.plot(x, ref, "ko--", label="Annealing (measured local)")
-    ax.set_xticks(x, [t.capitalize() for t in tasks])
-    ax.set_ylabel("Mean operational utility (higher is better)")
-    ax.grid(axis="y", alpha=0.25)
-    ax.legend(frameon=False, ncol=2, fontsize=8)
-    fig.tight_layout()
-    fig.savefig(FIGURES / "operational_utility.pdf", bbox_inches="tight")
-    fig.savefig(FIGURES / "operational_utility.png", dpi=220, bbox_inches="tight")
-    plt.close(fig)
-
-    # Figure 3: QAOA success probability scaling.
-    qstatic = static[static.algorithm == "qaoa"]
-    fig, ax = plt.subplots(figsize=(6.5, 3.5))
-    for task, g in qstatic.groupby("task"):
-        agg = g.groupby("n_vars").success_prob.agg(["mean", "std", "count"]).reset_index()
-        err = 1.96 * agg["std"].fillna(0) / np.sqrt(agg["count"])
-        ax.errorbar(agg.n_vars, agg["mean"], yerr=err, marker="o", capsize=3, label=task.capitalize())
-    ax.set_xlabel("Binary decision variables")
-    ax.set_ylabel("QAOA probability of an optimum")
-    ax.set_yscale("log")
-    ax.grid(alpha=0.25, which="both")
-    ax.legend(frameon=False)
-    fig.tight_layout()
-    fig.savefig(FIGURES / "qaoa_success_scaling.pdf", bbox_inches="tight")
-    fig.savefig(FIGURES / "qaoa_success_scaling.png", dpi=220, bbox_inches="tight")
+    axb.plot(x, ref, "ko--", ms=2.5, lw=1, label="Annealing (local)")
+    axb.set_xticks(x)
+    axb.set_xticklabels([t.capitalize() for t in tasks], rotation=30,
+                        ha="right", fontsize=6)
+    axb.set_ylabel("mean utility", fontsize=7)
+    axb.tick_params(axis="y", labelsize=6)
+    axb.grid(axis="y", alpha=0.25, lw=0.3)
+    axb.set_title("(b) utility by profile", fontsize=7)
+    hnd, lab = axb.get_legend_handles_labels()
+    fig.tight_layout(w_pad=1.0, rect=(0, 0.10, 1, 1))
+    fig.legend(hnd, lab, frameon=False, fontsize=5, ncol=4,
+               loc="lower center", bbox_to_anchor=(0.5, 0.0),
+               columnspacing=0.7, handletextpad=0.3, handlelength=1.2)
+    fig.savefig(FIGURES / "qaoa_scaling_utility.pdf", bbox_inches="tight")
+    fig.savefig(FIGURES / "qaoa_scaling_utility.png", dpi=220, bbox_inches="tight")
     plt.close(fig)
 
     # Compact LaTeX table generated from real outputs.
@@ -182,7 +191,17 @@ def main() -> int:
         "qaoa": "QAOA",
         "random": "Random",
     })
-    (TABLES / "solver_summary.tex").write_text(table.to_latex(index=False, escape=False))
+    _tex = table.to_latex(index=False, escape=False)
+    # rule between task blocks for readability (generic: task change)
+    _lines, _out, _prev = _tex.splitlines(), [], None
+    for _ln in _lines:
+        _cur = _ln.split(" & ")[0].strip() if " & " in _ln else None
+        if _cur and _prev and _cur != _prev and _prev not in ("task",):
+            _out.append("\\midrule")
+        if _cur:
+            _prev = _cur
+        _out.append(_ln)
+    (TABLES / "solver_summary.tex").write_text("\n".join(_out) + "\n")
 
     key = {
         "instances": int(static[["task", "size_label", "seed"]].drop_duplicates().shape[0]),
@@ -206,15 +225,18 @@ def main() -> int:
         )
         rec_summary.to_csv(RESULTS / "recovery_summary.csv", index=False)
         nominal = rec_summary[rec_summary.profile == "nominal"]
-        fig, ax1 = plt.subplots(figsize=(6.5, 3.5))
-        ax1.plot(nominal.shots, nominal.optimal_rate, "o-", label="Optimal rate", color="#4C78A8")
-        ax1.plot(nominal.shots, 1-nominal.deadline_miss_rate, "s-", label="On-time rate", color="#59A14F")
+        fig, ax1 = plt.subplots(figsize=(1.55, 1.45))
+        ax1.plot(nominal.shots, nominal.optimal_rate, "o-", ms=2.5, lw=1,
+                 label="optimal", color="#4C78A8")
+        ax1.plot(nominal.shots, 1-nominal.deadline_miss_rate, "s-", ms=2.5,
+                 lw=1, label="on-time", color="#59A14F")
         ax1.set_xscale("log", base=2)
         ax1.set_ylim(0, 1.05)
-        ax1.set_xlabel("Shots with transferred parameters")
-        ax1.set_ylabel("Rate")
-        ax1.grid(alpha=0.25)
-        ax1.legend(frameon=False)
+        ax1.tick_params(labelsize=6)
+        ax1.set_xlabel("transferred shots", fontsize=7)
+        ax1.set_ylabel("rate", fontsize=7)
+        ax1.grid(alpha=0.25, lw=0.3)
+        ax1.legend(frameon=False, fontsize=5.5, handlelength=1.4)
         fig.tight_layout()
         fig.savefig(FIGURES / "transfer_tradeoff.pdf", bbox_inches="tight")
         fig.savefig(FIGURES / "transfer_tradeoff.png", dpi=220, bbox_inches="tight")

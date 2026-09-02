@@ -97,17 +97,35 @@ def main() -> int:
         for j, queue in enumerate(queues):
             delay = queue + evals * (0.005 + 0.020 + 1024 * 0.00005)
             heat[i, j] = np.mean(delay <= observed_deadlines)
-    fig, ax = plt.subplots(figsize=(4.8, 3.1))
-    im = ax.pcolormesh(queues, eval_counts, heat, shading="auto", vmin=0, vmax=1,
-                       cmap="viridis")
-    ax.set_xscale("log")
-    ax.set_yscale("log")
-    ax.set_xlabel("modeled queue delay (s)")
-    ax.set_ylabel("online circuit evaluations")
-    cb = fig.colorbar(im, ax=ax)
-    cb.set_label("on-time fraction")
-    fig.tight_layout()
-    fig.savefig(FIGURES / "revision_boundary_surface.pdf", bbox_inches="tight")
+    fig, (axa, axb) = plt.subplots(1, 2, figsize=(3.5, 1.8),
+                                   gridspec_kw={"width_ratios": [1.25, 1]})
+    im = axa.pcolormesh(queues, eval_counts, heat, shading="auto", vmin=0,
+                        vmax=1, cmap="viridis")
+    axa.set_xscale("log")
+    axa.set_yscale("log")
+    axa.tick_params(labelsize=6)
+    axa.set_xlabel("queue delay (s)", fontsize=7)
+    axa.set_ylabel("online evaluations", fontsize=7)
+    axa.set_title("(a) service boundary", fontsize=7)
+    cb = fig.colorbar(im, ax=axa, pad=0.04)
+    cb.ax.tick_params(labelsize=6)
+    cb.set_label("on-time fraction", fontsize=7)
+    rec = pd.read_csv(RESULTS / "recovery_summary.csv")
+    nominal = rec[rec.profile == "nominal"]
+    axb.plot(nominal.shots, nominal.optimal_rate, "o-", ms=2.5, lw=1,
+             label="optimal", color="#4C78A8")
+    axb.plot(nominal.shots, 1 - nominal.deadline_miss_rate, "s-", ms=2.5,
+             lw=1, label="on-time", color="#59A14F")
+    axb.set_xscale("log", base=2)
+    axb.set_ylim(0, 1.05)
+    axb.tick_params(labelsize=6)
+    axb.set_xlabel("transferred shots", fontsize=7)
+    axb.set_ylabel("rate", fontsize=7)
+    axb.set_title("(b) transfer frontier", fontsize=7)
+    axb.grid(alpha=0.25, lw=0.3)
+    axb.legend(frameon=False, fontsize=5.5, handlelength=1.4)
+    fig.tight_layout(w_pad=1.0)
+    fig.savefig(FIGURES / "revision_boundary_transfer.pdf", bbox_inches="tight")
     plt.close(fig)
 
     order = ["local_search", "mean_field", "qaoa", "annealing"]
