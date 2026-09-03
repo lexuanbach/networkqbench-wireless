@@ -27,10 +27,12 @@ from networkqbench import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[1]
-RESULTS = ROOT / "submission" / "03_experiments" / "results"
-NETDATA = ROOT / "benchmark" / "data" / "netdata" / "Performance_5G_Weekday.csv"
-NETDATA_URL = "https://media.githubusercontent.com/media/tsinghua-fib-lab/NetData/main/Performance_5G_Weekday.csv"
+ROOT = Path(__file__).resolve().parent
+RESULTS = ROOT / "results"
+NETDATA = ROOT / "data" / "netdata" / "Performance_5G_Weekday.csv"
+NETDATA_URL = ("https://media.githubusercontent.com/media/tsinghua-fib-lab/"
+               "NetData/093e13ebcbee4f18a3fc4d6a6f3aeab9ac1283a3/"
+               "Performance_5G_Weekday.csv")
 NETDATA_COMMIT = "093e13ebcbee4f18a3fc4d6a6f3aeab9ac1283a3"
 
 
@@ -248,7 +250,8 @@ def main() -> int:
         "python": platform.python_version(), "platform": platform.platform(),
         "processor": platform.processor(), "seeds": args.seeds,
         "shot_replicates": args.shot_replicates,
-        "evidence": "local CPU, exact statevector, trace-derived; no QPU measurement",
+        "evidence": ["measured_local", "exact_simulated", "trace_derived"],
+        "not_measured": ["live QPU output", "provider queue"],
     }
     (RESULTS / "clearaccept_manifest.json").write_text(json.dumps(manifest, indent=2))
     return 0

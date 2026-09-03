@@ -13,6 +13,7 @@
     "x",
     "cx"
   ],
-  "evidence": "deterministic compilation on GenericBackendV2; not hardware execution",
+  "evidence": "compiled_estimate",
+  "evidence_description": "deterministic compilation on GenericBackendV2; not hardware execution",
   "encoding_scope": "quadratic interaction circuit; nonlinear overflow/slack logic omitted"
 }

@@ -17,10 +17,11 @@ import pandas as pd
 from scipy.stats import bootstrap, wilcoxon
 
 
-ROOT = Path(__file__).resolve().parents[1]
-RESULTS = ROOT / "submission" / "03_experiments" / "results"
-FIGURES = ROOT / "submission" / "04_draft" / "figures"
-TABLES = ROOT / "submission" / "04_draft" / "tables"
+ROOT = Path(__file__).resolve().parent
+RESULTS = ROOT / "results"
+OUTPUT = ROOT / "output"
+FIGURES = OUTPUT / "figures"
+TABLES = OUTPUT / "tables"
 
 
 def ci(values: np.ndarray) -> tuple[float, float]:
@@ -158,7 +159,10 @@ def main() -> int:
         vals = q[q.profile == prof].set_index("task").reindex(tasks).mean_utility
         axb.bar(x + (j - 1) * width, vals, width, label=prof.capitalize())
     ref = profile[(profile.algorithm == "annealing")].set_index("task").reindex(tasks).mean_utility
-    axb.plot(x, ref, "ko--", ms=2.5, lw=1, label="Annealing (local)")
+    axb.plot(x, ref, "o--", ms=4, lw=1.2, color="black",
+             markerfacecolor="white", markeredgewidth=1.0, zorder=5,
+             label="Annealing (local)")
+    axb.set_ylim(top=0.55)
     axb.set_xticks(x)
     axb.set_xticklabels([t.capitalize() for t in tasks], rotation=30,
                         ha="right", fontsize=6)

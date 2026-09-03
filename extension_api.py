@@ -8,19 +8,24 @@ the same meaning across extensions.
 
 from __future__ import annotations
 
+SCHEMA_VERSION = "1.0"
+
 from dataclasses import asdict, dataclass
 from enum import Enum
 from typing import Any, Callable, Mapping, Protocol
 
 
 class EvidenceKind(str, Enum):
-    """Allowed evidence labels for an observed or supplied quantity."""
+    """Canonical evidence labels used by records, manifests, and adapters."""
 
     MEASURED_LOCAL = "measured_local"
-    TRACE_REPLAYED = "trace_replayed"
-    MODELED = "modeled"
-    SIMULATED = "simulated"
+    EXACT_SIMULATED = "exact_simulated"
+    TRACE_DERIVED = "trace_derived"
+    COMPILED_ESTIMATE = "compiled_estimate"
     CALIBRATION_SNAPSHOT_EMULATED = "calibration_snapshot_emulated"
+    MODELED_QPU = "modeled_qpu"
+    TRACE_REPLAYED_QPU = "trace_replayed_qpu"
+    MEASURED_PROVIDER = "measured_provider"
 
 
 @dataclass(frozen=True)
@@ -151,4 +156,3 @@ def apply_deadline_policy(
         on_time=on_time,
         ledger_delay_s=delay,
     )
-

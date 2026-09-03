@@ -12,8 +12,8 @@ import re
 import pandas as pd
 
 
-ROOT = Path(__file__).resolve().parents[1]
-LIT = ROOT / "submission" / "01_literature"
+ROOT = Path(__file__).resolve().parent
+LIT = ROOT / "literature"
 OUT = LIT / "curated"
 
 

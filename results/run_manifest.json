@@ -3,6 +3,11 @@
   "elapsed_s": 5.149626970291138,
   "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
   "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "host": {
+    "processor": "Apple M5 Max",
+    "logical_cpus": 18,
+    "memory_gib": 128.0
+  },
   "numpy": "2.4.6",
   "pandas": "3.0.3",
   "seeds": 30,
@@ -18,6 +23,12 @@
     "routing"
   ],
   "shots": 1024,
-  "qaoa_execution": "local exact statevector simulation, p=1",
-  "qpu_profiles": "modeled, not hardware measurements"
+  "qaoa_execution": {
+    "evidence": "exact_simulated",
+    "depth": 1
+  },
+  "qpu_profiles": {
+    "evidence": "modeled_qpu",
+    "description": "scenario inputs, not hardware measurements"
+  }
 }

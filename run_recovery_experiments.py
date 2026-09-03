@@ -17,8 +17,8 @@ import pandas as pd
 from networkqbench import GENERATORS, exact_solver, operational_metrics, qaoa_probabilities
 
 
-ROOT = Path(__file__).resolve().parents[1]
-RESULTS = ROOT / "submission" / "03_experiments" / "results"
+ROOT = Path(__file__).resolve().parent
+RESULTS = ROOT / "results"
 
 
 def circular_mean(values: np.ndarray, period: float) -> float:

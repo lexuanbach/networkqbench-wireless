@@ -17,8 +17,8 @@ from qiskit.transpiler import CouplingMap, generate_preset_pass_manager
 from networkqbench import GENERATORS
 
 
-ROOT = Path(__file__).resolve().parents[1]
-RESULTS = ROOT / "submission" / "03_experiments" / "results"
+ROOT = Path(__file__).resolve().parent
+RESULTS = ROOT / "results"
 
 
 def interactions(inst) -> set[tuple[int, int]]:
@@ -120,7 +120,8 @@ def main() -> int:
         "optimization_level": 3,
         "targets": ["16-qubit bidirectional line", "4x4 bidirectional grid"],
         "basis_gates": ["rz", "sx", "x", "cx"],
-        "evidence": "deterministic compilation on GenericBackendV2; not hardware execution",
+        "evidence": "compiled_estimate",
+        "evidence_description": "deterministic compilation on GenericBackendV2; not hardware execution",
         "encoding_scope": "quadratic interaction circuit; nonlinear overflow/slack logic omitted",
     }, indent=2))
     return 0

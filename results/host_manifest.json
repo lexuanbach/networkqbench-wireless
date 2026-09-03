@@ -1,0 +1,14 @@
+{
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "processor": "Apple M5 Max",
+  "machine": "arm64",
+  "python": "3.14.6",
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "3.0.3",
+    "networkx": "3.6.1",
+    "qiskit": null,
+    "highspy": null
+  }
+}

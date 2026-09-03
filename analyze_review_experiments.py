@@ -66,14 +66,20 @@ def main() -> int:
         switches=("switches", "mean"), median_delay_s=("delay_s", "median"))
     closed_summary.to_csv(RES / "review_closed_loop_summary.csv", index=False)
     order = ["milp", "rolling", "task_specific", "qaoa_transfer"]
+    labels = {"milp": "HiGHS MILP", "rolling": "Rolling",
+              "task_specific": "Task-specific",
+              "qaoa_transfer": "Transferred QAOA"}
     rows = []
     for method in order:
         r = closed_summary.set_index("method").loc[method]
-        rows.append(f"{method.replace('_', ' ').title()} & {r.next_max_load:.3f} & "
+        delay = (f"{r.median_delay_s / 60:.2f} min" if method == "qaoa_transfer"
+                 else (r"$<0.01$ ms" if 1e3 * r.median_delay_s < 0.005
+                       else f"{1e3 * r.median_delay_s:.2f} ms"))
+        rows.append(f"{labels[method]} & {r.next_max_load:.3f} & "
                     f"{r.next_cost:.3f} & {100*r.deadline_miss:.1f}\\% & "
-                    f"{r.switches:.2f} & {1e3*r.median_delay_s:.2f} " + ROW_END)
+                    f"{r.switches:.2f} & {delay} " + ROW_END)
     write_table("review_closed_loop.tex", "lrrrrr",
-                r"Method & Next max load & Next cost & Miss & Switches & Delay ms \\", rows)
+                r"Method & Next max load & Next cost & Miss & Switches & Median delay \\", rows)
     rolling_vs_qaoa = paired_cluster(closed, "next_max_effective_load", "qaoa_transfer",
                                      "rolling", "station", method="method")
     milp_vs_rolling = paired_cluster(closed, "next_max_effective_load", "rolling",
@@ -81,7 +87,12 @@ def main() -> int:
 
     resources = pd.read_csv(RES / "review_full_circuit_resources.csv")
     r12 = resources[(resources.n_vars == 12) & (resources.topology == "grid4x4")]
-    rows = [f"{r.task.title()} & {r.variant.replace('_', ' ')} & {int(r.cx)} & "
+    variant_labels = {
+        "quadratic_lower_bound": "Interaction lower bound",
+        "exact_full_x": "Complete X",
+        "exact_full_onehot": "Complete one-hot",
+    }
+    rows = [f"{r.task.title()} & {variant_labels[r.variant]} & {int(r.cx)} & "
             f"{int(r.depth)} & {r.transpile_s:.2f} " + ROW_END
             for r in r12.itertuples()]
     write_table("review_full_resources.tex", "llrrr",
@@ -110,6 +121,7 @@ def main() -> int:
         f"\\newcommand{{\\ReviewClosedStations}}{{{closed.station.nunique()}}}",
         f"\\newcommand{{\\ReviewClosedTransitions}}{{{closed[['station','window']].drop_duplicates().shape[0]}}}",
         f"\\newcommand{{\\ReviewRollingVsQaoa}}{{{rolling_vs_qaoa[0]:+.3f}}}",
+        f"\\newcommand{{\\ReviewRollingVsQaoaPrecise}}{{{rolling_vs_qaoa[0]:.4f}}}",
         f"\\newcommand{{\\ReviewRollingVsQaoaLo}}{{{rolling_vs_qaoa[1]:+.3f}}}",
         f"\\newcommand{{\\ReviewRollingVsQaoaHi}}{{{rolling_vs_qaoa[2]:+.3f}}}",
         f"\\newcommand{{\\ReviewMilpVsRolling}}{{{milp_vs_rolling[0]:+.3f}}}",

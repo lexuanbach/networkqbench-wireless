@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 output/
+data/QuantumQueue/
+data/netdata/Performance_5G_Weekday.csv
+literature/

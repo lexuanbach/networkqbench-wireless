@@ -7,6 +7,7 @@
 \newcommand{\ReviewClosedStations}{24}
 \newcommand{\ReviewClosedTransitions}{1128}
 \newcommand{\ReviewRollingVsQaoa}{+0.012}
+\newcommand{\ReviewRollingVsQaoaPrecise}{0.0124}
 \newcommand{\ReviewRollingVsQaoaLo}{+0.002}
 \newcommand{\ReviewRollingVsQaoaHi}{+0.026}
 \newcommand{\ReviewMilpVsRolling}{+0.008}

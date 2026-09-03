@@ -5,5 +5,13 @@
   "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
   "constraint_seeds": 10,
   "closed_loop_stations": 24,
-  "evidence": "measured local CPU, exact statevector, and trace-replayed service; no QPU measurement"
+  "evidence": [
+    "measured_local",
+    "exact_simulated",
+    "trace_replayed_qpu"
+  ],
+  "not_measured": [
+    "live QPU output",
+    "provider network latency"
+  ]
 }

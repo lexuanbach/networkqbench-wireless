@@ -111,7 +111,8 @@ def main() -> int:
         "targets": ["16-qubit bidirectional line", "4x4 bidirectional grid"],
         "complete_oracle": "Qiskit DiagonalGate over the full enumerated cost vector",
         "interpretation": "exact small-instance synthesis; exponential upper path, not scalable",
-        "evidence": "deterministic GenericBackendV2 compilation; no hardware execution",
+        "evidence": "compiled_estimate",
+        "evidence_description": "deterministic GenericBackendV2 compilation; no hardware execution",
     }, indent=2))
     return 0
 

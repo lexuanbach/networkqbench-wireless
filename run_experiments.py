@@ -5,8 +5,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
 import platform
+import subprocess
 import sys
 import time
 
@@ -25,8 +27,32 @@ from networkqbench import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "submission" / "03_experiments" / "results"
+ROOT = Path(__file__).resolve().parent
+OUT = ROOT / "results"
+
+
+def host_record() -> dict[str, object]:
+    """Return non-identifying hardware fields used to contextualize timings."""
+    chip = platform.processor() or platform.machine()
+    if sys.platform == "darwin":
+        try:
+            chip = subprocess.check_output(
+                ["sysctl", "-n", "machdep.cpu.brand_string"], text=True
+            ).strip()
+        except (OSError, subprocess.SubprocessError):
+            pass
+    try:
+        memory_gib = round(
+            os.sysconf("SC_PHYS_PAGES") * os.sysconf("SC_PAGE_SIZE") / 1024**3,
+            1,
+        )
+    except (AttributeError, OSError, ValueError):
+        memory_gib = None
+    return {
+        "processor": chip,
+        "logical_cpus": os.cpu_count(),
+        "memory_gib": memory_gib,
+    }
 
 
 def run(seed_count: int, sizes: list[int], tasks: list[str], shots: int) -> pd.DataFrame:
@@ -97,14 +123,16 @@ def main() -> int:
         "elapsed_s": time.time() - start,
         "python": sys.version,
         "platform": platform.platform(),
+        "host": host_record(),
         "numpy": np.__version__,
         "pandas": pd.__version__,
         "seeds": args.seeds,
         "sizes": sizes,
         "tasks": tasks,
         "shots": args.shots,
-        "qaoa_execution": "local exact statevector simulation, p=1",
-        "qpu_profiles": "modeled, not hardware measurements",
+        "qaoa_execution": {"evidence": "exact_simulated", "depth": 1},
+        "qpu_profiles": {"evidence": "modeled_qpu",
+                         "description": "scenario inputs, not hardware measurements"},
     }
     (OUT / "run_manifest.json").write_text(json.dumps(manifest, indent=2))
     print(f"Wrote {len(df)} rows to {OUT / 'raw_results.csv'}")

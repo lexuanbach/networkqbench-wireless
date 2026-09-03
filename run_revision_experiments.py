@@ -32,9 +32,9 @@ from networkqbench import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[1]
-RESULTS = ROOT / "submission" / "03_experiments" / "results"
-DATA = ROOT / "benchmark" / "data" / "abilene"
+ROOT = Path(__file__).resolve().parent
+RESULTS = ROOT / "results"
+DATA = ROOT / "data" / "abilene"
 
 
 def solve_instance(inst: Instance, tag: str) -> list[dict]:

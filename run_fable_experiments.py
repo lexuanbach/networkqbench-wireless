@@ -8,6 +8,7 @@ QuantumQueue replay is an empirical queue envelope around simulated QAOA.
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import math
@@ -27,9 +28,9 @@ from networkqbench import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[1]
-RESULTS = ROOT / "submission" / "03_experiments" / "results"
-QUEUE_REPO = ROOT.parent / "02-QPU-Aware-CoOptimization" / "benchmark" / "data" / "QuantumQueue"
+ROOT = Path(__file__).resolve().parent
+RESULTS = ROOT / "results"
+DEFAULT_QUEUE_REPO = ROOT / "data" / "QuantumQueue"
 
 
 def sha256(path: Path) -> str:
@@ -243,11 +244,14 @@ def staleness_sensitivity():
     return result
 
 
-def load_quantumqueue():
+def load_quantumqueue(queue_repo: Path):
     frames, files = [], []
-    if not QUEUE_REPO.exists():
-        raise FileNotFoundError(f"clone https://github.com/rgokulsm/QuantumQueue at {QUEUE_REPO}")
-    for path in sorted(QUEUE_REPO.glob("*.csv")):
+    if not queue_repo.exists():
+        raise FileNotFoundError(
+            "QuantumQueue is not bundled. Clone "
+            f"https://github.com/rgokulsm/QuantumQueue at {queue_repo} "
+            "or pass --queue-dir PATH.")
+    for path in sorted(queue_repo.glob("*.csv")):
         frame = pd.read_csv(path)
         if {"queue_time", "run_time", "status", "machine"}.issubset(frame.columns):
             frames.append(frame)
@@ -261,7 +265,9 @@ def load_quantumqueue():
     data["run_minutes"] = pd.to_numeric(data.run_time, errors="coerce")
     data = data[(data.queue_minutes >= 0) & (data.run_minutes > 0)]
     try:
-        commit = subprocess.check_output(["git", "-C", str(QUEUE_REPO), "rev-parse", "HEAD"], text=True).strip()
+        commit = subprocess.check_output(
+            ["git", "-C", str(queue_repo), "rev-parse", "HEAD"],
+            text=True).strip()
     except Exception:
         commit = "unknown"
     provenance = {
@@ -274,8 +280,8 @@ def load_quantumqueue():
     return data, provenance
 
 
-def queue_replay():
-    data, provenance = load_quantumqueue()
+def queue_replay(queue_repo: Path):
+    data, provenance = load_quantumqueue(queue_repo)
     queue_seconds = data.queue_minutes.to_numpy(dtype=float) * 60.0
     quantiles = np.quantile(queue_seconds, np.linspace(0.0, 1.0, 101))
     raw = pd.read_csv(RESULTS / "raw_results.csv")
@@ -350,6 +356,11 @@ def timing_frontier_and_mip():
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--queue-dir", type=Path, default=DEFAULT_QUEUE_REPO,
+        help="local clone of rgokulsm/QuantumQueue")
+    args = parser.parse_args()
     RESULTS.mkdir(parents=True, exist_ok=True)
     cached = RESULTS / "fable_depth_sensitivity.csv"
     depth = pd.read_csv(cached) if cached.exists() else depth_sensitivity()
@@ -359,7 +370,7 @@ def main():
     penalty = pd.read_csv(cached) if cached.exists() else penalty_sensitivity()
     cached = RESULTS / "fable_staleness_sensitivity.csv"
     stale = pd.read_csv(cached) if cached.exists() else staleness_sensitivity()
-    replay, provenance = queue_replay()
+    replay, provenance = queue_replay(args.queue_dir.resolve())
     frontier, mip = timing_frontier_and_mip()
     manifest = {
         "script_sha256": sha256(Path(__file__)),
@@ -367,6 +378,7 @@ def main():
         "penalty_rows": len(penalty), "staleness_rows": len(stale),
         "queue_replay_rows": len(replay), "queue_source_commit": provenance["commit"],
         "frontier_rows": len(frontier), "mip_groups": len(mip),
+        "evidence": ["exact_simulated", "trace_replayed_qpu", "measured_local"],
         "claims": {"qaoa": "exact statevector simulation", "queue": "public trace replay",
                    "mip_time": "measured local wall clock; not production controller latency"},
     }

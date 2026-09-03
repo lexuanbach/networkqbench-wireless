@@ -8,7 +8,8 @@
   "shots": 1024,
   "optimization_level": 3,
   "seed_transpiler": 20260902,
-  "evidence": "local Aer execution using an archived IBM calibration snapshot",
+  "evidence": "calibration_snapshot_emulated",
+  "evidence_description": "local Aer execution using an archived IBM calibration snapshot",
   "not_measured": [
     "live QPU output",
     "provider queue",

@@ -16,10 +16,11 @@ import numpy as np
 import pandas as pd
 
 
-ROOT = Path(__file__).resolve().parents[1]
-RESULTS = ROOT / "submission" / "03_experiments" / "results"
-TABLES = ROOT / "submission" / "04_draft" / "tables"
-FIGURES = ROOT / "submission" / "04_draft" / "figures"
+ROOT = Path(__file__).resolve().parent
+RESULTS = ROOT / "results"
+OUTPUT = ROOT / "output"
+TABLES = OUTPUT / "tables"
+FIGURES = OUTPUT / "figures"
 ROW_END = r"\\"
 
 
@@ -209,7 +210,7 @@ def main() -> int:
     display = {"circular_mean": "Circular mean", "component_circular_median": "Component median",
                "observed_circular_medoid": "Observed medoid"}
     rows = [f"{display[r.aggregation]} & {r.optimum_probability:.4f} & "
-            f"{r.hit_probability_1024:.3f} & {r.expected_normalized_cost:.4f} " + ROW_END
+            f"{r.hit_probability_1024:.4f} & {r.expected_normalized_cost:.4f} " + ROW_END
             for r in transfer_summary.itertuples()]
     write_table(TABLES / "fable_transfer_aggregation.tex",
                 "Aggregator & $P(x^*)$ & $P_{1024}(x^*)$ & $E[\\tilde C]$ " + ROW_END,

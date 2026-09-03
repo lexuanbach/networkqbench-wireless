@@ -19,10 +19,11 @@ import numpy as np
 import pandas as pd
 
 
-ROOT = Path(__file__).resolve().parents[1]
-RESULTS = ROOT / "submission" / "03_experiments" / "results"
-FIGURES = ROOT / "submission" / "04_draft" / "figures"
-TABLES = ROOT / "submission" / "04_draft" / "tables"
+ROOT = Path(__file__).resolve().parent
+RESULTS = ROOT / "results"
+OUTPUT = ROOT / "output"
+FIGURES = OUTPUT / "figures"
+TABLES = OUTPUT / "tables"
 
 
 def bootstrap_ci(values, seed=19):

@@ -87,7 +87,7 @@ def main() -> int:
                 "local_pipeline_s": (build_instance_s + fitted["runtime_s"]
                                      + build_circuit_s + transpile_s + sample_s
                                      + postprocess_s),
-                "evidence": "archived-calibration noisy emulation",
+                "evidence": "calibration_snapshot_emulated",
             })
             print(task, seed, optimum_frequency, ops.get("cx", 0), flush=True)
     pd.DataFrame(rows).to_csv(RESULTS / "review_backend_emulation.csv", index=False)
@@ -96,7 +96,8 @@ def main() -> int:
         "qiskit": qiskit_version, "qiskit_aer": aer_version,
         "qiskit_ibm_runtime": runtime_version, "python": platform.python_version(),
         "shots": 1024, "optimization_level": 3, "seed_transpiler": 20260902,
-        "evidence": "local Aer execution using an archived IBM calibration snapshot",
+        "evidence": "calibration_snapshot_emulated",
+        "evidence_description": "local Aer execution using an archived IBM calibration snapshot",
         "not_measured": ["live QPU output", "provider queue", "provider network latency"],
     }, indent=2))
     return 0

@@ -2,13 +2,13 @@
 \toprule
 Task & Circuit & CX & Depth & Compile s \\
 \midrule
-Channel & quadratic lower bound & 202 & 215 & 0.01 \\
-Channel & exact full x & 252 & 226 & 0.19 \\
-Placement & quadratic lower bound & 180 & 193 & 0.00 \\
-Placement & exact full x & 178 & 215 & 0.28 \\
-Placement & exact full onehot & 5117 & 16999 & 1.11 \\
-Routing & quadratic lower bound & 160 & 173 & 0.00 \\
-Routing & exact full x & 373 & 497 & 0.16 \\
-Routing & exact full onehot & 5350 & 17260 & 0.97 \\
+Channel & Interaction lower bound & 202 & 215 & 0.01 \\
+Channel & Complete X & 252 & 226 & 0.19 \\
+Placement & Interaction lower bound & 180 & 193 & 0.00 \\
+Placement & Complete X & 178 & 215 & 0.28 \\
+Placement & Complete one-hot & 5117 & 16999 & 1.11 \\
+Routing & Interaction lower bound & 160 & 173 & 0.00 \\
+Routing & Complete X & 373 & 497 & 0.16 \\
+Routing & Complete one-hot & 5350 & 17260 & 0.97 \\
 \bottomrule
 \end{tabular}

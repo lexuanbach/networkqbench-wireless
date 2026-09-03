@@ -77,10 +77,25 @@ def main() -> None:
     api_instance = InstanceRecord("s0", lambda x: float(x), lambda x: x >= 0,
                                   volatility_per_s=0.1, deadline_s=0.3)
     api_solver = SolverRecord(7, 7.0, 1, PhaseTimes(optimization_s=0.2), {})
-    api_service = ServiceRecord(0.2, 0.0, 0.0, EvidenceKind.TRACE_REPLAYED)
+    api_service = ServiceRecord(0.2, 0.0, 0.0,
+                                EvidenceKind.TRACE_REPLAYED_QPU)
     decision = apply_deadline_policy(api_instance, api_solver, api_service, 3)
     assert not decision.on_time and decision.computed_action == 7
     assert decision.applied_action == 3
+
+    # Stored evidence-bearing columns must use the same public enum as new
+    # adapters. This catches taxonomy drift between code and released CSVs.
+    import pandas as pd
+    from pathlib import Path
+    allowed = {kind.value for kind in EvidenceKind}
+    results = Path(__file__).resolve().parent / "results"
+    for name, column in (
+        ("raw_results.csv", "timing_evidence"),
+        ("review_closed_loop_5g.csv", "delay_evidence"),
+        ("review_backend_emulation.csv", "evidence"),
+    ):
+        values = set(pd.read_csv(results / name, usecols=[column])[column].dropna())
+        assert values <= allowed, (name, values - allowed)
     print("All benchmark smoke tests passed.")
 
 

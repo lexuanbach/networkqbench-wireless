@@ -15,5 +15,6 @@
   ],
   "complete_oracle": "Qiskit DiagonalGate over the full enumerated cost vector",
   "interpretation": "exact small-instance synthesis; exponential upper path, not scalable",
-  "evidence": "deterministic GenericBackendV2 compilation; no hardware execution"
+  "evidence": "compiled_estimate",
+  "evidence_description": "deterministic GenericBackendV2 compilation; no hardware execution"
 }

@@ -321,7 +321,8 @@ def main() -> int:
         "created_unix": time.time(), "elapsed_s": time.time() - started,
         "python": platform.python_version(), "platform": platform.platform(),
         "constraint_seeds": args.seeds, "closed_loop_stations": args.stations,
-        "evidence": "measured local CPU, exact statevector, and trace-replayed service; no QPU measurement",
+        "evidence": ["measured_local", "exact_simulated", "trace_replayed_qpu"],
+        "not_measured": ["live QPU output", "provider network latency"],
     }, indent=2))
     return 0
 

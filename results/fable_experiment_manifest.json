@@ -8,6 +8,11 @@
   "queue_source_commit": "a614f9167035eee579e981f709af56fa64171ea9",
   "frontier_rows": 45,
   "mip_groups": 6,
+  "evidence": [
+    "exact_simulated",
+    "trace_replayed_qpu",
+    "measured_local"
+  ],
   "claims": {
     "qaoa": "exact statevector simulation",
     "queue": "public trace replay",
