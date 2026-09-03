@@ -1,0 +1,11 @@
+\newcommand{\WeightGridCells}{72}
+\newcommand{\WeightGridChanged}{0}
+\newcommand{\QaoaRatePct}{99.2\%}
+\newcommand{\QaoaRateSeedSEPct}{0.5}
+\newcommand{\QaoaRateSeeds}{30}
+\newcommand{\AbileneBlockThreeLo}{+0.0000}
+\newcommand{\AbileneBlockThreeHi}{+0.0278}
+\newcommand{\AbileneBlockFiveLo}{+0.0000}
+\newcommand{\AbileneBlockFiveHi}{+0.0310}
+\newcommand{\AbileneBlockSevenLo}{+0.0000}
+\newcommand{\AbileneBlockSevenHi}{+0.0325}

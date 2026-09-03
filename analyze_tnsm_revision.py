@@ -10,9 +10,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parents[1]
-RESULTS = ROOT / "submission" / "03_experiments" / "results"
-TABLES = ROOT / "submission" / "04_draft" / "tables"
+ROOT = Path(__file__).resolve().parent
+RESULTS = ROOT / "results"
+# macros stored as .txt: the release carries no manuscript files
+TABLES, MACRO_NAME = ROOT / "generated", "tnsm_numbers.txt"
 
 MACROS = []
 
@@ -108,7 +109,7 @@ def main() -> int:
     weight_grid()
     seed_cluster_se()
     abilene_blocks()
-    (TABLES / "tnsm_numbers.tex").write_text("\n".join(MACROS) + "\n")
+    (TABLES / MACRO_NAME).write_text("\n".join(MACROS) + "\n")
     print(f"emitted {len(MACROS)} macros")
     return 0
 
