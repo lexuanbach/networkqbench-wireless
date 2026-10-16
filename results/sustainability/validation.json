@@ -1,0 +1,10 @@
+{
+  "instances_verified": 120,
+  "milp_matches": 120,
+  "sampling_rows_verified": 43200,
+  "independent_applied_energy_replays": 43200,
+  "scenario_summaries": 64800,
+  "policy_decisions_verified": 3285,
+  "training_membership": "0--14 only",
+  "status": "passed"
+}

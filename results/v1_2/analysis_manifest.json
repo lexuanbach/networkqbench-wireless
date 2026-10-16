@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.2",
+  "primary": {
+    "profile": "optimistic",
+    "local_w": 50.0,
+    "qpu_w": 20000.0,
+    "reuse": 100,
+    "horizon": 60.0,
+    "migration_j": 10.0,
+    "boundary": "allocated",
+    "marginal_fraction": 0.01,
+    "utilization": 1.0,
+    "repetition_s": 0.0,
+    "setup_s": 0.0,
+    "migration_s": 0.0,
+    "wake_j": 0.0,
+    "wake_s": 0.0,
+    "benefit_gate": true
+  },
+  "main_grid": 8640,
+  "statistical_unit": "held-out instance",
+  "resamples": 20000,
+  "source_sha256": "58479a6b7a0d1351c2feb36b44926852a42019b6b1d2faa6b8c0c48130f312ed"
+}

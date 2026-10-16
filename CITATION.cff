@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite this software release when using NetworkQBench-Wireless."
+type: software
+title: "NetworkQBench-Wireless"
+version: 1.2.0
+date-released: 2026-10-16
+url: "https://github.com/lexuanbach/networkqbench-wireless"
+repository-code: "https://github.com/lexuanbach/networkqbench-wireless"
+authors:
+  - family-names: Le
+    given-names: Xuan-Bach
+    orcid: "https://orcid.org/0009-0003-6848-5403"
+license: MIT

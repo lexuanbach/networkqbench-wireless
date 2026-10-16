@@ -1,10 +1,8 @@
-# NetworkQBench-Wireless — standalone artifact
+# NetworkQBench-Wireless — reproducible benchmark artifact
 
-Simulator-first benchmark for quantum-assisted wireless network control.
-Quantum evidence is exact statevector simulation or archived-calibration
-noisy emulation. Every remote-QPU timing value is a labeled model or a labeled
-public-telemetry replay, never a live-hardware measurement. No .tex/.pdf ships
-here (manuscript lives outside this folder); `check_artifact.py` enforces that.
+This repository accompanies **NetworkQBench-Wireless: Deadline-Aware Energy Accounting for Quantum-Assisted Network Control**, an original manuscript. Software release `networkqbench-wireless-v1.2.0` integrates solution quality, complete execution resources, applied actions, and operational energy. See [README-energy.md](README-energy.md) for the complete schema-1.2 experiment, validation, and reproduction commands.
+
+The supporting network studies below retain their execution protocols and result files. Quantum evidence is exact noiseless/noisy simulation or declared calibration-snapshot emulation. Remote service and electricity are explicit models or trace replay, not live-QPU measurements. Internal reviews and manuscript source are excluded from this artifact. Generated PDFs and table fragments are written only under `output/`.
 
 ## Experiment map (script to results)
 
@@ -16,10 +14,10 @@ and manuscript-ready table fragments under ignored `output/` directories.
 |---|---|---|---|
 | Main grid (360 inst.) | run_experiments.py | analyze_results.py | raw_results.csv, key_results.json, solver_summary table |
 | Parameter transfer | run_recovery_experiments.py | analyze_results.py | recovery_*.csv |
-| Revision wave (Abilene, hardness, mean-field) | run_revision_experiments.py | analyze_revision_experiments.py | revision_*.csv |
-| Clear-accept wave (MIP/HiGHS, NetData 5G, shots, compiled resources) | fetch_netdata.py, run_clear_accept_experiments.py, compile_resources.py | analyze_clear_accept.py | clearaccept_*.csv/json |
+| Abilene, hardness, and mean-field | run_revision_experiments.py | analyze_revision_experiments.py | revision_*.csv |
+| HiGHS, NetData 5G, shots, compiled resources | fetch_netdata.py, run_clear_accept_experiments.py, compile_resources.py | analyze_clear_accept.py | clearaccept_*.csv/json |
 | Depth/transfer/penalty/timing + QuantumQueue replay | run_fable_experiments.py | analyze_clear_accept.py | fable_*.csv/json |
-| Constraint-aware + closed-loop review wave | run_review_experiments.py | analyze_review_experiments.py | review_constraint_aware*.csv, review_closed_loop*.csv/json |
+| Constraint-aware and closed-loop experiments | run_review_experiments.py | analyze_review_experiments.py | review_constraint_aware*.csv, review_closed_loop*.csv/json |
 | Complete circuits + archived-calibration emulation | compile_full_resources.py, run_backend_emulation.py | analyze_review_experiments.py | review_full_circuit*.csv/json, review_backend_emulation*.csv/json |
 
 ## Headline numbers (regenerable; see REPRODUCE.md)

@@ -1,0 +1,1201 @@
+size,seed,algorithm,shots,qpu_power_threshold_w,headroom_j,minimum_reuse,reason
+6,15,onehot_p2,16,,-2.283029958845873,,non-QPU terms already exceed MILP
+6,15,onehot_p2,64,,-2.3972047311326605,,non-QPU terms already exceed MILP
+6,15,onehot_p2,256,,-2.8523192519060103,,non-QPU terms already exceed MILP
+6,15,onehot_p2,1024,,-4.663868611220096,,non-QPU terms already exceed MILP
+6,15,onehot_structured,16,,-1.7661238616710762,,non-QPU terms already exceed MILP
+6,15,onehot_structured,64,,-1.8400806712525082,,non-QPU terms already exceed MILP
+6,15,onehot_structured,256,,-2.1359076525259297,,non-QPU terms already exceed MILP
+6,15,onehot_structured,1024,,-3.324976013878768,,non-QPU terms already exceed MILP
+6,15,onehot_transfer,16,,-2.209546487305488,,non-QPU terms already exceed MILP
+6,15,onehot_transfer,64,,-2.336749270238215,,non-QPU terms already exceed MILP
+6,15,onehot_transfer,256,,-2.837475021966384,,non-QPU terms already exceed MILP
+6,15,onehot_transfer,1024,,-4.841905933113594,,non-QPU terms already exceed MILP
+6,15,quantum_uniform_full,16,,-3479.9538426524814,,non-QPU terms already exceed MILP
+6,15,quantum_uniform_full,64,,-1885.3985895164005,,non-QPU terms already exceed MILP
+6,15,quantum_uniform_full,256,,-145.96897513175645,,non-QPU terms already exceed MILP
+6,15,quantum_uniform_full,1024,,-1.3880360120820114,,non-QPU terms already exceed MILP
+6,15,quantum_uniform_onehot,16,,-146.33833146772668,,non-QPU terms already exceed MILP
+6,15,quantum_uniform_onehot,64,,-1.4260425171960378,,non-QPU terms already exceed MILP
+6,15,quantum_uniform_onehot,256,,-1.5716034158467664,,non-QPU terms already exceed MILP
+6,15,quantum_uniform_onehot,1024,,-2.1564991439518053,,non-QPU terms already exceed MILP
+6,16,onehot_p2,16,,-0.6904431091315928,,non-QPU terms already exceed MILP
+6,16,onehot_p2,64,,-0.6920285694068298,,non-QPU terms already exceed MILP
+6,16,onehot_p2,256,,-0.6928951650625095,,non-QPU terms already exceed MILP
+6,16,onehot_p2,1024,,-0.6944868651917204,,non-QPU terms already exceed MILP
+6,16,onehot_structured,16,,-0.3324706952626002,,non-QPU terms already exceed MILP
+6,16,onehot_structured,64,,-0.33357903896830976,,non-QPU terms already exceed MILP
+6,16,onehot_structured,256,,-0.33461649739183486,,non-QPU terms already exceed MILP
+6,16,onehot_structured,1024,,-0.33543944894336164,,non-QPU terms already exceed MILP
+6,16,onehot_transfer,16,,-0.46329354238696396,,non-QPU terms already exceed MILP
+6,16,onehot_transfer,64,,-0.4642727349419147,,non-QPU terms already exceed MILP
+6,16,onehot_transfer,256,,-0.46528734103776515,,non-QPU terms already exceed MILP
+6,16,onehot_transfer,1024,,-0.4660581385323894,,non-QPU terms already exceed MILP
+6,16,quantum_uniform_full,16,113.82172092621317,0.012083313893526793,,positive fixed-arrival headroom
+6,16,quantum_uniform_full,64,24.4323520401118,0.010374953970313072,,positive fixed-arrival headroom
+6,16,quantum_uniform_full,256,5.180862616518122,0.00880000600591302,,positive fixed-arrival headroom
+6,16,quantum_uniform_full,1024,1.2182461524371007,0.008277056738734245,,positive fixed-arrival headroom
+6,16,quantum_uniform_onehot,16,,-0.14868330024182796,,non-QPU terms already exceed MILP
+6,16,quantum_uniform_onehot,64,,-0.14909163861739216,,non-QPU terms already exceed MILP
+6,16,quantum_uniform_onehot,256,,-0.14908329164609313,,non-QPU terms already exceed MILP
+6,16,quantum_uniform_onehot,1024,,-0.14931453904137015,,non-QPU terms already exceed MILP
+6,17,onehot_p2,16,464.8641398501996,0.2446672940859571,,positive fixed-arrival headroom
+6,17,onehot_p2,64,115.7380933574719,0.2436610931836185,,positive fixed-arrival headroom
+6,17,onehot_p2,256,28.799690299679337,0.24252564797643572,,positive fixed-arrival headroom
+6,17,onehot_p2,1024,7.19497523616931,0.24235899944324046,,positive fixed-arrival headroom
+6,17,onehot_structured,16,1663.4657675660071,0.5812814778182656,,positive fixed-arrival headroom
+6,17,onehot_structured,64,414.73966790603055,0.5797065182123333,,positive fixed-arrival headroom
+6,17,onehot_structured,256,103.49748361097606,0.5786585707683116,,positive fixed-arrival headroom
+6,17,onehot_structured,1024,25.846144917906027,0.5780273203272372,,positive fixed-arrival headroom
+6,17,onehot_transfer,16,838.4223853626117,0.48467521253041923,,positive fixed-arrival headroom
+6,17,onehot_transfer,64,207.81627061152082,0.4805377188604325,,positive fixed-arrival headroom
+6,17,onehot_transfer,256,52.11128462381635,0.48199186264537275,,positive fixed-arrival headroom
+6,17,onehot_transfer,1024,13.008394016842733,0.48127311444841325,,positive fixed-arrival headroom
+6,17,quantum_uniform_full,16,9300.859552718974,0.9873792501166463,,positive fixed-arrival headroom
+6,17,quantum_uniform_full,64,2321.1035334867283,0.9856334044598043,,positive fixed-arrival headroom
+6,17,quantum_uniform_full,256,578.9720778245255,0.9834188125096262,,positive fixed-arrival headroom
+6,17,quantum_uniform_full,1024,144.70592173610862,0.9831667616963387,,positive fixed-arrival headroom
+6,17,quantum_uniform_onehot,16,4659.920684943995,0.7892041672021151,,positive fixed-arrival headroom
+6,17,quantum_uniform_onehot,64,1164.2175189003412,0.7886875160038471,,positive fixed-arrival headroom
+6,17,quantum_uniform_onehot,256,291.097422839951,0.7888041525147855,,positive fixed-arrival headroom
+6,17,quantum_uniform_onehot,1024,72.75436787767788,0.7885875036008656,,positive fixed-arrival headroom
+6,18,onehot_p2,16,608.768027331646,0.32040678814519197,,positive fixed-arrival headroom
+6,18,onehot_p2,64,150.83926375373682,0.31755888519546716,,positive fixed-arrival headroom
+6,18,onehot_p2,256,37.791949711477024,0.3182505435543135,,positive fixed-arrival headroom
+6,18,onehot_p2,1024,9.316064385012456,0.31380678445566446,,positive fixed-arrival headroom
+6,18,onehot_structured,16,1945.076909688286,0.6796876753214747,,positive fixed-arrival headroom
+6,18,onehot_structured,64,485.9502546373783,0.6792418279219419,,positive fixed-arrival headroom
+6,18,onehot_structured,256,121.39254353408036,0.6787105666007847,,positive fixed-arrival headroom
+6,18,onehot_structured,1024,30.291404902191093,0.677441825857386,,positive fixed-arrival headroom
+6,18,onehot_transfer,16,,-1.3153310313355178,,non-QPU terms already exceed MILP
+6,18,onehot_transfer,64,,-1.315808136248961,,non-QPU terms already exceed MILP
+6,18,onehot_transfer,256,,-1.3163351833354682,,non-QPU terms already exceed MILP
+6,18,onehot_transfer,1024,,-1.3176476729568094,,non-QPU terms already exceed MILP
+6,18,quantum_uniform_full,16,9307.72702590041,0.9881083010695875,,positive fixed-arrival headroom
+6,18,quantum_uniform_full,64,2320.028863015653,0.9851770563909668,,positive fixed-arrival headroom
+6,18,quantum_uniform_full,256,578.5672601564004,0.9827312054112554,,positive fixed-arrival headroom
+6,18,quantum_uniform_full,1024,144.64212345855435,0.9827333008870482,,positive fixed-arrival headroom
+6,18,quantum_uniform_onehot,16,4467.344749366965,0.756589506752789,,positive fixed-arrival headroom
+6,18,quantum_uniform_onehot,64,1114.7634502052451,0.7551853517070413,,positive fixed-arrival headroom
+6,18,quantum_uniform_onehot,256,278.7800377120326,0.7554269949905574,,positive fixed-arrival headroom
+6,18,quantum_uniform_onehot,1024,69.6857834484519,0.7553269942291081,,positive fixed-arrival headroom
+6,19,onehot_p2,16,,-0.7696640033973381,,non-QPU terms already exceed MILP
+6,19,onehot_p2,64,,-0.7706535569159314,,non-QPU terms already exceed MILP
+6,19,onehot_p2,256,,-0.7712140035655466,,non-QPU terms already exceed MILP
+6,19,onehot_p2,1024,,-0.771918153273873,,non-QPU terms already exceed MILP
+6,19,onehot_structured,16,,-0.41644563038425986,,non-QPU terms already exceed MILP
+6,19,onehot_structured,64,,-0.41689353832771303,,non-QPU terms already exceed MILP
+6,19,onehot_structured,256,,-0.4169122811872512,,non-QPU terms already exceed MILP
+6,19,onehot_structured,1024,,-0.4186748324500513,,non-QPU terms already exceed MILP
+6,19,onehot_transfer,16,,-0.5163956347460044,,non-QPU terms already exceed MILP
+6,19,onehot_transfer,64,,-0.5168268952984363,,non-QPU terms already exceed MILP
+6,19,onehot_transfer,256,,-0.5168560922611505,,non-QPU terms already exceed MILP
+6,19,onehot_transfer,1024,,-0.5186331488657743,,non-QPU terms already exceed MILP
+6,19,quantum_uniform_full,16,,-0.07701455894857645,,non-QPU terms already exceed MILP
+6,19,quantum_uniform_full,64,,-0.08028331492096186,,non-QPU terms already exceed MILP
+6,19,quantum_uniform_full,256,,-0.08287916705012321,,non-QPU terms already exceed MILP
+6,19,quantum_uniform_full,1024,,-0.08299791067838669,,non-QPU terms already exceed MILP
+6,19,quantum_uniform_onehot,16,,-0.28477711882442236,,non-QPU terms already exceed MILP
+6,19,quantum_uniform_onehot,64,,-0.2854666584171355,,non-QPU terms already exceed MILP
+6,19,quantum_uniform_onehot,256,,-0.2880166661925614,,non-QPU terms already exceed MILP
+6,19,quantum_uniform_onehot,1024,,-0.2856583595275879,,non-QPU terms already exceed MILP
+6,20,onehot_p2,16,,-0.710095202899538,,non-QPU terms already exceed MILP
+6,20,onehot_p2,64,,-0.7110577014973387,,non-QPU terms already exceed MILP
+6,20,onehot_p2,256,,-0.711609801161103,,non-QPU terms already exceed MILP
+6,20,onehot_p2,1024,,-0.7139784920727834,,non-QPU terms already exceed MILP
+6,20,onehot_structured,16,,-0.3953059932755423,,non-QPU terms already exceed MILP
+6,20,onehot_structured,64,,-0.3957205831538886,,non-QPU terms already exceed MILP
+6,20,onehot_structured,256,,-0.3980372364167124,,non-QPU terms already exceed MILP
+6,20,onehot_structured,1024,,-0.39857473759911954,,non-QPU terms already exceed MILP
+6,20,onehot_transfer,16,,-0.4983809923287481,,non-QPU terms already exceed MILP
+6,20,onehot_transfer,64,,-0.4987830442842096,,non-QPU terms already exceed MILP
+6,20,onehot_transfer,256,,-0.5009726418647915,,non-QPU terms already exceed MILP
+6,20,onehot_transfer,1024,,-0.5016393407713622,,non-QPU terms already exceed MILP
+6,20,quantum_uniform_full,16,,-0.03782908013090491,,non-QPU terms already exceed MILP
+6,20,quantum_uniform_full,64,,-0.03919988218694925,,non-QPU terms already exceed MILP
+6,20,quantum_uniform_full,256,,-0.04135829210281372,,non-QPU terms already exceed MILP
+6,20,quantum_uniform_full,1024,,-0.04152908502146602,,non-QPU terms already exceed MILP
+6,20,quantum_uniform_onehot,16,,-0.2109791412949562,,non-QPU terms already exceed MILP
+6,20,quantum_uniform_onehot,64,,-0.21140618762001395,,non-QPU terms already exceed MILP
+6,20,quantum_uniform_onehot,256,,-0.2114561996422708,,non-QPU terms already exceed MILP
+6,20,quantum_uniform_onehot,1024,,-0.2115270383656025,,non-QPU terms already exceed MILP
+6,21,onehot_p2,16,,-0.715326500008814,,non-QPU terms already exceed MILP
+6,21,onehot_p2,64,,-0.715774396318011,,non-QPU terms already exceed MILP
+6,21,onehot_p2,256,,-0.7163972997805104,,non-QPU terms already exceed MILP
+6,21,onehot_p2,1024,,-0.7165243903873488,,non-QPU terms already exceed MILP
+6,21,onehot_structured,16,,-0.3692497762385756,,non-QPU terms already exceed MILP
+6,21,onehot_structured,64,,-0.3697914683725685,,non-QPU terms already exceed MILP
+6,21,onehot_structured,256,,-0.36969771911390126,,non-QPU terms already exceed MILP
+6,21,onehot_structured,1024,,-0.3705227312166244,,non-QPU terms already exceed MILP
+6,21,onehot_transfer,16,,-0.48809777083806694,,non-QPU terms already exceed MILP
+6,21,onehot_transfer,64,,-0.48843947309069335,,non-QPU terms already exceed MILP
+6,21,onehot_transfer,256,,-0.4884832219686359,,non-QPU terms already exceed MILP
+6,21,onehot_transfer,1024,,-0.4891352641861886,,non-QPU terms already exceed MILP
+6,21,quantum_uniform_full,16,,-0.019722981844097376,,non-QPU terms already exceed MILP
+6,21,quantum_uniform_full,64,,-0.02125627640634775,,non-QPU terms already exceed MILP
+6,21,quantum_uniform_full,256,,-0.02400838118046522,,non-QPU terms already exceed MILP
+6,21,quantum_uniform_full,1024,,-0.024112526327371597,,non-QPU terms already exceed MILP
+6,21,quantum_uniform_onehot,16,,-0.1968895928002894,,non-QPU terms already exceed MILP
+6,21,quantum_uniform_onehot,64,,-0.19689998868852854,,non-QPU terms already exceed MILP
+6,21,quantum_uniform_onehot,256,,-0.19672708865255117,,non-QPU terms already exceed MILP
+6,21,quantum_uniform_onehot,1024,,-0.19696253864094615,,non-QPU terms already exceed MILP
+6,22,onehot_p2,16,,-0.7086681140353903,,non-QPU terms already exceed MILP
+6,22,onehot_p2,64,,-0.710159755195491,,non-QPU terms already exceed MILP
+6,22,onehot_p2,256,,-0.7107431123731658,,non-QPU terms already exceed MILP
+6,22,onehot_p2,1024,,-0.7135639603948221,,non-QPU terms already exceed MILP
+6,22,onehot_structured,16,,-0.38851228612475097,,non-QPU terms already exceed MILP
+6,22,onehot_structured,64,,-0.38900813390500844,,non-QPU terms already exceed MILP
+6,22,onehot_structured,256,,-0.38962269038165687,,non-QPU terms already exceed MILP
+6,22,onehot_structured,1024,,-0.39011438214220107,,non-QPU terms already exceed MILP
+6,22,onehot_transfer,16,,-0.4955290032085031,,non-QPU terms already exceed MILP
+6,22,onehot_transfer,64,,-0.49589565326459706,,non-QPU terms already exceed MILP
+6,22,onehot_transfer,256,,-0.49645605334080756,,non-QPU terms already exceed MILP
+6,22,onehot_transfer,1024,,-0.4971248011570424,,non-QPU terms already exceed MILP
+6,22,quantum_uniform_full,16,,-0.04822084726765752,,non-QPU terms already exceed MILP
+6,22,quantum_uniform_full,64,,-0.04973128950223327,,non-QPU terms already exceed MILP
+6,22,quantum_uniform_full,256,,-0.051770839374512434,,non-QPU terms already exceed MILP
+6,22,quantum_uniform_full,1024,,-0.05340834893286228,,non-QPU terms already exceed MILP
+6,22,quantum_uniform_onehot,16,,-0.2351729576548678,,non-QPU terms already exceed MILP
+6,22,quantum_uniform_onehot,64,,-0.23661875445395708,,non-QPU terms already exceed MILP
+6,22,quantum_uniform_onehot,256,,-0.2366604078488308,,non-QPU terms already exceed MILP
+6,22,quantum_uniform_onehot,1024,,-0.2367958570830524,,non-QPU terms already exceed MILP
+6,23,onehot_p2,16,,-2.040533329178288,,non-QPU terms already exceed MILP
+6,23,onehot_p2,64,,-2.1509370728308568,,non-QPU terms already exceed MILP
+6,23,onehot_p2,256,,-2.58102068817243,,non-QPU terms already exceed MILP
+6,23,onehot_p2,1024,,-4.283479433433968,,non-QPU terms already exceed MILP
+6,23,onehot_structured,16,,-1.4595102923049126,,non-QPU terms already exceed MILP
+6,23,onehot_structured,64,,-1.5305116778836236,,non-QPU terms already exceed MILP
+6,23,onehot_structured,256,,-1.8193654617716675,,non-QPU terms already exceed MILP
+6,23,onehot_structured,1024,,-2.9605130041745724,,non-QPU terms already exceed MILP
+6,23,onehot_transfer,16,,-1.781028982171847,,non-QPU terms already exceed MILP
+6,23,onehot_transfer,64,,-1.9061253429099452,,non-QPU terms already exceed MILP
+6,23,onehot_transfer,256,,-2.4115793981254683,,non-QPU terms already exceed MILP
+6,23,onehot_transfer,1024,,-4.419327633877401,,non-QPU terms already exceed MILP
+6,23,quantum_uniform_full,16,,-2187.7616203872094,,non-QPU terms already exceed MILP
+6,23,quantum_uniform_full,64,,-442.56737111061375,,non-QPU terms already exceed MILP
+6,23,quantum_uniform_full,256,,-6.113574195282126,,non-QPU terms already exceed MILP
+6,23,quantum_uniform_full,1024,,-6.486804251981084,,non-QPU terms already exceed MILP
+6,23,quantum_uniform_onehot,16,,-4.5246003801512416,,non-QPU terms already exceed MILP
+6,23,quantum_uniform_onehot,64,,-4.564201529843558,,non-QPU terms already exceed MILP
+6,23,quantum_uniform_onehot,256,,-4.713452625153877,,non-QPU terms already exceed MILP
+6,23,quantum_uniform_onehot,1024,,-5.306485293265723,,non-QPU terms already exceed MILP
+6,24,onehot_p2,16,,-0.7884368704399094,,non-QPU terms already exceed MILP
+6,24,onehot_p2,64,,-0.7895514540141448,,non-QPU terms already exceed MILP
+6,24,onehot_p2,256,,-0.7900306078372523,,non-QPU terms already exceed MILP
+6,24,onehot_p2,1024,,-0.7908493567956612,,non-QPU terms already exceed MILP
+6,24,onehot_structured,16,,-0.4388644041027874,,non-QPU terms already exceed MILP
+6,24,onehot_structured,64,,-0.4404790031258017,,non-QPU terms already exceed MILP
+6,24,onehot_structured,256,,-0.4419414473231882,,non-QPU terms already exceed MILP
+6,24,onehot_structured,1024,,-0.44215610553510487,,non-QPU terms already exceed MILP
+6,24,onehot_transfer,16,,-0.6795018592383713,,non-QPU terms already exceed MILP
+6,24,onehot_transfer,64,,-0.680922708241269,,non-QPU terms already exceed MILP
+6,24,onehot_transfer,256,,-0.6825518591795117,,non-QPU terms already exceed MILP
+6,24,onehot_transfer,1024,,-0.6826060039456934,,non-QPU terms already exceed MILP
+6,24,quantum_uniform_full,16,,-0.11683331383392215,,non-QPU terms already exceed MILP
+6,24,quantum_uniform_full,64,,-0.11892291065305471,,non-QPU terms already exceed MILP
+6,24,quantum_uniform_full,256,,-0.12268960988149047,,non-QPU terms already exceed MILP
+6,24,quantum_uniform_full,1024,,-0.12239171471446753,,non-QPU terms already exceed MILP
+6,24,quantum_uniform_onehot,16,,-0.3900082460604608,,non-QPU terms already exceed MILP
+6,24,quantum_uniform_onehot,64,,-0.3903916017152369,,non-QPU terms already exceed MILP
+6,24,quantum_uniform_onehot,256,,-0.3905916032381356,,non-QPU terms already exceed MILP
+6,24,quantum_uniform_onehot,1024,,-0.3907020464539528,,non-QPU terms already exceed MILP
+6,25,onehot_p2,16,,-0.5193098270101473,,non-QPU terms already exceed MILP
+6,25,onehot_p2,64,,-0.5224869175581262,,non-QPU terms already exceed MILP
+6,25,onehot_p2,256,,-0.5223639713367447,,non-QPU terms already exceed MILP
+6,25,onehot_p2,1024,,-0.5226993638789281,,non-QPU terms already exceed MILP
+6,25,onehot_structured,16,,-0.13751024683006108,,non-QPU terms already exceed MILP
+6,25,onehot_structured,64,,-0.1365560602862388,,non-QPU terms already exceed MILP
+6,25,onehot_structured,256,,-0.13713520322926342,,non-QPU terms already exceed MILP
+6,25,onehot_structured,1024,,-0.13834355934523046,,non-QPU terms already exceed MILP
+6,25,onehot_transfer,16,,-0.22301646252162755,,non-QPU terms already exceed MILP
+6,25,onehot_transfer,64,,-0.22272890503518283,,non-QPU terms already exceed MILP
+6,25,onehot_transfer,256,,-0.22337060957215726,,non-QPU terms already exceed MILP
+6,25,onehot_transfer,1024,,-0.2244893026072532,,non-QPU terms already exceed MILP
+6,25,quantum_uniform_full,16,2159.2407896497148,0.22922500222921371,,positive fixed-arrival headroom
+6,25,quantum_uniform_full,64,535.4192913260758,0.2273604478687048,,positive fixed-arrival headroom
+6,25,quantum_uniform_full,256,132.34251202575402,0.22479169722646475,,positive fixed-arrival headroom
+6,25,quantum_uniform_full,1024,33.05956313567104,0.22461460623890162,,positive fixed-arrival headroom
+6,25,quantum_uniform_onehot,16,172.61065014347216,0.029233339708298445,,positive fixed-arrival headroom
+6,25,quantum_uniform_onehot,64,43.27570423761002,0.02931669307872653,,positive fixed-arrival headroom
+6,25,quantum_uniform_onehot,256,10.83815132529969,0.029368788935244083,,positive fixed-arrival headroom
+6,25,quantum_uniform_onehot,1024,2.6899280601097946,0.029156237840652466,,positive fixed-arrival headroom
+6,26,onehot_p2,16,,-0.8185182170709595,,non-QPU terms already exceed MILP
+6,26,onehot_p2,64,,-0.8195453261723742,,non-QPU terms already exceed MILP
+6,26,onehot_p2,256,,-0.8196327657133224,,non-QPU terms already exceed MILP
+6,26,onehot_p2,1024,,-0.8203119676327333,,non-QPU terms already exceed MILP
+6,26,onehot_structured,16,,-0.5086247955841827,,non-QPU terms already exceed MILP
+6,26,onehot_structured,64,,-0.5090643798466772,,non-QPU terms already exceed MILP
+6,26,onehot_structured,256,,-0.5097518821712583,,non-QPU terms already exceed MILP
+6,26,onehot_structured,1024,,-0.5113997876178473,,non-QPU terms already exceed MILP
+6,26,onehot_transfer,16,,-0.6448268454914796,,non-QPU terms already exceed MILP
+6,26,onehot_transfer,64,,-0.6452455914113671,,non-QPU terms already exceed MILP
+6,26,onehot_transfer,256,,-0.6457893324550241,,non-QPU terms already exceed MILP
+6,26,onehot_transfer,1024,,-0.6476122916210443,,non-QPU terms already exceed MILP
+6,26,quantum_uniform_full,16,,-0.09149585664272308,,non-QPU terms already exceed MILP
+6,26,quantum_uniform_full,64,,-0.09557296567800222,,non-QPU terms already exceed MILP
+6,26,quantum_uniform_full,256,,-0.0970292049460113,,non-QPU terms already exceed MILP
+6,26,quantum_uniform_full,1024,,-0.09819375397637486,,non-QPU terms already exceed MILP
+6,26,quantum_uniform_onehot,16,,-0.30294586019590497,,non-QPU terms already exceed MILP
+6,26,quantum_uniform_onehot,64,,-0.3035812550224364,,non-QPU terms already exceed MILP
+6,26,quantum_uniform_onehot,256,,-0.3034708583727479,,non-QPU terms already exceed MILP
+6,26,quantum_uniform_onehot,1024,,-0.3036771113984287,,non-QPU terms already exceed MILP
+6,27,onehot_p2,16,,-0.3984118400840089,,non-QPU terms already exceed MILP
+6,27,onehot_p2,64,,-0.3983076367294416,,non-QPU terms already exceed MILP
+6,27,onehot_p2,256,,-0.40053473168518394,,non-QPU terms already exceed MILP
+6,27,onehot_p2,1024,,-0.403861835016869,,non-QPU terms already exceed MILP
+6,27,onehot_structured,16,,-0.06007898203097284,,non-QPU terms already exceed MILP
+6,27,onehot_structured,64,,-0.062203980749472976,,non-QPU terms already exceed MILP
+6,27,onehot_structured,256,,-0.062137332977727056,,non-QPU terms already exceed MILP
+6,27,onehot_structured,1024,,-0.06454357947222888,,non-QPU terms already exceed MILP
+6,27,onehot_transfer,16,,-0.07017691689543426,,non-QPU terms already exceed MILP
+6,27,onehot_transfer,64,,-0.07160817342810333,,non-QPU terms already exceed MILP
+6,27,onehot_transfer,256,,-0.07179772085510194,,non-QPU terms already exceed MILP
+6,27,onehot_transfer,1024,,-0.0735248236451298,,non-QPU terms already exceed MILP
+6,27,quantum_uniform_full,16,4212.352195958178,0.44718330912292004,,positive fixed-arrival headroom
+6,27,quantum_uniform_full,64,1046.2980507921523,0.44430000428837957,,positive fixed-arrival headroom
+6,27,quantum_uniform_full,256,259.6194143581626,0.44097915245220065,,positive fixed-arrival headroom
+6,27,quantum_uniform_full,1024,64.87602836465759,0.4407833069562912,,positive fixed-arrival headroom
+6,27,quantum_uniform_onehot,16,1406.4346166293035,0.23819376667233882,,positive fixed-arrival headroom
+6,27,quantum_uniform_onehot,64,351.55942030277424,0.23816041368991137,,positive fixed-arrival headroom
+6,27,quantum_uniform_onehot,256,87.93752084667216,0.23828957648947835,,positive fixed-arrival headroom
+6,27,quantum_uniform_onehot,1024,21.955742083741644,0.237979166675359,,positive fixed-arrival headroom
+6,28,onehot_p2,16,,-0.5806097466265783,,non-QPU terms already exceed MILP
+6,28,onehot_p2,64,,-0.5810222526779398,,non-QPU terms already exceed MILP
+6,28,onehot_p2,256,,-0.5826077013043687,,non-QPU terms already exceed MILP
+6,28,onehot_p2,1024,,-0.5837222499540076,,non-QPU terms already exceed MILP
+6,28,onehot_structured,16,,-0.13533104513771832,,non-QPU terms already exceed MILP
+6,28,onehot_structured,64,,-0.13592689367942512,,non-QPU terms already exceed MILP
+6,28,onehot_structured,256,,-0.13752269163524034,,non-QPU terms already exceed MILP
+6,28,onehot_structured,1024,,-0.13923519593663514,,non-QPU terms already exceed MILP
+6,28,onehot_transfer,16,,-0.2018892935011536,,non-QPU terms already exceed MILP
+6,28,onehot_transfer,64,,-0.20246014767326415,,non-QPU terms already exceed MILP
+6,28,onehot_transfer,256,,-0.20404348918236792,,non-QPU terms already exceed MILP
+6,28,onehot_transfer,1024,,-0.20584139577113092,,non-QPU terms already exceed MILP
+6,28,quantum_uniform_full,16,3617.083678020623,0.3839896032586694,,positive fixed-arrival headroom
+6,28,quantum_uniform_full,64,896.0973927414307,0.38051879685372114,,positive fixed-arrival headroom
+6,28,quantum_uniform_full,256,222.85668583907545,0.37853545229882,,positive fixed-arrival headroom
+6,28,quantum_uniform_full,1024,55.573729234390534,0.37758125411346555,,positive fixed-arrival headroom
+6,28,quantum_uniform_onehot,16,,-0.48297079326584935,,non-QPU terms already exceed MILP
+6,28,quantum_uniform_onehot,64,,-0.48338120384141803,,non-QPU terms already exceed MILP
+6,28,quantum_uniform_onehot,256,,-0.48348330007866025,,non-QPU terms already exceed MILP
+6,28,quantum_uniform_onehot,1024,,-0.4835958038456738,,non-QPU terms already exceed MILP
+6,29,onehot_p2,16,,-0.44201604870613664,,non-QPU terms already exceed MILP
+6,29,onehot_p2,64,,-0.4433035555994138,,non-QPU terms already exceed MILP
+6,29,onehot_p2,256,,-0.4464431022061035,,non-QPU terms already exceed MILP
+6,29,onehot_p2,1024,,-0.44665145070757717,,non-QPU terms already exceed MILP
+6,29,onehot_structured,16,,-0.1341351920273155,,non-QPU terms already exceed MILP
+6,29,onehot_structured,64,,-0.1362768963444978,,non-QPU terms already exceed MILP
+6,29,onehot_structured,256,,-0.13628519675694406,,non-QPU terms already exceed MILP
+6,29,onehot_structured,1024,,-0.13724349276162684,,non-QPU terms already exceed MILP
+6,29,onehot_transfer,16,,-0.28152272873558104,,non-QPU terms already exceed MILP
+6,29,onehot_transfer,64,,-0.2833643725607544,,non-QPU terms already exceed MILP
+6,29,onehot_transfer,256,,-0.2833935695234686,,non-QPU terms already exceed MILP
+6,29,onehot_transfer,1024,,-0.28426437941379845,,non-QPU terms already exceed MILP
+6,29,quantum_uniform_full,16,3699.0542765552373,0.392691601999104,,positive fixed-arrival headroom
+6,29,quantum_uniform_full,64,920.9073664334172,0.39105410408228636,,positive fixed-arrival headroom
+6,29,quantum_uniform_full,256,228.6188590878792,0.3883228492923081,,positive fixed-arrival headroom
+6,29,quantum_uniform_full,1024,57.03205978189498,0.38748950185254216,,positive fixed-arrival headroom
+6,29,quantum_uniform_onehot,16,1041.3836352799897,0.17636873247101903,,positive fixed-arrival headroom
+6,29,quantum_uniform_onehot,64,259.727864853077,0.17595004476606846,,positive fixed-arrival headroom
+6,29,quantum_uniform_onehot,256,64.89428469211076,0.17584793688729405,,positive fixed-arrival headroom
+6,29,quantum_uniform_onehot,1024,16.20742624582286,0.1756729413755238,,positive fixed-arrival headroom
+8,15,onehot_p2,16,,-1307.3595298224463,,non-QPU terms already exceed MILP
+8,15,onehot_p2,64,,-148.13344419068744,,non-QPU terms already exceed MILP
+8,15,onehot_p2,256,,-3.8594395466934657,,non-QPU terms already exceed MILP
+8,15,onehot_p2,1024,,-6.358403486650786,,non-QPU terms already exceed MILP
+8,15,onehot_structured,16,,-437.02814913299517,,non-QPU terms already exceed MILP
+8,15,onehot_structured,64,,-2.3333989185339306,,non-QPU terms already exceed MILP
+8,15,onehot_structured,256,,-2.712838512576127,,non-QPU terms already exceed MILP
+8,15,onehot_structured,1024,,-4.227126209640119,,non-QPU terms already exceed MILP
+8,15,onehot_transfer,16,,-438.1089318563754,,non-QPU terms already exceed MILP
+8,15,onehot_transfer,64,,-3.747907365184801,,non-QPU terms already exceed MILP
+8,15,onehot_transfer,256,,-5.168561210550251,,non-QPU terms already exceed MILP
+8,15,onehot_transfer,1024,,-10.844654759821424,,non-QPU terms already exceed MILP
+8,15,quantum_uniform_full,16,,-4349.524442764909,,non-QPU terms already exceed MILP
+8,15,quantum_uniform_full,64,,-3479.7646929383845,,non-QPU terms already exceed MILP
+8,15,quantum_uniform_full,256,,-1595.3453316304149,,non-QPU terms already exceed MILP
+8,15,quantum_uniform_full,1024,,-291.0851819009913,,non-QPU terms already exceed MILP
+8,15,quantum_uniform_onehot,16,,-1161.1784201860355,,non-QPU terms already exceed MILP
+8,15,quantum_uniform_onehot,64,,-1.6846880341763608,,non-QPU terms already exceed MILP
+8,15,quantum_uniform_onehot,256,,-1.8456975113003864,,non-QPU terms already exceed MILP
+8,15,quantum_uniform_onehot,1024,,-2.4847982702194713,,non-QPU terms already exceed MILP
+8,16,onehot_p2,16,,-1.2876749775532517,,non-QPU terms already exceed MILP
+8,16,onehot_p2,64,,-1.2971791244272026,,non-QPU terms already exceed MILP
+8,16,onehot_p2,256,,-1.2936937311824295,,non-QPU terms already exceed MILP
+8,16,onehot_p2,1024,,-1.2952228813664988,,non-QPU terms already exceed MILP
+8,16,onehot_structured,16,,-0.7013882179817301,,non-QPU terms already exceed MILP
+8,16,onehot_structured,64,,-0.7085986221209168,,non-QPU terms already exceed MILP
+8,16,onehot_structured,256,,-0.7049194788560271,,non-QPU terms already exceed MILP
+8,16,onehot_structured,1024,,-0.7074444689860684,,non-QPU terms already exceed MILP
+8,16,onehot_transfer,16,,-1.1648361357001704,,non-QPU terms already exceed MILP
+8,16,onehot_transfer,64,,-1.1689215335063636,,non-QPU terms already exceed MILP
+8,16,onehot_transfer,256,,-1.1689132214523852,,non-QPU terms already exceed MILP
+8,16,onehot_transfer,1024,,-1.1699777697212994,,non-QPU terms already exceed MILP
+8,16,quantum_uniform_full,16,590.5980616230029,0.06269789022189798,,positive fixed-arrival headroom
+8,16,quantum_uniform_full,64,137.59698766644718,0.058429184842680115,,positive fixed-arrival headroom
+8,16,quantum_uniform_full,256,32.03571897411344,0.05441459082067013,,positive fixed-arrival headroom
+8,16,quantum_uniform_full,1024,7.235598803926666,0.049160394817590714,,positive fixed-arrival headroom
+8,16,quantum_uniform_onehot,16,,-0.35222495486959815,,non-QPU terms already exceed MILP
+8,16,quantum_uniform_onehot,64,,-0.356960357632488,,non-QPU terms already exceed MILP
+8,16,quantum_uniform_onehot,256,,-0.360683296348725,,non-QPU terms already exceed MILP
+8,16,quantum_uniform_onehot,1024,,-0.35573330522311153,,non-QPU terms already exceed MILP
+8,17,onehot_p2,16,,-1.2089812817284837,,non-QPU terms already exceed MILP
+8,17,onehot_p2,64,,-1.210500036017038,,non-QPU terms already exceed MILP
+8,17,onehot_p2,256,,-1.2114521270850673,,non-QPU terms already exceed MILP
+8,17,onehot_p2,1024,,-1.2127521369839087,,non-QPU terms already exceed MILP
+8,17,onehot_structured,16,,-0.631496568210423,,non-QPU terms already exceed MILP
+8,17,onehot_structured,64,,-0.6352549204602838,,non-QPU terms already exceed MILP
+8,17,onehot_structured,256,,-0.6398882153443992,,non-QPU terms already exceed MILP
+8,17,onehot_structured,1024,,-0.639496570925985,,non-QPU terms already exceed MILP
+8,17,onehot_transfer,16,,-1.0574445729143918,,non-QPU terms already exceed MILP
+8,17,onehot_transfer,64,,-1.0592091847211123,,non-QPU terms already exceed MILP
+8,17,onehot_transfer,256,,-1.0620091245509684,,non-QPU terms already exceed MILP
+8,17,onehot_transfer,1024,,-1.061679983518843,,non-QPU terms already exceed MILP
+8,17,quantum_uniform_full,16,,-0.02103752037510276,,non-QPU terms already exceed MILP
+8,17,quantum_uniform_full,64,,-0.02757502067834139,,non-QPU terms already exceed MILP
+8,17,quantum_uniform_full,256,,-0.02785626845434308,,non-QPU terms already exceed MILP
+8,17,quantum_uniform_full,1024,,-0.03459166316315532,,non-QPU terms already exceed MILP
+8,17,quantum_uniform_onehot,16,,-0.4950937610119581,,non-QPU terms already exceed MILP
+8,17,quantum_uniform_onehot,64,,-0.4937167074458557,,non-QPU terms already exceed MILP
+8,17,quantum_uniform_onehot,256,,-0.49604166112840176,,non-QPU terms already exceed MILP
+8,17,quantum_uniform_onehot,1024,,-0.4944375045597553,,non-QPU terms already exceed MILP
+8,18,onehot_p2,16,,-1.228118889623147,,non-QPU terms already exceed MILP
+8,18,onehot_p2,64,,-1.2301813965896145,,non-QPU terms already exceed MILP
+8,18,onehot_p2,256,,-1.234998092171736,,non-QPU terms already exceed MILP
+8,18,onehot_p2,1024,,-1.2328438848489895,,non-QPU terms already exceed MILP
+8,18,onehot_structured,16,,-0.7003570692613721,,non-QPU terms already exceed MILP
+8,18,onehot_structured,64,,-0.7035716804675758,,non-QPU terms already exceed MILP
+8,18,onehot_structured,256,,-0.7056154329329729,,non-QPU terms already exceed MILP
+8,18,onehot_structured,1024,,-0.7058800216764212,,non-QPU terms already exceed MILP
+8,18,onehot_transfer,16,,-1.2538091647438705,,non-QPU terms already exceed MILP
+8,18,onehot_transfer,64,,-1.25730707263574,,non-QPU terms already exceed MILP
+8,18,onehot_transfer,256,,-1.2576612662523985,,non-QPU terms already exceed MILP
+8,18,onehot_transfer,1024,,-1.2600133214145899,,non-QPU terms already exceed MILP
+8,18,quantum_uniform_full,16,,-0.02512720227241516,,non-QPU terms already exceed MILP
+8,18,quantum_uniform_full,64,,-0.027935547288507223,,non-QPU terms already exceed MILP
+8,18,quantum_uniform_full,256,,-0.03663971134665189,,non-QPU terms already exceed MILP
+8,18,quantum_uniform_full,1024,,-0.04221260594204068,,non-QPU terms already exceed MILP
+8,18,quantum_uniform_onehot,16,,-0.5017334157600999,,non-QPU terms already exceed MILP
+8,18,quantum_uniform_onehot,64,,-0.5108709125779569,,non-QPU terms already exceed MILP
+8,18,quantum_uniform_onehot,256,,-0.5088084056042135,,non-QPU terms already exceed MILP
+8,18,quantum_uniform_onehot,1024,,-0.508912562392652,,non-QPU terms already exceed MILP
+8,19,onehot_p2,16,,-1.1359521109843627,,non-QPU terms already exceed MILP
+8,19,onehot_p2,64,,-1.1385583706432953,,non-QPU terms already exceed MILP
+8,19,onehot_p2,256,,-1.1406167099557933,,non-QPU terms already exceed MILP
+8,19,onehot_p2,1024,,-1.1403187682153657,,non-QPU terms already exceed MILP
+8,19,onehot_structured,16,,-0.6063237222842872,,non-QPU terms already exceed MILP
+8,19,onehot_structured,64,,-0.6120633236059803,,non-QPU terms already exceed MILP
+8,19,onehot_structured,256,,-0.6117737172098714,,non-QPU terms already exceed MILP
+8,19,onehot_structured,1024,,-0.6119445101285237,,non-QPU terms already exceed MILP
+8,19,onehot_transfer,16,,-1.2208945136517286,,non-QPU terms already exceed MILP
+8,19,onehot_transfer,64,,-1.2266237074509263,,non-QPU terms already exceed MILP
+8,19,onehot_transfer,256,,-1.2309924601504463,,non-QPU terms already exceed MILP
+8,19,onehot_transfer,1024,,-1.2284008106216788,,non-QPU terms already exceed MILP
+8,19,quantum_uniform_full,16,,-0.07140419026109157,,non-QPU terms already exceed MILP
+8,19,quantum_uniform_full,64,,-0.0741271329970914,,non-QPU terms already exceed MILP
+8,19,quantum_uniform_full,256,,-0.08330833213403821,,non-QPU terms already exceed MILP
+8,19,quantum_uniform_full,1024,,-0.08987294556573033,,non-QPU terms already exceed MILP
+8,19,quantum_uniform_onehot,16,,-0.4486708580443519,,non-QPU terms already exceed MILP
+8,19,quantum_uniform_onehot,64,,-0.4558417624793947,,non-QPU terms already exceed MILP
+8,19,quantum_uniform_onehot,256,,-0.4552646102383733,,non-QPU terms already exceed MILP
+8,19,quantum_uniform_onehot,1024,,-0.45238755689933896,,non-QPU terms already exceed MILP
+8,20,onehot_p2,16,,-1.1321645734133199,,non-QPU terms already exceed MILP
+8,20,onehot_p2,64,,-1.1348771319098887,,non-QPU terms already exceed MILP
+8,20,onehot_p2,256,,-1.1359958715038374,,non-QPU terms already exceed MILP
+8,20,onehot_p2,1024,,-1.1362146275350824,,non-QPU terms already exceed MILP
+8,20,onehot_structured,16,,-0.5239798473194242,,non-QPU terms already exceed MILP
+8,20,onehot_structured,64,,-0.526913199108094,,non-QPU terms already exceed MILP
+8,20,onehot_structured,256,,-0.5275444379076362,,non-QPU terms already exceed MILP
+8,20,onehot_structured,1024,,-0.5281027890741825,,non-QPU terms already exceed MILP
+8,20,onehot_transfer,16,,-0.8741861577145755,,non-QPU terms already exceed MILP
+8,20,onehot_transfer,64,,-0.8774444945156574,,non-QPU terms already exceed MILP
+8,20,onehot_transfer,256,,-0.8778924490325153,,non-QPU terms already exceed MILP
+8,20,onehot_transfer,1024,,-0.8781028464436531,,non-QPU terms already exceed MILP
+8,20,quantum_uniform_full,16,,-0.012041596230119467,,non-QPU terms already exceed MILP
+8,20,quantum_uniform_full,64,,-0.014068701304495335,,non-QPU terms already exceed MILP
+8,20,quantum_uniform_full,256,,-0.02621040027588606,,non-QPU terms already exceed MILP
+8,20,quantum_uniform_full,1024,,-0.03163118660449982,,non-QPU terms already exceed MILP
+8,20,quantum_uniform_onehot,16,,-0.38983538094908,,non-QPU terms already exceed MILP
+8,20,quantum_uniform_onehot,64,,-0.3932186895981431,,non-QPU terms already exceed MILP
+8,20,quantum_uniform_onehot,256,,-0.3934645354747772,,non-QPU terms already exceed MILP
+8,20,quantum_uniform_onehot,1024,,-0.394731180742383,,non-QPU terms already exceed MILP
+8,21,onehot_p2,16,,-1.0060479204403237,,non-QPU terms already exceed MILP
+8,21,onehot_p2,64,,-1.0094333711313084,,non-QPU terms already exceed MILP
+8,21,onehot_p2,256,,-1.0099500223295763,,non-QPU terms already exceed MILP
+8,21,onehot_p2,1024,,-1.0112604164751247,,non-QPU terms already exceed MILP
+8,21,onehot_structured,16,,-0.5477777584455907,,non-QPU terms already exceed MILP
+8,21,onehot_structured,64,,-0.5486048543898505,,non-QPU terms already exceed MILP
+8,21,onehot_structured,256,,-0.5496903108432889,,non-QPU terms already exceed MILP
+8,21,onehot_structured,1024,,-0.5499048642814159,,non-QPU terms already exceed MILP
+8,21,onehot_transfer,16,,-0.9780987184421974,,non-QPU terms already exceed MILP
+8,21,onehot_transfer,64,,-0.9787133214995265,,non-QPU terms already exceed MILP
+8,21,onehot_transfer,256,,-0.9799195122905076,,non-QPU terms already exceed MILP
+8,21,onehot_transfer,1024,,-0.9807404149323702,,non-QPU terms already exceed MILP
+8,21,quantum_uniform_full,16,84.64068965319638,0.008985455613583326,,positive fixed-arrival headroom
+8,21,quantum_uniform_full,64,13.845038674659493,0.005879157222807407,,positive fixed-arrival headroom
+8,21,quantum_uniform_full,256,0.4489131514144431,0.0007625059224665165,,positive fixed-arrival headroom
+8,21,quantum_uniform_full,1024,,-0.0025395448319613934,,non-QPU terms already exceed MILP
+8,21,quantum_uniform_onehot,16,,-0.3536771545186639,,non-QPU terms already exceed MILP
+8,21,quantum_uniform_onehot,64,,-0.3574104541912675,,non-QPU terms already exceed MILP
+8,21,quantum_uniform_onehot,256,,-0.35709586506709456,,non-QPU terms already exceed MILP
+8,21,quantum_uniform_onehot,1024,,-0.3572854590602219,,non-QPU terms already exceed MILP
+8,22,onehot_p2,16,,-0.9394062255742028,,non-QPU terms already exceed MILP
+8,22,onehot_p2,64,,-0.9421437667842838,,non-QPU terms already exceed MILP
+8,22,onehot_p2,256,,-0.9437125330950948,,non-QPU terms already exceed MILP
+8,22,onehot_p2,1024,,-0.9440041767666116,,non-QPU terms already exceed MILP
+8,22,onehot_structured,16,,-0.5011402554810047,,non-QPU terms already exceed MILP
+8,22,onehot_structured,64,,-0.502744400400843,,non-QPU terms already exceed MILP
+8,22,onehot_structured,256,,-0.5030819117091596,,non-QPU terms already exceed MILP
+8,22,onehot_structured,1024,,-0.5030111079177004,,non-QPU terms already exceed MILP
+8,22,onehot_transfer,16,,-1.0596528202295303,,non-QPU terms already exceed MILP
+8,22,onehot_transfer,64,,-1.062113223131746,,non-QPU terms already exceed MILP
+8,22,onehot_transfer,256,,-1.0624548671767116,,non-QPU terms already exceed MILP
+8,22,onehot_transfer,1024,,-1.060602815814491,,non-QPU terms already exceed MILP
+8,22,quantum_uniform_full,16,281.945140693817,0.029931296136055607,,positive fixed-arrival headroom
+8,22,quantum_uniform_full,64,65.9187712538286,0.027991747025225777,,positive fixed-arrival headroom
+8,22,quantum_uniform_full,256,13.883116281840866,0.02358130599168362,,positive fixed-arrival headroom
+8,22,quantum_uniform_full,1024,2.5925803750163166,0.01761461328715086,,positive fixed-arrival headroom
+8,22,quantum_uniform_onehot,16,,-0.33798114443197846,,non-QPU terms already exceed MILP
+8,22,quantum_uniform_onehot,64,,-0.3406457398086786,,non-QPU terms already exceed MILP
+8,22,quantum_uniform_onehot,256,,-0.3407061477191746,,non-QPU terms already exceed MILP
+8,22,quantum_uniform_onehot,1024,,-0.341276990249753,,non-QPU terms already exceed MILP
+8,23,onehot_p2,16,,-1.0545250066788867,,non-QPU terms already exceed MILP
+8,23,onehot_p2,64,,-1.0575062517309561,,non-QPU terms already exceed MILP
+8,23,onehot_p2,256,,-1.0600312651367858,,non-QPU terms already exceed MILP
+8,23,onehot_p2,1024,,-1.0622625161195174,,non-QPU terms already exceed MILP
+8,23,onehot_structured,16,,-0.5136090582236648,,non-QPU terms already exceed MILP
+8,23,onehot_structured,64,,-0.5170445092953742,,non-QPU terms already exceed MILP
+8,23,onehot_structured,256,,-0.5203027995303273,,non-QPU terms already exceed MILP
+8,23,onehot_structured,1024,,-0.5200319476425648,,non-QPU terms already exceed MILP
+8,23,onehot_transfer,16,,-0.8877819888293743,,non-QPU terms already exceed MILP
+8,23,onehot_transfer,64,,-0.890836144797504,,non-QPU terms already exceed MILP
+8,23,onehot_transfer,256,,-0.8913861373439431,,non-QPU terms already exceed MILP
+8,23,onehot_transfer,1024,,-0.8916152892634273,,non-QPU terms already exceed MILP
+8,23,quantum_uniform_full,16,209.4905296398135,0.022239514626562595,,positive fixed-arrival headroom
+8,23,quantum_uniform_full,64,46.2008164420067,0.019618714693933725,,positive fixed-arrival headroom
+8,23,quantum_uniform_full,256,6.842777418894181,0.0116228680126369,,positive fixed-arrival headroom
+8,23,quantum_uniform_full,1024,1.5426622957205953,0.010481217876076698,,positive fixed-arrival headroom
+8,23,quantum_uniform_onehot,16,,-0.41660629492253065,,non-QPU terms already exceed MILP
+8,23,quantum_uniform_onehot,64,,-0.4204187337309122,,non-QPU terms already exceed MILP
+8,23,quantum_uniform_onehot,256,,-0.42049169121310115,,non-QPU terms already exceed MILP
+8,23,quantum_uniform_onehot,1024,,-0.4206146374344826,,non-QPU terms already exceed MILP
+8,24,onehot_p2,16,,-0.9523708760971203,,non-QPU terms already exceed MILP
+8,24,onehot_p2,64,,-0.9545187737094238,,non-QPU terms already exceed MILP
+8,24,onehot_p2,256,,-0.9556041719624773,,non-QPU terms already exceed MILP
+8,24,onehot_p2,1024,,-0.9557687715860084,,non-QPU terms already exceed MILP
+8,24,onehot_structured,16,,-0.4836735799908638,,non-QPU terms already exceed MILP
+8,24,onehot_structured,64,,-0.49022357165813446,,non-QPU terms already exceed MILP
+8,24,onehot_structured,256,,-0.48746316647157073,,non-QPU terms already exceed MILP
+8,24,onehot_structured,1024,,-0.48754232889041305,,non-QPU terms already exceed MILP
+8,24,onehot_transfer,16,,-0.8640027507208288,,non-QPU terms already exceed MILP
+8,24,onehot_transfer,64,,-0.867340249940753,,non-QPU terms already exceed MILP
+8,24,onehot_transfer,256,,-0.8677507070824504,,non-QPU terms already exceed MILP
+8,24,onehot_transfer,1024,,-0.8679694165475667,,non-QPU terms already exceed MILP
+8,24,quantum_uniform_full,16,124.94949483577258,0.013264638371765614,,positive fixed-arrival headroom
+8,24,quantum_uniform_full,64,27.969882057835125,0.011877130717039108,,positive fixed-arrival headroom
+8,24,quantum_uniform_full,256,3.72132580625925,0.0063208951614797115,,positive fixed-arrival headroom
+8,24,quantum_uniform_full,1024,0.038339552750015875,0.0002604881228762679,,positive fixed-arrival headroom
+8,24,quantum_uniform_onehot,16,,-0.3405520487576723,,non-QPU terms already exceed MILP
+8,24,quantum_uniform_onehot,64,,-0.34388328483328223,,non-QPU terms already exceed MILP
+8,24,quantum_uniform_onehot,256,,-0.34377079270780087,,non-QPU terms already exceed MILP
+8,24,quantum_uniform_onehot,1024,,-0.34389994386583567,,non-QPU terms already exceed MILP
+8,25,onehot_p2,16,,-0.9993145280750468,,non-QPU terms already exceed MILP
+8,25,onehot_p2,64,,-1.001949938130565,,non-QPU terms already exceed MILP
+8,25,onehot_p2,256,,-1.0030999352457002,,non-QPU terms already exceed MILP
+8,25,onehot_p2,1024,,-1.0031061867484823,,non-QPU terms already exceed MILP
+8,25,onehot_structured,16,,-0.44649440282955766,,non-QPU terms already exceed MILP
+8,25,onehot_structured,64,,-0.44941106066835346,,non-QPU terms already exceed MILP
+8,25,onehot_structured,256,,-0.44912356138956966,,non-QPU terms already exceed MILP
+8,25,onehot_structured,1024,,-0.4496611091308296,,non-QPU terms already exceed MILP
+8,25,onehot_transfer,16,,-0.9253902728742105,,non-QPU terms already exceed MILP
+8,25,onehot_transfer,64,,-0.9281798168085515,,non-QPU terms already exceed MILP
+8,25,onehot_transfer,256,,-0.9279590235091746,,non-QPU terms already exceed MILP
+8,25,onehot_transfer,1024,,-0.9282319243066013,,non-QPU terms already exceed MILP
+8,25,quantum_uniform_full,16,822.5399088788256,0.08732083672657609,,positive fixed-arrival headroom
+8,25,quantum_uniform_full,64,199.32093190698808,0.0846396405249834,,positive fixed-arrival headroom
+8,25,quantum_uniform_full,256,46.368951101881436,0.07876044558361173,,positive fixed-arrival headroom
+8,25,quantum_uniform_full,1024,10.809712510319908,0.07344378112611594,,positive fixed-arrival headroom
+8,25,quantum_uniform_onehot,16,,-0.3466436550952494,,non-QPU terms already exceed MILP
+8,25,quantum_uniform_onehot,64,,-0.3491624519228935,,non-QPU terms already exceed MILP
+8,25,quantum_uniform_onehot,256,,-0.34937700536102057,,non-QPU terms already exceed MILP
+8,25,quantum_uniform_onehot,1024,,-0.3496353193113464,,non-QPU terms already exceed MILP
+8,26,onehot_p2,16,,-1.0825458254039404,,non-QPU terms already exceed MILP
+8,26,onehot_p2,64,,-1.0848437707172707,,non-QPU terms already exceed MILP
+8,26,onehot_p2,256,,-1.0879396266536787,,non-QPU terms already exceed MILP
+8,26,onehot_p2,1024,,-1.08461458387319,,non-QPU terms already exceed MILP
+8,26,onehot_structured,16,,-0.5610506651064497,,non-QPU terms already exceed MILP
+8,26,onehot_structured,64,,-0.5652652606368065,,non-QPU terms already exceed MILP
+8,26,onehot_structured,256,,-0.5647194241173565,,non-QPU terms already exceed MILP
+8,26,onehot_structured,1024,,-0.5655673700384796,,non-QPU terms already exceed MILP
+8,26,onehot_transfer,16,,-0.9441840597501141,,non-QPU terms already exceed MILP
+8,26,onehot_transfer,64,,-0.9485673643648624,,non-QPU terms already exceed MILP
+8,26,onehot_transfer,256,,-0.9485611594282091,,non-QPU terms already exceed MILP
+8,26,onehot_transfer,1024,,-0.9488923610260827,,non-QPU terms already exceed MILP
+8,26,quantum_uniform_full,16,59.71732726229388,0.006339591462165117,,positive fixed-arrival headroom
+8,26,quantum_uniform_full,64,9.71901692315296,0.004127083346247673,,positive fixed-arrival headroom
+8,26,quantum_uniform_full,256,,-0.0013979179711895995,,non-QPU terms already exceed MILP
+8,26,quantum_uniform_full,1024,,-0.005347913131117821,,non-QPU terms already exceed MILP
+8,26,quantum_uniform_onehot,16,,-0.3260687021538615,,non-QPU terms already exceed MILP
+8,26,quantum_uniform_onehot,64,,-0.3297457965090871,,non-QPU terms already exceed MILP
+8,26,quantum_uniform_onehot,256,,-0.3303791540674865,,non-QPU terms already exceed MILP
+8,26,quantum_uniform_onehot,1024,,-0.33050414919125615,,non-QPU terms already exceed MILP
+8,27,onehot_p2,16,,-0.9745292403895291,,non-QPU terms already exceed MILP
+8,27,onehot_p2,64,,-0.973610432469286,,non-QPU terms already exceed MILP
+8,27,onehot_p2,256,,-0.9751541811274365,,non-QPU terms already exceed MILP
+8,27,onehot_p2,1024,,-0.9762291718507186,,non-QPU terms already exceed MILP
+8,27,onehot_structured,16,,-0.4889631662517786,,non-QPU terms already exceed MILP
+8,27,onehot_structured,64,,-0.4914319161325693,,non-QPU terms already exceed MILP
+8,27,onehot_structured,256,,-0.4913569213822484,,non-QPU terms already exceed MILP
+8,27,onehot_structured,1024,,-0.4918298586271703,,non-QPU terms already exceed MILP
+8,27,onehot_transfer,16,,-1.0333465081639588,,non-QPU terms already exceed MILP
+8,27,onehot_transfer,64,,-1.0358923715539277,,non-QPU terms already exceed MILP
+8,27,onehot_transfer,256,,-1.035854862537235,,non-QPU terms already exceed MILP
+8,27,onehot_transfer,1024,,-1.036363166756928,,non-QPU terms already exceed MILP
+8,27,quantum_uniform_full,16,87.62333880388479,0.009302093647420406,,positive fixed-arrival headroom
+8,27,quantum_uniform_full,64,17.166537999090572,0.007289598695933819,,positive fixed-arrival headroom
+8,27,quantum_uniform_full,256,1.6693220781401001,0.0028354437090456486,,positive fixed-arrival headroom
+8,27,quantum_uniform_full,1024,,-0.0036707990802824497,,non-QPU terms already exceed MILP
+8,27,quantum_uniform_onehot,16,,-0.41824160423129797,,non-QPU terms already exceed MILP
+8,27,quantum_uniform_onehot,64,,-0.42170620569959283,,non-QPU terms already exceed MILP
+8,27,quantum_uniform_onehot,256,,-0.4208873985335231,,non-QPU terms already exceed MILP
+8,27,quantum_uniform_onehot,1024,,-0.4211749560199678,,non-QPU terms already exceed MILP
+8,28,onehot_p2,16,,-1.1260541776428,,non-QPU terms already exceed MILP
+8,28,onehot_p2,64,,-1.1300270716892555,,non-QPU terms already exceed MILP
+8,28,onehot_p2,256,,-1.1306729322532192,,non-QPU terms already exceed MILP
+8,28,onehot_p2,1024,,-1.1312562777893618,,non-QPU terms already exceed MILP
+8,28,onehot_structured,16,,-0.6700507150962949,,non-QPU terms already exceed MILP
+8,28,onehot_structured,64,,-0.6732590631654602,,non-QPU terms already exceed MILP
+8,28,onehot_structured,256,,-0.6734694605693221,,non-QPU terms already exceed MILP
+8,28,onehot_structured,1024,,-0.6733465725556016,,non-QPU terms already exceed MILP
+8,28,onehot_transfer,16,,-1.1133611570112407,,non-QPU terms already exceed MILP
+8,28,onehot_transfer,64,,-1.1165736028924584,,non-QPU terms already exceed MILP
+8,28,onehot_transfer,256,,-1.116671519819647,,non-QPU terms already exceed MILP
+8,28,onehot_transfer,1024,,-1.116919461172074,,non-QPU terms already exceed MILP
+8,28,quantum_uniform_full,16,,-0.08727495139464736,,non-QPU terms already exceed MILP
+8,28,quantum_uniform_full,64,,-0.09066870249807835,,non-QPU terms already exceed MILP
+8,28,quantum_uniform_full,256,,-0.09522495372220874,,non-QPU terms already exceed MILP
+8,28,quantum_uniform_full,1024,,-0.1040665926411748,,non-QPU terms already exceed MILP
+8,28,quantum_uniform_onehot,16,,-0.4947104169987142,,non-QPU terms already exceed MILP
+8,28,quantum_uniform_onehot,64,,-0.4980416181497276,,non-QPU terms already exceed MILP
+8,28,quantum_uniform_onehot,256,,-0.49809376057237387,,non-QPU terms already exceed MILP
+8,28,quantum_uniform_onehot,1024,,-0.4985749633051455,,non-QPU terms already exceed MILP
+8,29,onehot_p2,16,,-0.9819187262328342,,non-QPU terms already exceed MILP
+8,29,onehot_p2,64,,-0.984572914079763,,non-QPU terms already exceed MILP
+8,29,onehot_p2,256,,-0.9857124803820625,,non-QPU terms already exceed MILP
+8,29,onehot_p2,1024,,-0.9862020766595379,,non-QPU terms already exceed MILP
+8,29,onehot_structured,16,,-0.5800944888032973,,non-QPU terms already exceed MILP
+8,29,onehot_structured,64,,-0.581731986720115,,non-QPU terms already exceed MILP
+8,29,onehot_structured,256,,-0.5820861454121768,,non-QPU terms already exceed MILP
+8,29,onehot_structured,1024,,-0.5822923984378576,,non-QPU terms already exceed MILP
+8,29,onehot_transfer,16,,-0.9571965453214943,,non-QPU terms already exceed MILP
+8,29,onehot_transfer,64,,-0.956175699364394,,non-QPU terms already exceed MILP
+8,29,onehot_transfer,256,,-0.9567340505309403,,non-QPU terms already exceed MILP
+8,29,onehot_transfer,1024,,-0.9565090429969132,,non-QPU terms already exceed MILP
+8,29,quantum_uniform_full,16,259.8476132269901,0.02758542262017727,,positive fixed-arrival headroom
+8,29,quantum_uniform_full,64,61.93966680566395,0.02630206011235714,,positive fixed-arrival headroom
+8,29,quantum_uniform_full,256,11.682666839221838,0.019843710586428642,,positive fixed-arrival headroom
+8,29,quantum_uniform_full,1024,2.111158168219527,0.014343715272843838,,positive fixed-arrival headroom
+8,29,quantum_uniform_onehot,16,,-0.3091687015257776,,non-QPU terms already exceed MILP
+8,29,quantum_uniform_onehot,64,,-0.31334370421245694,,non-QPU terms already exceed MILP
+8,29,quantum_uniform_onehot,256,,-0.31337079405784607,,non-QPU terms already exceed MILP
+8,29,quantum_uniform_onehot,1024,,-0.31360414857044816,,non-QPU terms already exceed MILP
+9,15,onehot_p2,16,,-10.054614957138256,,non-QPU terms already exceed MILP
+9,15,onehot_p2,64,,-11.278829700422648,,non-QPU terms already exceed MILP
+9,15,onehot_p2,256,,-16.145081554692297,,non-QPU terms already exceed MILP
+9,15,onehot_p2,1024,,-35.60494670707703,,non-QPU terms already exceed MILP
+9,15,onehot_structured,16,,-7.845047282258747,,non-QPU terms already exceed MILP
+9,15,onehot_structured,64,,-8.718711932095175,,non-QPU terms already exceed MILP
+9,15,onehot_structured,256,,-12.192439488710079,,non-QPU terms already exceed MILP
+9,15,onehot_structured,1024,,-25.989502434465976,,non-QPU terms already exceed MILP
+9,15,onehot_transfer,16,,-10.142939715638931,,non-QPU terms already exceed MILP
+9,15,onehot_transfer,64,,-11.770017390146677,,non-QPU terms already exceed MILP
+9,15,onehot_transfer,256,,-18.24391938129702,,non-QPU terms already exceed MILP
+9,15,onehot_transfer,1024,,-44.11656587810285,,non-QPU terms already exceed MILP
+9,15,quantum_uniform_full,16,,-12788.18232658282,,non-QPU terms already exceed MILP
+9,15,quantum_uniform_full,64,,-10583.797402076314,,non-QPU terms already exceed MILP
+9,15,quantum_uniform_full,256,,-8379.527851037776,,non-QPU terms already exceed MILP
+9,15,quantum_uniform_full,1024,,-3530.868992948046,,non-QPU terms already exceed MILP
+9,15,quantum_uniform_onehot,16,,-8379.991515039415,,non-QPU terms already exceed MILP
+9,15,quantum_uniform_onehot,64,,-1767.4107186104811,,non-QPU terms already exceed MILP
+9,15,quantum_uniform_onehot,256,,-4.4322574594043544,,non-QPU terms already exceed MILP
+9,15,quantum_uniform_onehot,1024,,-5.955210037820507,,non-QPU terms already exceed MILP
+9,16,onehot_p2,16,,-1.7299992438638583,,non-QPU terms already exceed MILP
+9,16,onehot_p2,64,,-1.7312159003922716,,non-QPU terms already exceed MILP
+9,16,onehot_p2,256,,-1.7332701069535688,,non-QPU terms already exceed MILP
+9,16,onehot_p2,1024,,-1.735570101191115,,non-QPU terms already exceed MILP
+9,16,onehot_structured,16,,-0.9222202581659076,,non-QPU terms already exceed MILP
+9,16,onehot_structured,64,,-0.9229619052421185,,non-QPU terms already exceed MILP
+9,16,onehot_structured,256,,-0.925632763763133,,non-QPU terms already exceed MILP
+9,16,onehot_structured,1024,,-0.9281160539248958,,non-QPU terms already exceed MILP
+9,16,onehot_transfer,16,,-1.43310156383086,,non-QPU terms already exceed MILP
+9,16,onehot_transfer,64,,-1.435291161404166,,non-QPU terms already exceed MILP
+9,16,onehot_transfer,256,,-1.4380849079461768,,non-QPU terms already exceed MILP
+9,16,onehot_transfer,1024,,-1.4404745070496574,,non-QPU terms already exceed MILP
+9,16,quantum_uniform_full,16,,-0.041864559054374695,,non-QPU terms already exceed MILP
+9,16,quantum_uniform_full,64,,-0.04601251846179366,,non-QPU terms already exceed MILP
+9,16,quantum_uniform_full,256,,-0.05417081108316779,,non-QPU terms already exceed MILP
+9,16,quantum_uniform_full,1024,,-0.06484580505639315,,non-QPU terms already exceed MILP
+9,16,quantum_uniform_onehot,16,,-0.2847291906364262,,non-QPU terms already exceed MILP
+9,16,quantum_uniform_onehot,64,,-0.29167085001972737,,non-QPU terms already exceed MILP
+9,16,quantum_uniform_onehot,256,,-0.29391873674467206,,non-QPU terms already exceed MILP
+9,16,quantum_uniform_onehot,1024,,-0.2941020908765495,,non-QPU terms already exceed MILP
+9,17,onehot_p2,16,,-3.1249541825673077,,non-QPU terms already exceed MILP
+9,17,onehot_p2,64,,-3.305176050038426,,non-QPU terms already exceed MILP
+9,17,onehot_p2,256,,-4.025039311876753,,non-QPU terms already exceed MILP
+9,17,onehot_p2,1024,,-6.908015516215528,,non-QPU terms already exceed MILP
+9,17,onehot_structured,16,,-2.27997489257541,,non-QPU terms already exceed MILP
+9,17,onehot_structured,64,,-2.441029765897838,,non-QPU terms already exceed MILP
+9,17,onehot_structured,256,,-3.087521119581652,,non-QPU terms already exceed MILP
+9,17,onehot_structured,1024,,-5.657530563912587,,non-QPU terms already exceed MILP
+9,17,onehot_transfer,16,,-3.4726891973259626,,non-QPU terms already exceed MILP
+9,17,onehot_transfer,64,,-3.8282038130928413,,non-QPU terms already exceed MILP
+9,17,onehot_transfer,256,,-5.252154709203751,,non-QPU terms already exceed MILP
+9,17,onehot_transfer,1024,,-10.932605872905697,,non-QPU terms already exceed MILP
+9,17,quantum_uniform_full,16,,-2204.9333162963158,,non-QPU terms already exceed MILP
+9,17,quantum_uniform_full,64,,-1878.3621952739995,,non-QPU terms already exceed MILP
+9,17,quantum_uniform_full,256,,-1388.530327238448,,non-QPU terms already exceed MILP
+9,17,quantum_uniform_full,1024,,-245.7658059147143,,non-QPU terms already exceed MILP
+9,17,quantum_uniform_onehot,16,,-1225.6767965355175,,non-QPU terms already exceed MILP
+9,17,quantum_uniform_onehot,64,,-409.34957393441437,,non-QPU terms already exceed MILP
+9,17,quantum_uniform_onehot,256,,-1.251800093872589,,non-QPU terms already exceed MILP
+9,17,quantum_uniform_onehot,1024,,-1.5349718475845293,,non-QPU terms already exceed MILP
+9,18,onehot_p2,16,,-3.184160970762605,,non-QPU terms already exceed MILP
+9,18,onehot_p2,64,,-3.367719417306944,,non-QPU terms already exceed MILP
+9,18,onehot_p2,256,,-4.089895728189731,,non-QPU terms already exceed MILP
+9,18,onehot_p2,1024,,-6.96515585770976,,non-QPU terms already exceed MILP
+9,18,onehot_structured,16,,-2.2397754477133276,,non-QPU terms already exceed MILP
+9,18,onehot_structured,64,,-2.405194752405805,,non-QPU terms already exceed MILP
+9,18,onehot_structured,256,,-3.0495360319764586,,non-QPU terms already exceed MILP
+9,18,onehot_structured,1024,,-5.618502898636507,,non-QPU terms already exceed MILP
+9,18,onehot_transfer,16,,-3.771483838718268,,non-QPU terms already exceed MILP
+9,18,onehot_transfer,64,,-4.131214932924195,,non-QPU terms already exceed MILP
+9,18,onehot_transfer,256,,-5.5533154745498905,,non-QPU terms already exceed MILP
+9,18,onehot_transfer,1024,,-11.232424256202648,,non-QPU terms already exceed MILP
+9,18,quantum_uniform_full,16,,-2449.8979827137664,,non-QPU terms already exceed MILP
+9,18,quantum_uniform_full,64,,-2286.610903142682,,non-QPU terms already exceed MILP
+9,18,quantum_uniform_full,256,,-1388.5574261775473,,non-QPU terms already exceed MILP
+9,18,quantum_uniform_full,1024,,-490.6791389998689,,non-QPU terms already exceed MILP
+9,18,quantum_uniform_onehot,16,,-1470.545988298225,,non-QPU terms already exceed MILP
+9,18,quantum_uniform_onehot,64,,-409.29456601509446,,non-QPU terms already exceed MILP
+9,18,quantum_uniform_onehot,256,,-1.1878763763961615,,non-QPU terms already exceed MILP
+9,18,quantum_uniform_onehot,1024,,-1.4801937103402452,,non-QPU terms already exceed MILP
+9,19,onehot_p2,16,,-4.260279345224262,,non-QPU terms already exceed MILP
+9,19,onehot_p2,64,,-4.5690152344468515,,non-QPU terms already exceed MILP
+9,19,onehot_p2,256,,-5.789026219215884,,non-QPU terms already exceed MILP
+9,19,onehot_p2,1024,,-10.681882756020059,,non-QPU terms already exceed MILP
+9,19,onehot_structured,16,,-3.495800055025029,,non-QPU terms already exceed MILP
+9,19,onehot_structured,64,,-3.7493870623293333,,non-QPU terms already exceed MILP
+9,19,onehot_structured,256,,-4.764446586857957,,non-QPU terms already exceed MILP
+9,19,onehot_structured,1024,,-8.809136303432751,,non-QPU terms already exceed MILP
+9,19,onehot_transfer,16,,-4.884290571208112,,non-QPU terms already exceed MILP
+9,19,onehot_transfer,64,,-5.422991549858125,,non-QPU terms already exceed MILP
+9,19,onehot_transfer,256,,-7.578955539007438,,non-QPU terms already exceed MILP
+9,19,onehot_transfer,1024,,-16.187053202680545,,non-QPU terms already exceed MILP
+9,19,quantum_uniform_full,16,,-3735.369874927179,,non-QPU terms already exceed MILP
+9,19,quantum_uniform_full,64,,-3477.8234056637084,,non-QPU terms already exceed MILP
+9,19,quantum_uniform_full,256,,-1803.813292764149,,non-QPU terms already exceed MILP
+9,19,quantum_uniform_full,1024,,-645.1676171708677,,non-QPU terms already exceed MILP
+9,19,quantum_uniform_onehot,16,,-1804.2379220757211,,non-QPU terms already exceed MILP
+9,19,quantum_uniform_onehot,64,,-516.6515443820608,,non-QPU terms already exceed MILP
+9,19,quantum_uniform_onehot,256,,-1.7211585042605293,,non-QPU terms already exceed MILP
+9,19,quantum_uniform_onehot,1024,,-2.1667850369849475,,non-QPU terms already exceed MILP
+9,20,onehot_p2,16,,-1.7070138534763828,,non-QPU terms already exceed MILP
+9,20,onehot_p2,64,,-1.708382606630039,,non-QPU terms already exceed MILP
+9,20,onehot_p2,256,,-1.7102222015382722,,non-QPU terms already exceed MILP
+9,20,onehot_p2,1024,,-1.7122138465056196,,non-QPU terms already exceed MILP
+9,20,onehot_structured,16,,-0.9912932637380436,,non-QPU terms already exceed MILP
+9,20,onehot_structured,64,,-0.9923557631045696,,non-QPU terms already exceed MILP
+9,20,onehot_structured,256,,-0.9953744589583948,,non-QPU terms already exceed MILP
+9,20,onehot_structured,1024,,-0.9980557599337772,,non-QPU terms already exceed MILP
+9,20,onehot_transfer,16,,-1.843432802357711,,non-QPU terms already exceed MILP
+9,20,onehot_transfer,64,,-1.844489061855711,,non-QPU terms already exceed MILP
+9,20,onehot_transfer,256,,-1.8475557557540014,,non-QPU terms already exceed MILP
+9,20,onehot_transfer,1024,,-1.8502515620857594,,non-QPU terms already exceed MILP
+9,20,quantum_uniform_full,16,,-0.0431125545874238,,non-QPU terms already exceed MILP
+9,20,quantum_uniform_full,64,,-0.04490216076374054,,non-QPU terms already exceed MILP
+9,20,quantum_uniform_full,256,,-0.05330005940049887,,non-QPU terms already exceed MILP
+9,20,quantum_uniform_full,1024,,-0.06613551219925284,,non-QPU terms already exceed MILP
+9,20,quantum_uniform_onehot,16,,-0.3749063150025904,,non-QPU terms already exceed MILP
+9,20,quantum_uniform_onehot,64,,-0.38145216228440404,,non-QPU terms already exceed MILP
+9,20,quantum_uniform_onehot,256,,-0.39301670901477337,,non-QPU terms already exceed MILP
+9,20,quantum_uniform_onehot,1024,,-0.3972438075579703,,non-QPU terms already exceed MILP
+9,21,onehot_p2,16,,-1.55916999198962,,non-QPU terms already exceed MILP
+9,21,onehot_p2,64,,-1.560805406072177,,non-QPU terms already exceed MILP
+9,21,onehot_p2,256,,-1.5619491400502739,,non-QPU terms already exceed MILP
+9,21,onehot_p2,1024,,-1.56904289603699,,non-QPU terms already exceed MILP
+9,21,onehot_structured,16,,-0.9742702470393851,,non-QPU terms already exceed MILP
+9,21,onehot_structured,64,,-0.9747473519528285,,non-QPU terms already exceed MILP
+9,21,onehot_structured,256,,-0.9776265007676557,,non-QPU terms already exceed MILP
+9,21,onehot_structured,1024,,-0.9800911062629893,,non-QPU terms already exceed MILP
+9,21,onehot_transfer,16,,-1.613172352896072,,non-QPU terms already exceed MILP
+9,21,onehot_transfer,64,,-1.613549398840405,,non-QPU terms already exceed MILP
+9,21,onehot_transfer,256,,-1.6163327494869009,,non-QPU terms already exceed MILP
+9,21,onehot_transfer,1024,,-1.6187452474841848,,non-QPU terms already exceed MILP
+9,21,quantum_uniform_full,16,,-0.05314159486442804,,non-QPU terms already exceed MILP
+9,21,quantum_uniform_full,64,,-0.055368701461702585,,non-QPU terms already exceed MILP
+9,21,quantum_uniform_full,256,,-0.08034165063872933,,non-QPU terms already exceed MILP
+9,21,quantum_uniform_full,1024,,-0.0769936973156291,,non-QPU terms already exceed MILP
+9,21,quantum_uniform_onehot,16,,-0.3256708295084536,,non-QPU terms already exceed MILP
+9,21,quantum_uniform_onehot,64,,-0.3320895861761528,,non-QPU terms already exceed MILP
+9,21,quantum_uniform_onehot,256,,-0.3336999942548573,,non-QPU terms already exceed MILP
+9,21,quantum_uniform_onehot,1024,,-0.33389999577048,,non-QPU terms already exceed MILP
+9,22,onehot_p2,16,,-3.0982732969278004,,non-QPU terms already exceed MILP
+9,22,onehot_p2,64,,-3.2840757480225875,,non-QPU terms already exceed MILP
+9,22,onehot_p2,256,,-4.0217004405058105,,non-QPU terms already exceed MILP
+9,22,onehot_p2,1024,,-6.970508165439242,,non-QPU terms already exceed MILP
+9,22,onehot_structured,16,,-2.2083691911102505,,non-QPU terms already exceed MILP
+9,22,onehot_structured,64,,-2.370838484283013,,non-QPU terms already exceed MILP
+9,22,onehot_structured,256,,-3.0178946567029925,,non-QPU terms already exceed MILP
+9,22,onehot_structured,1024,,-5.587676758208545,,non-QPU terms already exceed MILP
+9,22,onehot_transfer,16,,-3.3726764483581064,,non-QPU terms already exceed MILP
+9,22,onehot_transfer,64,,-3.7292034494821564,,non-QPU terms already exceed MILP
+9,22,onehot_transfer,256,,-5.15373448295577,,non-QPU terms already exceed MILP
+9,22,onehot_transfer,1024,,-10.833730600817944,,non-QPU terms already exceed MILP
+9,22,quantum_uniform_full,16,,-2449.899199706968,,non-QPU terms already exceed MILP
+9,22,quantum_uniform_full,64,,-2204.9687638589094,,non-QPU terms already exceed MILP
+9,22,quantum_uniform_full,256,,-1388.5563746641783,,non-QPU terms already exceed MILP
+9,22,quantum_uniform_full,1024,,-490.67800941855967,,non-QPU terms already exceed MILP
+9,22,quantum_uniform_onehot,16,,-1062.31646631255,,non-QPU terms already exceed MILP
+9,22,quantum_uniform_onehot,64,,-164.33301173488144,,non-QPU terms already exceed MILP
+9,22,quantum_uniform_onehot,256,,-1.1309520635550143,,non-QPU terms already exceed MILP
+9,22,quantum_uniform_onehot,1024,,-1.414017688635795,,non-QPU terms already exceed MILP
+9,23,onehot_p2,16,,-1.0518096910018357,,non-QPU terms already exceed MILP
+9,23,onehot_p2,64,,-1.0527909324737266,,non-QPU terms already exceed MILP
+9,23,onehot_p2,256,,-1.0544450777815655,,non-QPU terms already exceed MILP
+9,23,onehot_p2,1024,,-1.0595825790733215,,non-QPU terms already exceed MILP
+9,23,onehot_structured,16,,-0.42618286062497646,,non-QPU terms already exceed MILP
+9,23,onehot_structured,64,,-0.42839951312635094,,non-QPU terms already exceed MILP
+9,23,onehot_structured,256,,-0.43066827312577516,,non-QPU terms already exceed MILP
+9,23,onehot_structured,1024,,-0.43870365445764037,,non-QPU terms already exceed MILP
+9,23,onehot_transfer,16,,-1.0047911662768456,,non-QPU terms already exceed MILP
+9,23,onehot_transfer,64,,-1.0070724059987697,,non-QPU terms already exceed MILP
+9,23,onehot_transfer,256,,-1.009226601694536,,non-QPU terms already exceed MILP
+9,23,onehot_transfer,1024,,-1.0127015524776652,,non-QPU terms already exceed MILP
+9,23,quantum_uniform_full,16,4086.3828344752055,0.43381040170788765,,positive fixed-arrival headroom
+9,23,quantum_uniform_full,64,1015.7768889968991,0.43133949814364314,,positive fixed-arrival headroom
+9,23,quantum_uniform_full,256,250.20334785842752,0.42498539853841066,,positive fixed-arrival headroom
+9,23,quantum_uniform_full,1024,61.043736734177486,0.41474579786881804,,positive fixed-arrival headroom
+9,23,quantum_uniform_onehot,16,1372.2045884316249,0.1971583552658558,,positive fixed-arrival headroom
+9,23,quantum_uniform_onehot,64,330.71904714408043,0.1900708507746458,,positive fixed-arrival headroom
+9,23,quantum_uniform_onehot,256,82.40336857431205,0.1894354559481144,,positive fixed-arrival headroom
+9,23,quantum_uniform_onehot,1024,20.586112228690585,0.18930000672116876,,positive fixed-arrival headroom
+9,24,onehot_p2,16,,-2.2751464733446483,,non-QPU terms already exceed MILP
+9,24,onehot_p2,64,,-2.3677970900098444,,non-QPU terms already exceed MILP
+9,24,onehot_p2,256,,-2.726360095941345,,non-QPU terms already exceed MILP
+9,24,onehot_p2,1024,,-4.1520946862437995,,non-QPU terms already exceed MILP
+9,24,onehot_structured,16,,-1.5206386380668846,,non-QPU terms already exceed MILP
+9,24,onehot_structured,64,,-1.5909943026636029,,non-QPU terms already exceed MILP
+9,24,onehot_structured,256,,-1.8797125821365626,,non-QPU terms already exceed MILP
+9,24,onehot_structured,1024,,-3.010747057829576,,non-QPU terms already exceed MILP
+9,24,onehot_transfer,16,,-2.297217164406902,,non-QPU terms already exceed MILP
+9,24,onehot_transfer,64,,-2.4567093010264216,,non-QPU terms already exceed MILP
+9,24,onehot_transfer,256,,-3.107066511642188,,non-QPU terms already exceed MILP
+9,24,onehot_transfer,1024,,-5.659427171412972,,non-QPU terms already exceed MILP
+9,24,quantum_uniform_full,16,,-1109.8330567570592,,non-QPU terms already exceed MILP
+9,24,quantum_uniform_full,64,,-1035.854943282051,,non-QPU terms already exceed MILP
+9,24,quantum_uniform_full,256,,-813.9318200511261,,non-QPU terms already exceed MILP
+9,24,quantum_uniform_full,1024,,-37.28625202745752,,non-QPU terms already exceed MILP
+9,24,quantum_uniform_onehot,16,,-777.325029574582,,non-QPU terms already exceed MILP
+9,24,quantum_uniform_onehot,64,,-148.59034582951426,,non-QPU terms already exceed MILP
+9,24,quantum_uniform_onehot,256,,-0.6830824134449358,,non-QPU terms already exceed MILP
+9,24,quantum_uniform_onehot,1024,,-0.8123060394063941,,non-QPU terms already exceed MILP
+9,25,onehot_p2,16,,-2.4565267517755274,,non-QPU terms already exceed MILP
+9,25,onehot_p2,64,,-2.542122164850298,,non-QPU terms already exceed MILP
+9,25,onehot_p2,256,,-2.8769706667371793,,non-QPU terms already exceed MILP
+9,25,onehot_p2,1024,,-4.187764669935859,,non-QPU terms already exceed MILP
+9,25,onehot_structured,16,,-1.6035639320398332,,non-QPU terms already exceed MILP
+9,25,onehot_structured,64,,-1.6659707440703642,,non-QPU terms already exceed MILP
+9,25,onehot_structured,256,,-1.9325214247437543,,non-QPU terms already exceed MILP
+9,25,onehot_structured,1024,,-2.981720616495295,,non-QPU terms already exceed MILP
+9,25,onehot_transfer,16,,-2.604358180127747,,non-QPU terms already exceed MILP
+9,25,onehot_transfer,64,,-2.7691569854941918,,non-QPU terms already exceed MILP
+9,25,onehot_transfer,256,,-3.420101064715709,,non-QPU terms already exceed MILP
+9,25,onehot_transfer,1024,,-6.007196946200565,,non-QPU terms already exceed MILP
+9,25,quantum_uniform_full,16,,-1035.944012146916,,non-QPU terms already exceed MILP
+9,25,quantum_uniform_full,64,,-924.9794436910088,,non-QPU terms already exceed MILP
+9,25,quantum_uniform_full,256,,-518.1225817955856,,non-QPU terms already exceed MILP
+9,25,quantum_uniform_full,1024,,-0.39812403551331954,,non-QPU terms already exceed MILP
+9,25,quantum_uniform_onehot,16,,-703.3032101562349,,non-QPU terms already exceed MILP
+9,25,quantum_uniform_onehot,64,,-74.55187350079359,,non-QPU terms already exceed MILP
+9,25,quantum_uniform_onehot,256,,-0.6120466775100795,,non-QPU terms already exceed MILP
+9,25,quantum_uniform_onehot,1024,,-0.7409785438576364,,non-QPU terms already exceed MILP
+9,26,onehot_p2,16,,-2.9234521139223943,,non-QPU terms already exceed MILP
+9,26,onehot_p2,64,,-2.9914957086366485,,non-QPU terms already exceed MILP
+9,26,onehot_p2,256,,-3.2486356697118026,,non-QPU terms already exceed MILP
+9,26,onehot_p2,1024,,-866.4484823648818,,non-QPU terms already exceed MILP
+9,26,onehot_structured,16,,-1.4847938770035398,,non-QPU terms already exceed MILP
+9,26,onehot_structured,64,,-1.5426825992690283,,non-QPU terms already exceed MILP
+9,26,onehot_structured,256,,-1.7686899560503662,,non-QPU terms already exceed MILP
+9,26,onehot_structured,1024,,-865.2501472271979,,non-QPU terms already exceed MILP
+9,26,onehot_transfer,16,,-2.3508975699878647,,non-QPU terms already exceed MILP
+9,26,onehot_transfer,64,,-2.4610436195653165,,non-QPU terms already exceed MILP
+9,26,onehot_transfer,256,,-2.8935268607747275,,non-QPU terms already exceed MILP
+9,26,onehot_transfer,1024,,-865.9010909730569,,non-QPU terms already exceed MILP
+9,26,quantum_uniform_full,16,,-806.6530327544024,,non-QPU terms already exceed MILP
+9,26,quantum_uniform_full,64,,-806.6560160013687,,non-QPU terms already exceed MILP
+9,26,quantum_uniform_full,256,,-547.4670891600981,,non-QPU terms already exceed MILP
+9,26,quantum_uniform_full,1024,,-57.95078871251462,,non-QPU terms already exceed MILP
+9,26,quantum_uniform_onehot,16,,-403.8401123803196,,non-QPU terms already exceed MILP
+9,26,quantum_uniform_onehot,64,,-115.87691856243327,,non-QPU terms already exceed MILP
+9,26,quantum_uniform_onehot,256,,-0.7107616423818399,,non-QPU terms already exceed MILP
+9,26,quantum_uniform_onehot,1024,,-0.8135369804731454,,non-QPU terms already exceed MILP
+9,27,onehot_p2,16,,-1.56634288711939,,non-QPU terms already exceed MILP
+9,27,onehot_p2,64,,-1.5683324948186055,,non-QPU terms already exceed MILP
+9,27,onehot_p2,256,,-1.5748304371954873,,non-QPU terms already exceed MILP
+9,27,onehot_p2,1024,,-1.5721678907284513,,non-QPU terms already exceed MILP
+9,27,onehot_structured,16,,-0.6728556469242903,,non-QPU terms already exceed MILP
+9,27,onehot_structured,64,,-0.6742202556924894,,non-QPU terms already exceed MILP
+9,27,onehot_structured,256,,-0.6785702538909391,,non-QPU terms already exceed MILP
+9,27,onehot_structured,1024,,-0.6822890016410383,,non-QPU terms already exceed MILP
+9,27,onehot_transfer,16,,-1.4011640563767287,,non-QPU terms already exceed MILP
+9,27,onehot_transfer,64,,-1.4024536587530747,,non-QPU terms already exceed MILP
+9,27,onehot_transfer,256,,-1.4063140490325168,,non-QPU terms already exceed MILP
+9,27,onehot_transfer,1024,,-1.4063952952856198,,non-QPU terms already exceed MILP
+9,27,quantum_uniform_full,16,2324.0872320860135,0.24672510055825114,,positive fixed-arrival headroom
+9,27,quantum_uniform_full,64,573.3879193500073,0.24348344607278705,,positive fixed-arrival headroom
+9,27,quantum_uniform_full,256,138.61011622242697,0.23543759901076555,,positive fixed-arrival headroom
+9,27,quantum_uniform_full,1024,32.359836498827555,0.21986049553379416,,positive fixed-arrival headroom
+9,27,quantum_uniform_onehot,16,,-0.12370619503053604,,non-QPU terms already exceed MILP
+9,27,quantum_uniform_onehot,64,,-0.12795829959213734,,non-QPU terms already exceed MILP
+9,27,quantum_uniform_onehot,256,,-0.1298103392982739,,non-QPU terms already exceed MILP
+9,27,quantum_uniform_onehot,1024,,-0.12903329031541944,,non-QPU terms already exceed MILP
+9,28,onehot_p2,16,,-4.3512638482498005,,non-QPU terms already exceed MILP
+9,28,onehot_p2,64,,-4.354865901288576,,non-QPU terms already exceed MILP
+9,28,onehot_p2,256,,-4.354638856479141,,non-QPU terms already exceed MILP
+9,28,onehot_p2,1024,,-4.359184700180776,,non-QPU terms already exceed MILP
+9,28,onehot_structured,16,,-0.6520182123640552,,non-QPU terms already exceed MILP
+9,28,onehot_structured,64,,-0.6536932076560333,,non-QPU terms already exceed MILP
+9,28,onehot_structured,256,,-0.6561182668665424,,non-QPU terms already exceed MILP
+9,28,onehot_structured,1024,,-0.6604536549421027,,non-QPU terms already exceed MILP
+9,28,onehot_transfer,16,,-1.1283098600106314,,non-QPU terms already exceed MILP
+9,28,onehot_transfer,64,,-1.1271911087678745,,non-QPU terms already exceed MILP
+9,28,onehot_transfer,256,,-1.129116105963476,,non-QPU terms already exceed MILP
+9,28,onehot_transfer,1024,,-1.139064016402699,,non-QPU terms already exceed MILP
+9,28,quantum_uniform_full,16,3591.8852877217128,0.38131454214453697,,positive fixed-arrival headroom
+9,28,quantum_uniform_full,64,890.2245106160805,0.37802493618801236,,positive fixed-arrival headroom
+9,28,quantum_uniform_full,256,218.12961625511468,0.3705062409862876,,positive fixed-arrival headroom
+9,28,quantum_uniform_full,1024,52.09160848506572,0.3539228900335729,,positive fixed-arrival headroom
+9,28,quantum_uniform_onehot,16,136.0663026934262,0.01955000637099147,,positive fixed-arrival headroom
+9,28,quantum_uniform_onehot,64,24.095122813390272,0.013847948983311653,,positive fixed-arrival headroom
+9,28,quantum_uniform_onehot,256,5.248952998257532,0.012066713068634272,,positive fixed-arrival headroom
+9,28,quantum_uniform_onehot,1024,1.2304482924262428,0.01131461188197136,,positive fixed-arrival headroom
+9,29,onehot_p2,16,,-2.1372388947493164,,non-QPU terms already exceed MILP
+9,29,onehot_p2,64,,-2.2253430149139604,,non-QPU terms already exceed MILP
+9,29,onehot_p2,256,,-2.5643435574820614,,non-QPU terms already exceed MILP
+9,29,onehot_p2,1024,,-3.9143116484192433,,non-QPU terms already exceed MILP
+9,29,onehot_structured,16,,-1.7105140251514968,,non-QPU terms already exceed MILP
+9,29,onehot_structured,64,,-1.7857781633501872,,non-QPU terms already exceed MILP
+9,29,onehot_structured,256,,-2.0780369862986845,,non-QPU terms already exceed MILP
+9,29,onehot_structured,1024,,-3.2358054231808637,,non-QPU terms already exceed MILP
+9,29,onehot_transfer,16,,-2.446276013746683,,non-QPU terms already exceed MILP
+9,29,onehot_transfer,64,,-2.610671465321502,,non-QPU terms already exceed MILP
+9,29,onehot_transfer,256,,-3.260671310737962,,non-QPU terms already exceed MILP
+9,29,onehot_transfer,1024,,-5.845203659780964,,non-QPU terms already exceed MILP
+9,29,quantum_uniform_full,16,,-1109.8227463840885,,non-QPU terms already exceed MILP
+9,29,quantum_uniform_full,64,,-998.8584730472721,,non-QPU terms already exceed MILP
+9,29,quantum_uniform_full,256,,-592.000770994644,,non-QPU terms already exceed MILP
+9,29,quantum_uniform_full,1024,,-148.24629704601102,,non-QPU terms already exceed MILP
+9,29,quantum_uniform_onehot,16,,-444.33514103278867,,non-QPU terms already exceed MILP
+9,29,quantum_uniform_onehot,64,,-74.49345592345344,,non-QPU terms already exceed MILP
+9,29,quantum_uniform_onehot,256,,-0.5536170225095702,,non-QPU terms already exceed MILP
+9,29,quantum_uniform_onehot,1024,,-0.682540319445252,,non-QPU terms already exceed MILP
+12,15,onehot_p2,16,,-3252.7034423175064,,non-QPU terms already exceed MILP
+12,15,onehot_p2,64,,-248.00909950906498,,non-QPU terms already exceed MILP
+12,15,onehot_p2,256,,-25.905083547884715,,non-QPU terms already exceed MILP
+12,15,onehot_p2,1024,,-62.41380428909906,,non-QPU terms already exceed MILP
+12,15,onehot_structured,16,,-239.31114834311302,,non-QPU terms already exceed MILP
+12,15,onehot_structured,64,,-8.998892419542244,,non-QPU terms already exceed MILP
+12,15,onehot_structured,256,,-13.500674237860949,,non-QPU terms already exceed MILP
+12,15,onehot_structured,1024,,-31.47890333858959,,non-QPU terms already exceed MILP
+12,15,onehot_transfer,16,,-290.7720921577711,,non-QPU terms already exceed MILP
+12,15,onehot_transfer,64,,-67.50183199049934,,non-QPU terms already exceed MILP
+12,15,onehot_transfer,256,,-6966.603086953168,,non-QPU terms already exceed MILP
+12,15,onehot_transfer,1024,,-6966.6109661051305,,non-QPU terms already exceed MILP
+12,15,quantum_uniform_full,16,,-6949.419516422786,,non-QPU terms already exceed MILP
+12,15,quantum_uniform_full,64,,-6717.8252256652195,,non-QPU terms already exceed MILP
+12,15,quantum_uniform_full,256,,-6254.654658324696,,non-QPU terms already exceed MILP
+12,15,quantum_uniform_full,1024,,-4633.759107588543,,non-QPU terms already exceed MILP
+12,15,quantum_uniform_onehot,16,,-5097.591755491798,,non-QPU terms already exceed MILP
+12,15,quantum_uniform_onehot,64,,-1855.966307769515,,non-QPU terms already exceed MILP
+12,15,quantum_uniform_onehot,256,,-3.8625502568029333,,non-QPU terms already exceed MILP
+12,15,quantum_uniform_onehot,1024,,-4.9903232029028,,non-QPU terms already exceed MILP
+12,16,onehot_p2,16,,-4.034757006214932,,non-QPU terms already exceed MILP
+12,16,onehot_p2,64,,-4.0448549061475205,,non-QPU terms already exceed MILP
+12,16,onehot_p2,256,,-4.056565309641883,,non-QPU terms already exceed MILP
+12,16,onehot_p2,1024,,-4.074936159653589,,non-QPU terms already exceed MILP
+12,16,onehot_structured,16,,-2.0030517290506396,,non-QPU terms already exceed MILP
+12,16,onehot_structured,64,,-2.0096725827315822,,non-QPU terms already exceed MILP
+12,16,onehot_structured,256,,-2.022101734415628,,non-QPU terms already exceed MILP
+12,16,onehot_structured,1024,,-2.02248087584303,,non-QPU terms already exceed MILP
+12,16,onehot_transfer,16,,-17.51553510978556,,non-QPU terms already exceed MILP
+12,16,onehot_transfer,64,,-17.521326760412194,,non-QPU terms already exceed MILP
+12,16,onehot_transfer,256,,-17.528916364186443,,non-QPU terms already exceed MILP
+12,16,onehot_transfer,1024,,-17.5345330076525,,non-QPU terms already exceed MILP
+12,16,quantum_uniform_full,16,,-0.01302298903465271,,non-QPU terms already exceed MILP
+12,16,quantum_uniform_full,64,,-0.011573001276701689,,non-QPU terms already exceed MILP
+12,16,quantum_uniform_full,256,,-0.017610497772693634,,non-QPU terms already exceed MILP
+12,16,quantum_uniform_full,1024,,-0.04415845312178135,,non-QPU terms already exceed MILP
+12,16,quantum_uniform_onehot,16,,-0.5267375875264406,,non-QPU terms already exceed MILP
+12,16,quantum_uniform_onehot,64,,-0.5388521384447813,,non-QPU terms already exceed MILP
+12,16,quantum_uniform_onehot,256,,-0.5537708783522248,,non-QPU terms already exceed MILP
+12,16,quantum_uniform_onehot,1024,,-0.5540542448870838,,non-QPU terms already exceed MILP
+12,17,onehot_p2,16,,-1556.9773921434535,,non-QPU terms already exceed MILP
+12,17,onehot_p2,64,,-8.554511239257408,,non-QPU terms already exceed MILP
+12,17,onehot_p2,256,,-11.793392161343945,,non-QPU terms already exceed MILP
+12,17,onehot_p2,1024,,-2453.9329363806173,,non-QPU terms already exceed MILP
+12,17,onehot_structured,16,,-575.8755316040042,,non-QPU terms already exceed MILP
+12,17,onehot_structured,64,,-5.243092498240003,,non-QPU terms already exceed MILP
+12,17,onehot_structured,256,,-6.832652884819254,,non-QPU terms already exceed MILP
+12,17,onehot_structured,1024,,-13.199224649419193,,non-QPU terms already exceed MILP
+12,17,onehot_transfer,16,,-601.0551378374585,,non-QPU terms already exceed MILP
+12,17,onehot_transfer,64,,-2467.268847804866,,non-QPU terms already exceed MILP
+12,17,onehot_transfer,256,,-2467.2821707002586,,non-QPU terms already exceed MILP
+12,17,onehot_transfer,1024,,-2467.285506150569,,non-QPU terms already exceed MILP
+12,17,quantum_uniform_full,16,,-2449.857512792805,,non-QPU terms already exceed MILP
+12,17,quantum_uniform_full,64,,-2368.2172571997507,,non-QPU terms already exceed MILP
+12,17,quantum_uniform_full,256,,-2204.949528897778,,non-QPU terms already exceed MILP
+12,17,quantum_uniform_full,1024,,-1796.833832753793,,non-QPU terms already exceed MILP
+12,17,quantum_uniform_onehot,16,,-1960.665559327419,,non-QPU terms already exceed MILP
+12,17,quantum_uniform_onehot,64,,-736.3037578979784,,non-QPU terms already exceed MILP
+12,17,quantum_uniform_onehot,256,,-83.41732341606985,,non-QPU terms already exceed MILP
+12,17,quantum_uniform_onehot,1024,,-2.171210529806558,,non-QPU terms already exceed MILP
+12,18,onehot_p2,16,,-1150.5622915868007,,non-QPU terms already exceed MILP
+12,18,onehot_p2,64,,-173.1562034410381,,non-QPU terms already exceed MILP
+12,18,onehot_p2,256,,-13.434350494644605,,non-QPU terms already exceed MILP
+12,18,onehot_p2,1024,,-26.325164327266975,,non-QPU terms already exceed MILP
+12,18,onehot_structured,16,,-494.2641693090336,,non-QPU terms already exceed MILP
+12,18,onehot_structured,64,,-5.197315568999329,,non-QPU terms already exceed MILP
+12,18,onehot_structured,256,,-6.806573654110252,,non-QPU terms already exceed MILP
+12,18,onehot_structured,1024,,-13.16216098885343,,non-QPU terms already exceed MILP
+12,18,onehot_transfer,16,,-521.5793757756546,,non-QPU terms already exceed MILP
+12,18,onehot_transfer,64,,-37.52902404030465,,non-QPU terms already exceed MILP
+12,18,onehot_transfer,256,,-2468.2954348403728,,non-QPU terms already exceed MILP
+12,18,onehot_transfer,1024,,-2468.3027410892537,,non-QPU terms already exceed MILP
+12,18,quantum_uniform_full,16,,-2368.211660181565,,non-QPU terms already exceed MILP
+12,18,quantum_uniform_full,64,,-2368.2132276536286,,non-QPU terms already exceed MILP
+12,18,quantum_uniform_full,256,,-2286.5797089902917,,non-QPU terms already exceed MILP
+12,18,quantum_uniform_full,1024,,-1715.191940593868,,non-QPU terms already exceed MILP
+12,18,quantum_uniform_onehot,16,,-1797.4507233125769,,non-QPU terms already exceed MILP
+12,18,quantum_uniform_onehot,64,,-981.2306206464418,,non-QPU terms already exceed MILP
+12,18,quantum_uniform_onehot,256,,-165.09201232095074,,non-QPU terms already exceed MILP
+12,18,quantum_uniform_onehot,1024,,-2.2333445104886778,,non-QPU terms already exceed MILP
+12,19,onehot_p2,16,,-196.4439970101157,,non-QPU terms already exceed MILP
+12,19,onehot_p2,64,,-30.343636748068093,,non-QPU terms already exceed MILP
+12,19,onehot_p2,256,,-5.326566967247345,,non-QPU terms already exceed MILP
+12,19,onehot_p2,1024,,-7.38282399201853,,non-QPU terms already exceed MILP
+12,19,onehot_structured,16,,-53.34078314578801,,non-QPU terms already exceed MILP
+12,19,onehot_structured,64,,-2.230631268444995,,non-QPU terms already exceed MILP
+12,19,onehot_structured,256,,-2.489988878616714,,non-QPU terms already exceed MILP
+12,19,onehot_structured,1024,,-3.515701779113442,,non-QPU terms already exceed MILP
+12,19,onehot_transfer,16,,-70.1313882323011,,non-QPU terms already exceed MILP
+12,19,onehot_transfer,64,,-19.66191460572736,,non-QPU terms already exceed MILP
+12,19,onehot_transfer,256,,-401.0096170914039,,non-QPU terms already exceed MILP
+12,19,onehot_transfer,1024,,-401.01718584518676,,non-QPU terms already exceed MILP
+12,19,quantum_uniform_full,16,,-383.78048201149795,,non-QPU terms already exceed MILP
+12,19,quantum_uniform_full,64,,-383.78137365973816,,non-QPU terms already exceed MILP
+12,19,quantum_uniform_full,256,,-345.3763914257943,,non-QPU terms already exceed MILP
+12,19,quantum_uniform_full,1024,,-294.1887972101322,,non-QPU terms already exceed MILP
+12,19,quantum_uniform_onehot,16,,-307.8355758404068,,non-QPU terms already exceed MILP
+12,19,quantum_uniform_onehot,64,,-141.4331095484813,,non-QPU terms already exceed MILP
+12,19,quantum_uniform_onehot,256,,-13.458157031054725,,non-QPU terms already exceed MILP
+12,19,quantum_uniform_onehot,1024,,-0.7028386106248945,,non-QPU terms already exceed MILP
+12,20,onehot_p2,16,,-5.39335895772092,,non-QPU terms already exceed MILP
+12,20,onehot_p2,64,,-5.408552705543116,,non-QPU terms already exceed MILP
+12,20,onehot_p2,256,,-5.427019400282006,,non-QPU terms already exceed MILP
+12,20,onehot_p2,1024,,-5.428065205691382,,non-QPU terms already exceed MILP
+12,20,onehot_structured,16,,-3.7172162133501843,,non-QPU terms already exceed MILP
+12,20,onehot_structured,64,,-3.725251676165499,,non-QPU terms already exceed MILP
+12,20,onehot_structured,256,,-3.729953772497538,,non-QPU terms already exceed MILP
+12,20,onehot_structured,1024,,-3.730764174477372,,non-QPU terms already exceed MILP
+12,20,onehot_transfer,16,,-19.970074568060227,,non-QPU terms already exceed MILP
+12,20,onehot_transfer,64,,-19.975680827279575,,non-QPU terms already exceed MILP
+12,20,onehot_transfer,256,,-19.978970421601844,,non-QPU terms already exceed MILP
+12,20,onehot_transfer,1024,,-19.983039172017016,,non-QPU terms already exceed MILP
+12,20,quantum_uniform_full,16,,-0.046460391487926245,,non-QPU terms already exceed MILP
+12,20,quantum_uniform_full,64,,-0.04757289122790098,,non-QPU terms already exceed MILP
+12,20,quantum_uniform_full,256,,-0.05348329711705446,,non-QPU terms already exceed MILP
+12,20,quantum_uniform_full,1024,,-0.07786454213783145,,non-QPU terms already exceed MILP
+12,20,quantum_uniform_onehot,16,,-0.6545895272865891,,non-QPU terms already exceed MILP
+12,20,quantum_uniform_onehot,64,,-0.6699895281344652,,non-QPU terms already exceed MILP
+12,20,quantum_uniform_onehot,256,,-0.6971270339563489,,non-QPU terms already exceed MILP
+12,20,quantum_uniform_onehot,1024,,-0.6981561919674277,,non-QPU terms already exceed MILP
+12,21,onehot_p2,16,,-4.373671461122285,,non-QPU terms already exceed MILP
+12,21,onehot_p2,64,,-4.384892303256493,,non-QPU terms already exceed MILP
+12,21,onehot_p2,256,,-4.407861057894479,,non-QPU terms already exceed MILP
+12,21,onehot_p2,1024,,-4.409219415167172,,non-QPU terms already exceed MILP
+12,21,onehot_structured,16,,-2.41228080552537,,non-QPU terms already exceed MILP
+12,21,onehot_structured,64,,-2.417395419564855,,non-QPU terms already exceed MILP
+12,21,onehot_structured,256,,-2.425647508003749,,non-QPU terms already exceed MILP
+12,21,onehot_structured,1024,,-2.433955859974958,,non-QPU terms already exceed MILP
+12,21,onehot_transfer,16,,-25.770014098030515,,non-QPU terms already exceed MILP
+12,21,onehot_transfer,64,,-25.774982855306007,,non-QPU terms already exceed MILP
+12,21,onehot_transfer,256,,-25.784166149904195,,non-QPU terms already exceed MILP
+12,21,onehot_transfer,1024,,-25.79295575118158,,non-QPU terms already exceed MILP
+12,21,quantum_uniform_full,16,,-0.15942703746259212,,non-QPU terms already exceed MILP
+12,21,quantum_uniform_full,64,,-0.16074368311092257,,non-QPU terms already exceed MILP
+12,21,quantum_uniform_full,256,,-0.16717703826725483,,non-QPU terms already exceed MILP
+12,21,quantum_uniform_full,1024,,-0.21002283599227667,,non-QPU terms already exceed MILP
+12,21,quantum_uniform_onehot,16,,-0.8649520487524569,,non-QPU terms already exceed MILP
+12,21,quantum_uniform_onehot,64,,-0.8851249380968511,,non-QPU terms already exceed MILP
+12,21,quantum_uniform_onehot,256,,-0.8983770529739559,,non-QPU terms already exceed MILP
+12,21,quantum_uniform_onehot,1024,,-0.8978895405307412,,non-QPU terms already exceed MILP
+12,22,onehot_p2,16,,-1230.6020368175232,,non-QPU terms already exceed MILP
+12,22,onehot_p2,64,,-171.307206153484,,non-QPU terms already exceed MILP
+12,22,onehot_p2,256,,-11.514459064113908,,non-QPU terms already exceed MILP
+12,22,onehot_p2,1024,,-2453.777475954732,,non-QPU terms already exceed MILP
+12,22,onehot_structured,16,,-412.0746284877605,,non-QPU terms already exceed MILP
+12,22,onehot_structured,64,,-86.11428563217487,,non-QPU terms already exceed MILP
+12,22,onehot_structured,256,,-6.139126497604593,,non-QPU terms already exceed MILP
+12,22,onehot_structured,1024,,-12.493178283053567,,non-QPU terms already exceed MILP
+12,22,onehot_transfer,16,,-436.03379680839134,,non-QPU terms already exceed MILP
+12,22,onehot_transfer,64,,-2465.637537375209,,non-QPU terms already exceed MILP
+12,22,onehot_transfer,256,,-2465.644841528614,,non-QPU terms already exceed MILP
+12,22,onehot_transfer,1024,,-2465.6491435753414,,non-QPU terms already exceed MILP
+12,22,quantum_uniform_full,16,,-2449.887587656267,,non-QPU terms already exceed MILP
+12,22,quantum_uniform_full,64,,-2449.889975206461,,non-QPU terms already exceed MILP
+12,22,quantum_uniform_full,256,,-2286.620127150294,,non-QPU terms already exceed MILP
+12,22,quantum_uniform_full,1024,,-1715.2453995305696,,non-QPU terms already exceed MILP
+12,22,quantum_uniform_onehot,16,,-2042.3700906935846,,non-QPU terms already exceed MILP
+12,22,quantum_uniform_onehot,64,,-736.421353163365,,non-QPU terms already exceed MILP
+12,22,quantum_uniform_onehot,256,,-1.9327902236182126,,non-QPU terms already exceed MILP
+12,22,quantum_uniform_onehot,1024,,-2.3079872620874085,,non-QPU terms already exceed MILP
+12,23,onehot_p2,16,,-6.3218757717404515,,non-QPU terms already exceed MILP
+12,23,onehot_p2,64,,-6.33117571449111,,non-QPU terms already exceed MILP
+12,23,onehot_p2,256,,-6.3445174226071686,,non-QPU terms already exceed MILP
+12,23,onehot_p2,1024,,-6.349196585128084,,non-QPU terms already exceed MILP
+12,23,onehot_structured,16,,-2.060749630560167,,non-QPU terms already exceed MILP
+12,23,onehot_structured,64,,-2.0650662874031696,,non-QPU terms already exceed MILP
+12,23,onehot_structured,256,,-2.0720871324956533,,non-QPU terms already exceed MILP
+12,23,onehot_structured,1024,,-2.080180896096863,,non-QPU terms already exceed MILP
+12,23,onehot_transfer,16,,-18.815120395389386,,non-QPU terms already exceed MILP
+12,23,onehot_transfer,64,,-18.82040163466445,,non-QPU terms already exceed MILP
+12,23,onehot_transfer,256,,-18.82689538609702,,non-QPU terms already exceed MILP
+12,23,onehot_transfer,1024,,-18.834643337977468,,non-QPU terms already exceed MILP
+12,23,quantum_uniform_full,16,218.32311450845563,0.023177181836217642,,positive fixed-arrival headroom
+12,23,quantum_uniform_full,64,52.05404198460692,0.022104228388343472,,positive fixed-arrival headroom
+12,23,quantum_uniform_full,256,10.600943860426666,0.018006339203566313,,positive fixed-arrival headroom
+12,23,quantum_uniform_full,1024,,-0.0175853637047112,,non-QPU terms already exceed MILP
+12,23,quantum_uniform_onehot,16,,-0.5187187139017624,,non-QPU terms already exceed MILP
+12,23,quantum_uniform_onehot,64,,-0.5348062170596677,,non-QPU terms already exceed MILP
+12,23,quantum_uniform_onehot,256,,-0.5432895645499229,,non-QPU terms already exceed MILP
+12,23,quantum_uniform_onehot,1024,,-0.5436354111807304,,non-QPU terms already exceed MILP
+12,24,onehot_p2,16,,-33.57488876256684,,non-QPU terms already exceed MILP
+12,24,onehot_p2,64,,-22.98238959149603,,non-QPU terms already exceed MILP
+12,24,onehot_p2,256,,-16.39816417064867,,non-QPU terms already exceed MILP
+12,24,onehot_p2,1024,,-34.9313804140038,,non-QPU terms already exceed MILP
+12,24,onehot_structured,16,,-32.08686682902044,,non-QPU terms already exceed MILP
+12,24,onehot_structured,64,,-31.091798509318323,,non-QPU terms already exceed MILP
+12,24,onehot_structured,256,,-25.44715428521158,,non-QPU terms already exceed MILP
+12,24,onehot_structured,1024,,-18.859747584610886,,non-QPU terms already exceed MILP
+12,24,onehot_transfer,16,,-47.30847094015917,,non-QPU terms already exceed MILP
+12,24,onehot_transfer,64,,-47.31833343667677,,non-QPU terms already exceed MILP
+12,24,onehot_transfer,256,,-47.31784179148963,,non-QPU terms already exceed MILP
+12,24,onehot_transfer,1024,,-47.323075090949715,,non-QPU terms already exceed MILP
+12,24,quantum_uniform_full,16,,-29.621598405123223,,non-QPU terms already exceed MILP
+12,24,quantum_uniform_full,64,,-28.624029209036962,,non-QPU terms already exceed MILP
+12,24,quantum_uniform_full,256,,-26.296373767640034,,non-QPU terms already exceed MILP
+12,24,quantum_uniform_full,1024,,-19.3233001762419,,non-QPU terms already exceed MILP
+12,24,quantum_uniform_onehot,16,,-21.235947954024596,,non-QPU terms already exceed MILP
+12,24,quantum_uniform_onehot,64,,-10.261241036467254,,non-QPU terms already exceed MILP
+12,24,quantum_uniform_onehot,256,,-3.611647766090755,,non-QPU terms already exceed MILP
+12,24,quantum_uniform_onehot,1024,,-3.6280928425694583,,non-QPU terms already exceed MILP
+12,25,onehot_p2,16,,-524.3511942688492,,non-QPU terms already exceed MILP
+12,25,onehot_p2,64,,-7.7564853872099775,,non-QPU terms already exceed MILP
+12,25,onehot_p2,256,,-9.245356771069055,,non-QPU terms already exceed MILP
+12,25,onehot_p2,1024,,-15.123783970477234,,non-QPU terms already exceed MILP
+12,25,onehot_structured,16,,-114.0293848445217,,non-QPU terms already exceed MILP
+12,25,onehot_structured,64,,-3.33240601374564,,non-QPU terms already exceed MILP
+12,25,onehot_structured,256,,-4.06010625451745,,non-QPU terms already exceed MILP
+12,25,onehot_structured,1024,,-6.957076462531404,,non-QPU terms already exceed MILP
+12,25,onehot_transfer,16,,-134.85469189615105,,non-QPU terms already exceed MILP
+12,25,onehot_transfer,64,,-25.79220153240749,,non-QPU terms already exceed MILP
+12,25,onehot_transfer,256,,-1127.3849756569616,,non-QPU terms already exceed MILP
+12,25,onehot_transfer,1024,,-1127.3907631631955,,non-QPU terms already exceed MILP
+12,25,quantum_uniform_full,16,,-1073.071035299712,,non-QPU terms already exceed MILP
+12,25,quantum_uniform_full,64,,-1036.0849798801646,,non-QPU terms already exceed MILP
+12,25,quantum_uniform_full,256,,-1036.0951315256316,,non-QPU terms already exceed MILP
+12,25,quantum_uniform_full,1024,,-925.175865444915,,non-QPU terms already exceed MILP
+12,25,quantum_uniform_onehot,16,,-962.7140530951947,,non-QPU terms already exceed MILP
+12,25,quantum_uniform_onehot,64,,-408.0337490786478,,non-QPU terms already exceed MILP
+12,25,quantum_uniform_onehot,256,,-1.325415692444949,,non-QPU terms already exceed MILP
+12,25,quantum_uniform_onehot,1024,,-1.4899554810181144,,non-QPU terms already exceed MILP
+12,26,onehot_p2,16,,-209.7528279868493,,non-QPU terms already exceed MILP
+12,26,onehot_p2,64,,-43.66325405743555,,non-QPU terms already exceed MILP
+12,26,onehot_p2,256,,-5.851252686690714,,non-QPU terms already exceed MILP
+12,26,onehot_p2,1024,,-7.925433170428732,,non-QPU terms already exceed MILP
+12,26,onehot_structured,16,,-104.65421241844888,,non-QPU terms already exceed MILP
+12,26,onehot_structured,64,,-2.3668622987897834,,non-QPU terms already exceed MILP
+12,26,onehot_structured,256,,-2.6264179038844304,,non-QPU terms already exceed MILP
+12,26,onehot_structured,1024,,-3.656592881779943,,non-QPU terms already exceed MILP
+12,26,onehot_transfer,16,,-123.38807867684955,,non-QPU terms already exceed MILP
+12,26,onehot_transfer,64,,-22.084758114819124,,non-QPU terms already exceed MILP
+12,26,onehot_transfer,256,,-403.18302634170686,,non-QPU terms already exceed MILP
+12,26,onehot_transfer,1024,,-403.1868471856942,,non-QPU terms already exceed MILP
+12,26,quantum_uniform_full,16,,-384.0125476437097,,non-QPU terms already exceed MILP
+12,26,quantum_uniform_full,64,,-384.01297264113236,,non-QPU terms already exceed MILP
+12,26,quantum_uniform_full,256,,-319.9938775161572,,non-QPU terms already exceed MILP
+12,26,quantum_uniform_full,1024,,-230.40073529337678,,non-QPU terms already exceed MILP
+12,26,quantum_uniform_onehot,16,,-333.65666256669647,,non-QPU terms already exceed MILP
+12,26,quantum_uniform_onehot,64,,-205.66729914558528,,non-QPU terms already exceed MILP
+12,26,quantum_uniform_onehot,256,,-0.882833263494831,,non-QPU terms already exceed MILP
+12,26,quantum_uniform_onehot,1024,,-0.94110572860518,,non-QPU terms already exceed MILP
+12,27,onehot_p2,16,,-4.25717775686644,,non-QPU terms already exceed MILP
+12,27,onehot_p2,64,,-4.274225651519373,,non-QPU terms already exceed MILP
+12,27,onehot_p2,256,,-4.282619394129142,,non-QPU terms already exceed MILP
+12,27,onehot_p2,1024,,-4.291575690498576,,non-QPU terms already exceed MILP
+12,27,onehot_structured,16,,-1.8769892441341653,,non-QPU terms already exceed MILP
+12,27,onehot_structured,64,,-1.8795516850659624,,non-QPU terms already exceed MILP
+12,27,onehot_structured,256,,-1.8831954380657407,,non-QPU terms already exceed MILP
+12,27,onehot_structured,1024,,-1.8895475353274378,,non-QPU terms already exceed MILP
+12,27,onehot_transfer,16,,-19.91775371565018,,non-QPU terms already exceed MILP
+12,27,onehot_transfer,64,,-19.925268313032575,,non-QPU terms already exceed MILP
+12,27,onehot_transfer,256,,-19.929920420632698,,non-QPU terms already exceed MILP
+12,27,onehot_transfer,1024,,-19.935747473151423,,non-QPU terms already exceed MILP
+12,27,quantum_uniform_full,16,,-0.00454373937100172,,non-QPU terms already exceed MILP
+12,27,quantum_uniform_full,64,,-0.006672894116491079,,non-QPU terms already exceed MILP
+12,27,quantum_uniform_full,256,,-0.014679148327559233,,non-QPU terms already exceed MILP
+12,27,quantum_uniform_full,1024,,-0.03618955658748746,,non-QPU terms already exceed MILP
+12,27,quantum_uniform_onehot,16,,-0.5903312033042312,,non-QPU terms already exceed MILP
+12,27,quantum_uniform_onehot,64,,-0.6074957461096346,,non-QPU terms already exceed MILP
+12,27,quantum_uniform_onehot,256,,-0.6243041045963764,,non-QPU terms already exceed MILP
+12,27,quantum_uniform_onehot,1024,,-0.6210228456184268,,non-QPU terms already exceed MILP
+12,28,onehot_p2,16,,-3.662967399926856,,non-QPU terms already exceed MILP
+12,28,onehot_p2,64,,-3.6702360932249576,,non-QPU terms already exceed MILP
+12,28,onehot_p2,256,,-3.6906174009200186,,non-QPU terms already exceed MILP
+12,28,onehot_p2,1024,,-3.694567349513818,,non-QPU terms already exceed MILP
+12,28,onehot_structured,16,,-1.5782392277615145,,non-QPU terms already exceed MILP
+12,28,onehot_structured,64,,-1.5812496348517016,,non-QPU terms already exceed MILP
+12,28,onehot_structured,256,,-1.5902892263839021,,non-QPU terms already exceed MILP
+12,28,onehot_structured,1024,,-1.593305931543,,non-QPU terms already exceed MILP
+12,28,onehot_transfer,16,,-15.943162066054356,,non-QPU terms already exceed MILP
+12,28,onehot_transfer,64,,-15.94616836366913,,non-QPU terms already exceed MILP
+12,28,onehot_transfer,256,,-15.954012067180884,,non-QPU terms already exceed MILP
+12,28,onehot_transfer,1024,,-15.961432926938869,,non-QPU terms already exceed MILP
+12,28,quantum_uniform_full,16,2543.233263500485,0.2699896432532114,,positive fixed-arrival headroom
+12,28,quantum_uniform_full,64,630.2838791954237,0.26764374646154465,,positive fixed-arrival headroom
+12,28,quantum_uniform_full,256,149.799683683088,0.25444375071674585,,positive fixed-arrival headroom
+12,28,quantum_uniform_full,1024,33.40636196412647,0.2269708407111466,,positive fixed-arrival headroom
+12,28,quantum_uniform_onehot,16,,-0.2990833045914769,,non-QPU terms already exceed MILP
+12,28,quantum_uniform_onehot,64,,-0.3114187535829842,,non-QPU terms already exceed MILP
+12,28,quantum_uniform_onehot,256,,-0.3216582960449159,,non-QPU terms already exceed MILP
+12,28,quantum_uniform_onehot,1024,,-0.3226561965420842,,non-QPU terms already exceed MILP
+12,29,onehot_p2,16,,-701.1762191172675,,non-QPU terms already exceed MILP
+12,29,onehot_p2,64,,-152.41644290747354,,non-QPU terms already exceed MILP
+12,29,onehot_p2,256,,-7.519500154608977,,non-QPU terms already exceed MILP
+12,29,onehot_p2,1024,,-13.414839467252023,,non-QPU terms already exceed MILP
+12,29,onehot_structured,16,,-185.9406214285118,,non-QPU terms already exceed MILP
+12,29,onehot_structured,64,,-2.985507717836299,,non-QPU terms already exceed MILP
+12,29,onehot_structured,256,,-3.717794255382614,,non-QPU terms already exceed MILP
+12,29,onehot_structured,1024,,-6.61760272855463,,non-QPU terms already exceed MILP
+12,29,onehot_transfer,16,,-207.68442274120753,,non-QPU terms already exceed MILP
+12,29,onehot_transfer,64,,-26.83825241298473,,non-QPU terms already exceed MILP
+12,29,onehot_transfer,256,,-1118.0389878958813,,non-QPU terms already exceed MILP
+12,29,onehot_transfer,1024,,-1118.0474274479202,,non-QPU terms already exceed MILP
+12,29,quantum_uniform_full,16,,-1099.619613264047,,non-QPU terms already exceed MILP
+12,29,quantum_uniform_full,64,,-1062.968203354605,,non-QPU terms already exceed MILP
+12,29,quantum_uniform_full,256,,-1026.3217247760404,,non-QPU terms already exceed MILP
+12,29,quantum_uniform_full,1024,,-879.7489238609269,,non-QPU terms already exceed MILP
+12,29,quantum_uniform_onehot,16,,-770.5960256953404,,non-QPU terms already exceed MILP
+12,29,quantum_uniform_onehot,64,,-330.8763081276775,,non-QPU terms already exceed MILP
+12,29,quantum_uniform_onehot,256,,-1.1510967334470479,,non-QPU terms already exceed MILP
+12,29,quantum_uniform_onehot,1024,,-1.3237334468431072,,non-QPU terms already exceed MILP

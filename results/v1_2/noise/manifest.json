@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.2",
+  "qiskit_aer": "0.17.2",
+  "method": "exact density_matrix; Aer for n<=9, independent C++ kernel for n=12; zero-noise statevector reference",
+  "target": "all_to_all",
+  "max_qubits": 12,
+  "seeds": [
+    15,
+    18,
+    21,
+    24,
+    27
+  ],
+  "rates": [
+    0.0,
+    0.0001,
+    0.001,
+    0.01
+  ],
+  "gate_noise": "two-qubit depolarizing channel after each compiled CX; no other noise",
+  "repeats": 30,
+  "shots": [
+    16,
+    64,
+    256,
+    1024
+  ],
+  "source_sha256": "a8238ecfdb24431ab3e4a7e0bb708cf2272737b4a585ee62d3d8b44941bf489a",
+  "conditions": 240,
+  "sampling_batches": 28800
+}

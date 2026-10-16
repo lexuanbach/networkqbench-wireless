@@ -8,7 +8,7 @@ the same meaning across extensions.
 
 from __future__ import annotations
 
-SCHEMA_VERSION = "1.0"
+SCHEMA_VERSION = "1.2"
 
 from dataclasses import asdict, dataclass
 from enum import Enum
@@ -26,6 +26,35 @@ class EvidenceKind(str, Enum):
     MODELED_QPU = "modeled_qpu"
     TRACE_REPLAYED_QPU = "trace_replayed_qpu"
     MEASURED_PROVIDER = "measured_provider"
+    MODELED_ENERGY = "modeled_energy"
+    MODELED_NETWORK = "modeled_network"
+    MODELED_OPERATION_DURATIONS = "modeled_operation_durations"
+    NOISY_SIMULATED = "noisy_simulated"
+
+
+@dataclass(frozen=True)
+class ExperimentIdentity:
+    """Additive 1.2 identity; absent historical coordinates remain unknown."""
+    workload: str
+    instance_id: str
+    incumbent: str | None = None
+    encoding: str | None = None
+    depth: int | None = None
+    noise: str | None = None
+    controller: str | None = None
+    transition_scenario: str | None = None
+
+
+@dataclass(frozen=True)
+class ActionEvent:
+    event_id: str
+    solver: str
+    ready_s: float
+    arrival_s: float
+    computed_action: Any
+    applied_action: Any
+    rejection_reason: str
+    transition_j: float | None
 
 
 @dataclass(frozen=True)

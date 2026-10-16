@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.2",
+  "workload_cases": 480,
+  "sample_batches": 432000,
+  "scalar_event_replays": 84287,
+  "qubo_audits": 480,
+  "training_only": true,
+  "base_scenarios": 8640,
+  "noise_conditions": 240,
+  "noise_sampling_batches": 28800,
+  "status": "passed"
+}

@@ -1,0 +1,16 @@
+algorithm,shots,mean_saving_j,ci_low,ci_high,unit
+heuristic,0,-227.03912542938463,-520.5169336106316,-17.402318624207716,held-out instance; equal weight to each size; 20000 paired resamples
+local_search,0,-5.732761915059988,-22.19773666790762,3.032558096585945,held-out instance; equal weight to each size; 20000 paired resamples
+milp,0,0.0,0.0,0.0,held-out instance; equal weight to each size; 20000 paired resamples
+onehot_transfer,16,-3384.2738554938765,-4063.5780534200508,-2690.9639496732507,held-out instance; equal weight to each size; 20000 paired resamples
+onehot_transfer,64,-2991.8321683441454,-3615.8224484206366,-2334.618927419083,held-out instance; equal weight to each size; 20000 paired resamples
+onehot_transfer,256,-4859.115413575524,-5285.80280782852,-4413.486643219097,held-out instance; equal weight to each size; 20000 paired resamples
+onehot_transfer,1024,-12456.974811067976,-13740.4265186646,-11356.108635702352,held-out instance; equal weight to each size; 20000 paired resamples
+qaoa_online,16,-26008.508855047825,-27573.296091499433,-24479.117253275024,held-out instance; equal weight to each size; 20000 paired resamples
+qaoa_online,64,-74265.83913412642,-75921.84653447461,-72646.47879530973,held-out instance; equal weight to each size; 20000 paired resamples
+qaoa_online,256,-264636.2405207708,-267401.3285935507,-261709.3666559442,held-out instance; equal weight to each size; 20000 paired resamples
+qaoa_online,1024,-1022500.5197330338,-1032084.1559572456,-1012296.5980471858,held-out instance; equal weight to each size; 20000 paired resamples
+qaoa_transfer,16,-6830.03907479832,-7678.309333216827,-6064.3689424009435,held-out instance; equal weight to each size; 20000 paired resamples
+qaoa_transfer,64,-4423.115939182041,-4837.244511315318,-4035.782051343385,held-out instance; equal weight to each size; 20000 paired resamples
+qaoa_transfer,256,-4884.057879073896,-5311.2373941346805,-4438.428435177638,held-out instance; equal weight to each size; 20000 paired resamples
+qaoa_transfer,1024,-12343.461474905833,-13621.667393115194,-11265.29017295576,held-out instance; equal weight to each size; 20000 paired resamples

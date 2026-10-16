@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.1",
+  "python": "3.14.6",
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "numpy": "2.4.6",
+  "qiskit": "2.3.1",
+  "sizes": [
+    6,
+    8,
+    9,
+    12
+  ],
+  "seeds": 30,
+  "instances": 120,
+  "test_instances": 60,
+  "repeats": 30,
+  "shots": [
+    16,
+    64,
+    256,
+    1024
+  ],
+  "milp_oracle_matches": 120,
+  "fit_rows": 240,
+  "matched_circuits": 360,
+  "sampling_rows": 43200,
+  "operation_durations_s": {
+    "rz": 0.0,
+    "sx": 3.5e-08,
+    "x": 7e-08,
+    "cx": 3e-07,
+    "reset": 5e-06,
+    "measure": 1.6e-06,
+    "barrier": 0.0
+  },
+  "power_curve": {
+    "url": "https://www.spec.org/power_ssj2008/results/res2025q1/power_ssj2008-20250207-01482.html",
+    "load": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "watts": [
+      220.0,
+      258.0,
+      303.0,
+      347.0,
+      394.0,
+      444.0,
+      498.0,
+      574.0,
+      718.0,
+      904.0,
+      924.0
+    ]
+  },
+  "local_power_w": [
+    10,
+    50,
+    100
+  ],
+  "qpu_allocated_power_w": [
+    10000,
+    20000,
+    40000
+  ],
+  "qpu_marginal_fraction": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "default_marginal_fraction": 0.01,
+  "marginal_fraction_evidence": "illustrative sensitivity; no marginal-power measurement",
+  "reuse_counts": [
+    1,
+    10,
+    100,
+    1000
+  ],
+  "horizons_s": [
+    1,
+    10,
+    60,
+    300,
+    3600
+  ],
+  "migration_j_per_function": [
+    0,
+    1,
+    10,
+    100
+  ],
+  "host_optimizer_s_per_evaluation": 0.0001,
+  "host_optimizer_evidence": "illustrative lower-cost scenario",
+  "telemetry": "powermetrics requires superuser; no energy measurement performed",
+  "allocation": "full system power times active service; no external queue charged; utilization=1",
+  "communication_boundary": "local client activity during submit/roundtrip; external WAN excluded",
+  "compilation": "per-instance online cost; never amortized across different objectives",
+  "offline": "actual local ideal-simulator training cost shared by family; charged / M",
+  "quality": "feasible and (power-optimum)/(abs(optimum)+1)<=0.05",
+  "quantum_evidence": "ideal statevector, complete compiled circuits, modeled timing and power; no live QPU",
+  "elapsed_s": 66.02804133296013,
+  "source_sha256": {
+    "run_energy_experiments.py": "86da13323724d11496b51129d62f7ed396814e2ed2e7fb6698b4b4be7ba7f6dc",
+    "energy_model.py": "18f0abb863e62b110f1b2171bf274678623f069d90af6d524f5a041808f6634c",
+    "networkqbench.py": "fdab41f3e377f5181706b66ef49653d46b5457ea573cbd6530eb2a17243397ca",
+    "run_review_experiments.py": "3e98b7904a5d92bd85147c787c860542f28b2741956c2ff6de93f297c6f5bacd"
+  },
+  "source_amendments": {
+    "energy_model.py": {
+      "current_sha256": "56c0698e7e0ab7fad6bf27681e55cce93d704ef7f0eb813cd4b075e88b1ff0b8",
+      "execution_snapshot": "source_snapshots/energy_model_at_execution.py",
+      "change": "Canonical evidence enum validation added after execution; no solver, power, timing or accounting calculation changed."
+    }
+  },
+  "cpu": "Apple M5 Max",
+  "memory_bytes": 137438953472,
+  "logical_cpus": 18,
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "3.0.3",
+    "matplotlib": "3.10.9"
+  }
+}

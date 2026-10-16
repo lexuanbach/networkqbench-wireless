@@ -1,0 +1,57 @@
+{
+  "training_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "test_seeds": [
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "calibration_s": 0.027538583963178098,
+  "offline_seconds_by_size": {
+    "6": 0.6755320356460208,
+    "8": 1.4132725043455048,
+    "9": 3.1999609110643994,
+    "12": 22.12003245938103
+  },
+  "quality_target": 0.9,
+  "delay_statistic": "training 90th percentile",
+  "energy_statistic": "training mean",
+  "warning": "empirical policy; predictions have no per-instance guarantee",
+  "default_scenario": {
+    "profile": "optimistic",
+    "local_w": 50.0,
+    "qpu_w": 20000.0,
+    "reuse": 100,
+    "horizon": 60.0,
+    "migration": 10.0,
+    "boundary": "allocated",
+    "marginal_fraction": 0.01
+  }
+}

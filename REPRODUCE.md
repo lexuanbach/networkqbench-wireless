@@ -1,3 +1,7 @@
+# Current manuscript reproduction
+
+For schema 1.2 and all five main figures, follow [README-energy.md](README-energy.md). The commands below reproduce the supporting dimensionless studies with their original protocols.
+
 # Reproduce every number
 
 ```bash
@@ -39,3 +43,19 @@ python3 fetch_quantumqueue.py   # optional: QuantumQueue at the pinned commit
 python3 emit_host_manifest.py  # records the timing host
 python3 analyze_tnsm_revision.py  # SLA weight grid, seed-cluster SE, block sensitivity
 ```
+
+## Sustainability extension
+
+The energy study is independent of the external traffic datasets. Its pinned
+software environment, complete execution commands, evidence boundary, and
+result map are in `README-energy.md`. The principal commands are:
+
+```sh
+python3 test_energy.py
+python3 validate_energy_results.py
+python3 analyze_energy.py
+```
+
+Only `run_energy_experiments.py` replaces the measured phase-time and sampling
+records. Analysis regenerates figures/tables from saved records. Historical
+results outside `results/sustainability/` are not modified.

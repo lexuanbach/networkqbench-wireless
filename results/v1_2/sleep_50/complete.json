@@ -1,0 +1,9 @@
+{
+  "workload": "sleep_50",
+  "instances": 120,
+  "circuits": 840,
+  "sampling_batches": 100800,
+  "milp_matches": 120,
+  "qubo_matches": 120,
+  "schema_version": "1.2"
+}
