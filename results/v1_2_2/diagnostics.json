@@ -1,0 +1,19 @@
+{
+  "q_minus_keep": {
+    "mean": -45.859043887512236,
+    "ci_low": -206.90192207934567,
+    "ci_high": 75.88440467583331,
+    "wins": 4,
+    "instances": 60
+  },
+  "crossing_horizon_s": 42.43571622153525,
+  "crossing_residual_j": 0.0,
+  "common_objective_difference": {
+    "mean": 0.16434791924366438,
+    "ci_low": -7.464957320152947,
+    "ci_high": 8.05745170966414,
+    "wins": 2,
+    "instances": 60
+  },
+  "greedy_budget_us": 0.500703084980937
+}

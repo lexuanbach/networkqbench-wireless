@@ -1,10 +1,12 @@
 # NetworkQBench-Wireless: operational-energy experiments (schema 1.2)
 
-This is the artifact for **NetworkQBench-Wireless: Deadline-Aware Energy Accounting for Quantum-Assisted Network Control**, one original, unpublished manuscript. Version 1.2.0 is a software release; it does not imply a previously published paper.
+This is the artifact for **NetworkQBench-Wireless: Deadline-Aware Energy Accounting for Quantum-Assisted Server Placement in Network Control**, one original, unpublished manuscript. Version 1.2.0 is a software release; it does not imply a previously published paper.
 
 The benchmark integrates channel assignment, routing, dimensionless placement, and physically dimensioned server placement. Only physical placement supports electricity conclusions. Quantum and server energy are modeled. Local phase times are measured; quantum quality is exact noiseless or exact noisy simulation. No live-QPU or network electricity measurement is claimed.
 
-## Reproduce the published outputs from frozen measurements
+For the current article and version 1.2.2 package, use [README-round3.md](README-round3.md). The previous revision protocol remains in README-revision.md. The commands below reproduce the original 1.2 outputs.
+
+## Reproduce the original outputs from frozen measurements
 
 Python 3.14.6 was used. Install the pinned dependencies in an isolated environment. A C++17 compiler is needed for the exact-density validation and full 12-qubit noisy experiment. No external plotting package, font folder, or manuscript checkout is required.
 

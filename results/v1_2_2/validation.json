@@ -1,0 +1,15 @@
+{
+  "template_equivalence_cases": 60,
+  "template_probability_error_max": 6.550315845288424e-15,
+  "fresh_template_rechecks": 2,
+  "timing_records": 600,
+  "independent_event_replays": 1800,
+  "keep_pairing": true,
+  "crossing_replayed": true,
+  "shared_profile": true,
+  "keep_zero_charges": true,
+  "ledger_reconciled": true,
+  "timeout_bounds": true,
+  "training_split": true,
+  "historical_files_unchanged": 473
+}

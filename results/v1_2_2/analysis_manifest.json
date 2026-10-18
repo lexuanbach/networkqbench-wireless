@@ -1,0 +1,10 @@
+{
+  "bootstrap_resamples": 20000,
+  "bootstrap_seed": 20261017,
+  "unit": "size-stratified problem instance; repetitions averaged",
+  "source_sha256": {
+    "analyze_v122.py": "9a5b8ea2bc35a00b7be1845d8d8841dcb7f776feae28f86ad7da246d11d0f190",
+    "revision_v121.py": "a21b9cb0739de29b8754a5703caf7b37462bc690ce1f75bb81ce0e552f2bad28",
+    "analyze_v12.py": "58479a6b7a0d1351c2feb36b44926852a42019b6b1d2faa6b8c0c48130f312ed"
+  }
+}

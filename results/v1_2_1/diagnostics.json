@@ -1,0 +1,17 @@
+{
+  "break_even_us": 22.110421899317956,
+  "min_structured_us": 20.340000000000003,
+  "median_n6_us": 21.540000000000006,
+  "headroom_mean_w": 2.7619047619047707,
+  "headroom_max_w": 50.66666666666629,
+  "positive_headroom_w": [
+    38.000000000000455,
+    50.66666666666629,
+    0.3333333333337123,
+    37.714285714285325,
+    1.0,
+    38.000000000000455
+  ],
+  "component_negative_qaoa_cells": 0,
+  "component_negative_quantum_cells": 44
+}

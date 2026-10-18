@@ -186,7 +186,7 @@ def figures(s,grid):
  fig.savefig(DEST/'admission.pdf',metadata={'CreationDate':None,'ModDate':None});plt.close(fig)
 
 
-def macros(s,grid):
+def macros(s,grid,write_headline=True):
  values={}
  for prefix,alg,shots in [('Milp','milp',0),('Greedy','heuristic',0),('ClassUniform','classical_uniform_onehot',64),('QuantumUniform','quantum_uniform_onehot',64),('Dense','onehot_transfer',64),('Structured','onehot_structured',64),('DepthTwo','onehot_p2',64)]:
   r=s[(s.algorithm==alg)&(s.shots==shots)].iloc[0]
@@ -205,7 +205,7 @@ def macros(s,grid):
    values[prefix+suffix+'Quality']=fmt(100*g.quality.mean(),1)
  values['MultipleOptima']=str(int((ins.cooptimal_states>1).sum()))
  (DEST/'v12_numbers.tex').write_text('\n'.join('\\newcommand{\\V'+k+'}{'+v+'}' for k,v in values.items())+'\n')
- (OUT/'headline_numbers.json').write_text(json.dumps(values,indent=2))
+ if write_headline:(OUT/'headline_numbers.json').write_text(json.dumps(values,indent=2))
 
 
 def captions():

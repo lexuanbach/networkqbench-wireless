@@ -1,0 +1,10 @@
+{
+  "sparse_exact_checks": 54,
+  "event_replays": 3320,
+  "timeout_check": true,
+  "zero_compute_baseline": true,
+  "training_split": true,
+  "paired_comparators": true,
+  "ledger_reconciliation": true,
+  "component_interpolation": true
+}

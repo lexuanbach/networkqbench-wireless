@@ -1,6 +1,6 @@
 # NetworkQBench-Wireless — reproducible benchmark artifact
 
-This repository accompanies **NetworkQBench-Wireless: Deadline-Aware Energy Accounting for Quantum-Assisted Network Control**, an original manuscript. Software release `networkqbench-wireless-v1.2.0` integrates solution quality, complete execution resources, applied actions, and operational energy. See [README-energy.md](README-energy.md) for the complete schema-1.2 experiment, validation, and reproduction commands.
+This repository accompanies **NetworkQBench-Wireless: Deadline-Aware Energy Accounting for Quantum-Assisted Server Placement in Network Control**, an original manuscript. Version 1.2.2 integrates solution quality, complete execution resources, applied actions, and operational energy. Start with [README-round3.md](README-round3.md) for the current reproduction and validation commands. Earlier protocols remain in [README-revision.md](README-revision.md) and [README-energy.md](README-energy.md).
 
 The supporting network studies below retain their execution protocols and result files. Quantum evidence is exact noiseless/noisy simulation or declared calibration-snapshot emulation. Remote service and electricity are explicit models or trace replay, not live-QPU measurements. Internal reviews and manuscript source are excluded from this artifact. Generated PDFs and table fragments are written only under `output/`.
 

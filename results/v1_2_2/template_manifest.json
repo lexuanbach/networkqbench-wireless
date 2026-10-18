@@ -1,0 +1,40 @@
+{
+  "campaign": "Template",
+  "started_utc": "2026-10-18T04:06:36.773625+00:00",
+  "finished_utc": "2026-10-18T04:06:59.923960+00:00",
+  "elapsed_s": 23.15025500021875,
+  "python": "3.14.6",
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "rounds": 10,
+  "seed": 20261018,
+  "heldout_seeds": [
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "sizes": [
+    6,
+    8,
+    9,
+    12
+  ],
+  "target": "grid4x4",
+  "reuse": 100,
+  "source_sha256": {
+    "run_v122.py": "81afc8b3b8ea449a330c2541e02ad9be472306f748f5cb1426b6fb3e3ea94687",
+    "energy_v12.py": "1960b26bc47091c4577f572d7a8c303f3cb582476c4f1fad5ccc162b45ef8359"
+  },
+  "evidence": "Host durations measured; distributions simulated; energy modeled"
+}

@@ -1,3 +1,10 @@
+# Version 1.2.2 — 18 October 2026
+
+- Add paired incumbent contrasts, replayed horizon crossing, common-profile objective comparison, and scale-quality bounds.
+- Add measured symbolic-template binding with layout-aware probability validation and full preparation/service accounting.
+- Add timing-campaign provenance, per-size QAOA diagnosis, and portable revised figures and tables.
+- Preserve historical measurements and public extension interfaces.
+
 # Software release 1.2.0
 
 NetworkQBench-Wireless integrates quality, complete circuit resources, deadlines, applied actions, and operational energy in one benchmark. This software version does not imply publication of an earlier paper.
