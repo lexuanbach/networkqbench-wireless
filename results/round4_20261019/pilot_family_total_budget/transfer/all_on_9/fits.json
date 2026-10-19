@@ -1,0 +1,74 @@
+[
+  {
+    "theta": [
+      0.0006953125,
+      2.180882400148271
+    ],
+    "objective": "expectation",
+    "objective_value": 0.047297665176802665,
+    "training_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "family_evaluations": 74,
+    "instance_evaluations": 1110,
+    "historical_instance_budget": 1618,
+    "max_family_evaluations": 107,
+    "iterations": 12,
+    "stopping_reason": "Optimization terminated successfully.",
+    "offline_s": 0.0790316250640899,
+    "optimum_informed": false,
+    "workload": "all_on",
+    "size": 9,
+    "method": "direct"
+  },
+  {
+    "theta": [
+      0.877736974488713,
+      2.6544040017224253
+    ],
+    "objective": "useful_mass",
+    "objective_value": -0.25321355670510787,
+    "training_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "family_evaluations": 98,
+    "instance_evaluations": 1470,
+    "historical_instance_budget": 1561,
+    "max_family_evaluations": 104,
+    "iterations": 25,
+    "stopping_reason": "Optimization terminated successfully.",
+    "offline_s": 0.1028529170434922,
+    "optimum_informed": true,
+    "workload": "all_on",
+    "size": 9,
+    "method": "direct"
+  }
+]

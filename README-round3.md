@@ -13,7 +13,7 @@ python3 -m venv .venv
 .venv/bin/python render_v122.py
 ```
 
-Figures, tables, and numeric macros appear in `output/v1_2_2/`. The renderer also regenerates historical supplementary tables from their stored inputs. It writes no historical measurements. `--manuscript PATH` copies generated files into an independently provided manuscript directory. Figure 1 uses bundled Matplotlib code and fonts.
+Figures, tables, and numeric macros appear in `output/v1_2_2/`. The renderer also regenerates historical supplementary tables from their stored inputs. It writes no historical measurements. `--manuscript PATH` copies generated files into an independently provided manuscript directory. Figure 1 uses bundled drawing code and font assets. Current plot typography uses the article's LaTeX `txfonts` Times family; see [README-presentation.md](README-presentation.md) for dependencies and local presentation changes.
 
 The analyzers retain original primary and demand intervals where those results are unchanged. New paired contrasts resample 20,000 times within size, averaging sampling repetitions before resampling. Repeated timing rounds do not increase the number of problem instances.
 

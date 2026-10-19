@@ -1,0 +1,9 @@
+{
+  "ordering_forward_checks": 4,
+  "independent_reverse_circuit_checks": 4,
+  "training_fits": 30,
+  "train_test_separation": true,
+  "budget_caps": true,
+  "larger_per_instance_thresholds": 60,
+  "independent_crossed_event_replays": 666
+}

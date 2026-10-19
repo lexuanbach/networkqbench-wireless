@@ -1,0 +1,103 @@
+{
+  "campaign": "Round4Transfer",
+  "started_utc": "2026-10-19T00:50:11.858636+00:00",
+  "finished_utc": "2026-10-19T00:50:54.669288+00:00",
+  "environment": {
+    "python": "3.14.6",
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "qiskit": "2.3.1"
+  },
+  "parameters": {
+    "seed": 20261019,
+    "training_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "test_seeds": [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "shots": [
+      16,
+      64,
+      256,
+      1024
+    ],
+    "repetitions": 30,
+    "objectives": [
+      "expectation",
+      "useful_mass"
+    ],
+    "budget": "historical objective-specific individual probability evaluations; 15 per family call",
+    "maxiter": 40
+  },
+  "source_sha256": {
+    "round4.py": "feccc1df32838e2ac1b73cc7ba70fcedda50872f48daedba21578dfe9d65d6d7",
+    "run_round4.py": "a73b47fe9d135d9b0093e3fab570c7a1a4bc2485e69c3b74b82a3766cbd4e646",
+    "energy_v12.py": "1960b26bc47091c4577f572d7a8c303f3cb582476c4f1fad5ccc162b45ef8359",
+    "revision_v121.py": "a21b9cb0739de29b8754a5703caf7b37462bc690ce1f75bb81ce0e552f2bad28",
+    "analyze_v12.py": "58479a6b7a0d1351c2feb36b44926852a42019b6b1d2faa6b8c0c48130f312ed"
+  },
+  "input_sha256": {
+    "results/v1_2_1/aligned_transfer.json": "0d3770b2b5f4c255285b2b1d042c1c8edd02806a9d12bd0b8e776091cac283b3",
+    "results/v1_2_1/aligned_fits.json": "314310e6579399346efa4d5db9f7ee1b28ebfcaae7be8c73a4573a2ae1493eae",
+    "results/v1_2/all_on/instances.csv": "be3a149f031c6822ae7de66618a43837d77708bbc5f905322bd83896e2534518",
+    "results/v1_2/all_on/outcomes.csv": "2e0b3d590b01c5a06f8fd868db39f85878ff98ac5ffdac1d877f6a33fe1b8c05",
+    "results/v1_2/all_on/fits.json": "3afd79605e43edb170868ffda462a2b0c17fbca327d7ee3194f625f0397f09fb",
+    "results/v1_2/all_on/transfer.json": "3dca1c00368f64eff3e51acbb0fec43ae078cb1f78c5ebcabac23c9451312bce",
+    "results/v1_2/sleep_0/instances.csv": "a3d514df3fda30e97ad24be008a44e7c1e35d9a7f2f4475262270463f4c16e76",
+    "results/v1_2/sleep_0/outcomes.csv": "4174bf73adce920c867b583ffc31310b341613f69854cf2f075276cece4fe404",
+    "results/v1_2/sleep_0/fits.json": "f75b166f49ac77f5a9dafe96b2116e3406503c0135e6d5f14eb004ee97107313",
+    "results/v1_2/sleep_0/transfer.json": "7a2fd7a3496cfbcf9ddece829699b91c532e67ec255de0b4ffdf61d17fc5b7f3",
+    "results/v1_2/sleep_10/instances.csv": "e0c64f74012d4eb4d5b8f7e78cc951829a2dad22b886ff85a044717302772308",
+    "results/v1_2/sleep_10/outcomes.csv": "3fa7d728dba1f42df173a5cbad9fe553845650dadbdf31caf62c1bad224d87c4",
+    "results/v1_2/sleep_10/fits.json": "55e36606e02cb5a371e583f2856eec386b5c5611adcc4de9d1ed27b9a6685dae",
+    "results/v1_2/sleep_10/transfer.json": "5245977739728d6e5da8929dfb5a70fddaacb262a289b04aff388dced5ebac6f",
+    "results/v1_2/sleep_50/instances.csv": "60d9c8835149c05bbcb063645535713f12123ab3c3f71da86550653616c6ef58",
+    "results/v1_2/sleep_50/outcomes.csv": "6352471411ec9f29bc07696a291bcd62a71db397e83c30281aee855ff6ff9b54",
+    "results/v1_2/sleep_50/fits.json": "e194028b0c094ced71ee769f1ee3764cfc57b015d99e181bbda80d2c43ef2679",
+    "results/v1_2/sleep_50/transfer.json": "799aa3bb324de899aa3eb5522b889d67e9a32aa54701f8bd277ab7e72d9094fe"
+  },
+  "evidence": "Local wall times measured; quantum quality simulated; all joules modeled",
+  "assumptions": {
+    "host_w": 50,
+    "qpu_w": 20000,
+    "reuse": 100,
+    "horizon_s": 60,
+    "migration_j": 10,
+    "queue_s": 0.01,
+    "submit_s": 0.0005,
+    "roundtrip_s": 0.002,
+    "target": "grid4x4",
+    "durations": "unchanged declared scenario values",
+    "timing": "sequential campaigns on one host"
+  }
+}

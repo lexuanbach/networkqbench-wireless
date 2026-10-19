@@ -1,6 +1,6 @@
 # NetworkQBench-Wireless — reproducible benchmark artifact
 
-This repository accompanies **NetworkQBench-Wireless: Deadline-Aware Energy Accounting for Quantum-Assisted Server Placement in Network Control**, an original manuscript. Version 1.2.2 integrates solution quality, complete execution resources, applied actions, and operational energy. Start with [README-round3.md](README-round3.md) for the current reproduction and validation commands. Earlier protocols remain in [README-revision.md](README-revision.md) and [README-energy.md](README-energy.md).
+This repository accompanies **NetworkQBench-Wireless: Deadline-Aware Energy Accounting for Quantum-Assisted Server Placement in Network Control**, the accompanying manuscript. The local artifact integrates solution quality, complete execution resources, applied actions, and operational energy. Start with [README-current.md](README-current.md) for the current local reproduction and validation commands. Release v1.2.3 adds the round-four and round-five experiments and the current presentation; v1.2.2 covers evidence through the template study. Earlier protocols remain in [README-revision.md](README-revision.md) and [README-energy.md](README-energy.md).
 
 The supporting network studies below retain their execution protocols and result files. Quantum evidence is exact noiseless/noisy simulation or declared calibration-snapshot emulation. Remote service and electricity are explicit models or trace replay, not live-QPU measurements. Internal reviews and manuscript source are excluded from this artifact. Generated PDFs and table fragments are written only under `output/`.
 
@@ -26,7 +26,7 @@ and manuscript-ready table fragments under ignored `output/` directories.
 - Mean 105.5 objective evaluations per tuned instance -> 100% modeled deadline misses in every profile; 1,024-shot transferred parameters: 90.0% optimal, 28.3% on time (nominal).
 - Abilene next-window replay: local/mean-field 96.7% optimal vs QAOA 90.0%; n=16 hardness: 86.7% vs 56.7%.
 
-Environment: Python >=3.13, numpy, scipy, pandas, scikit-learn (HiGHS via scipy).
+Environment: Python 3.14.6, numpy, scipy, pandas, scikit-learn (HiGHS via scipy).
 
 ## Public extension interface
 

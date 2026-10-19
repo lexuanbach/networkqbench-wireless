@@ -1,3 +1,15 @@
+# Version 1.2.3 — 19 October 2026
+
+- Publish the round-four and round-five records: direct family training, deadline-limited proportional-load scaling, paired template analyses, ordering diagnostics, and crossed overhead/envelope replays.
+- Add the cartoon Figure 1 renderer with bundled, separately licensed fonts and icons.
+- Add legends to the frontier and quality-energy figures.
+
+- Separate read-only campaigns from derived analysis and validation outputs.
+- Regenerate all legacy and current tables without a manuscript dependency.
+- Add reconciled template components, complete sensitivity support, all-budget favorable counts, noise resources, admission-target counts, and illustrative carbon conversions.
+- Add portable manifest projections, environment preflight, and current reproduction entry point.
+- Keep all historical records and packages unchanged.
+
 # Version 1.2.2 — 18 October 2026
 
 - Add paired incumbent contrasts, replayed horizon crossing, common-profile objective comparison, and scale-quality bounds.

@@ -1,6 +1,6 @@
-# Current manuscript reproduction
+# Current local reproduction
 
-For schema 1.2 and all five main figures, follow [README-energy.md](README-energy.md). The commands below reproduce the supporting dimensionless studies with their original protocols.
+Follow [README-current.md](README-current.md). The canonical command is `python reproduce_current.py --validate`; it needs no manuscript directory and never writes into stored evidence. The commands below are optional historical remeasurement protocols, not the current reproduction chain.
 
 # Reproduce every number
 

@@ -24,10 +24,13 @@ sys.path.insert(0, str(root))
 import networkqbench  # noqa: F401  import smoke
 import pandas as pd
 assert len(pd.read_csv(root / "results/raw_results.csv")) > 1000
-for script in root.glob("*.py"):
+for script in root.rglob("*.py"):
     if script.name == Path(__file__).name:
         continue
+    if any(part in {".git", "output", "__pycache__"} for part in script.relative_to(root).parts):
+        continue
     source = script.read_text()
+    assert (chr(47) + "Users" + chr(47)) not in source, f"personal path: {script.relative_to(root)}"
     assert ' / "submission" / ' not in source, f"external submission path: {script.name}"
     assert "02-QPU-Aware-CoOptimization" not in source, f"sibling-project path: {script.name}"
 print("artifact check: OK")

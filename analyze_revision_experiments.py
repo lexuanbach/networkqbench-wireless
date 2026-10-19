@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+import argparse
+from artifact_paths import output_directory
 import json
 import math
 from pathlib import Path
@@ -43,6 +45,17 @@ def wilson(successes: int, n: int) -> tuple[float, float]:
 
 
 def main() -> int:
+    global RESULTS, RES, OUTPUT, TABLES, TAB, FIGURES, DERIVED
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--input', type=Path, default=ROOT/'results')
+    ap.add_argument('--output', type=Path, default=ROOT/'output/legacy/analyze_revision_experiments')
+    a = ap.parse_args()
+    RESULTS = RES = a.input
+    OUTPUT = output_directory(a.output)
+    TABLES = TAB = output_directory(OUTPUT/'tables')
+    FIGURES = output_directory(OUTPUT/'figures')
+    DERIVED = output_directory(OUTPUT/'derived')
+
     FIGURES.mkdir(parents=True, exist_ok=True)
     TABLES.mkdir(parents=True, exist_ok=True)
     raw = pd.read_csv(RESULTS / "raw_results.csv")
@@ -63,7 +76,7 @@ def main() -> int:
         lo, hi = wilson(successes, len(group))
         rates.append({"algorithm": algorithm, "n": len(group),
                       "rate": successes / len(group), "ci_low": lo, "ci_high": hi})
-    pd.DataFrame(rates).to_csv(RESULTS / "revision_rate_intervals.csv", index=False)
+    pd.DataFrame(rates).to_csv(DERIVED / "revision_rate_intervals.csv", index=False)
 
     q = static[static.algorithm == "qaoa"].copy()
     pstar = q.success_prob.clip(lower=1e-15, upper=1 - 1e-15)
@@ -76,7 +89,7 @@ def main() -> int:
     hard_summary = hard.groupby(["n_vars", "algorithm"], as_index=False).agg(
         instances=("seed", "size"), optimal_rate=("optimal", "mean"),
         mean_gap=("gap", "mean"), mean_utility=("utility", "mean"))
-    hard_summary.to_csv(RESULTS / "revision_hardness_summary.csv", index=False)
+    hard_summary.to_csv(DERIVED / "revision_hardness_summary.csv", index=False)
 
     trace = pd.read_csv(RESULTS / "revision_abilene_trace.csv")
     trace = trace[(trace.algorithm != "qaoa") | (trace.profile == "nominal")].copy()
@@ -87,7 +100,7 @@ def main() -> int:
         mean_utility=("utility", "mean"),
         next_max_utilization=("next_max_utilization", "mean"),
         next_overflow=("next_overflow", "mean"))
-    trace_summary.to_csv(RESULTS / "revision_abilene_summary.csv", index=False)
+    trace_summary.to_csv(DERIVED / "revision_abilene_summary.csv", index=False)
 
     # Deadline/queue boundary: on-time fraction over the observed deadlines.
     queues = np.geomspace(0.005, 5.0, 45)
@@ -182,7 +195,7 @@ def main() -> int:
         "hard_n16": hard_summary[hard_summary.n_vars == 16].to_dict("records"),
         "abilene": trace_summary.to_dict("records"),
     }
-    (RESULTS / "revision_key_results.json").write_text(json.dumps(report, indent=2))
+    (DERIVED / "revision_key_results.json").write_text(json.dumps(report, indent=2))
     print(json.dumps(report, indent=2))
     return 0
 

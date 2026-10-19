@@ -1,0 +1,16 @@
+{
+  "source_sha256": "64d56e3fbadf96eaa31ca41d4e5320fb6f53b144bb7344947f6a51e0ee97380e",
+  "input_sha256": {
+    "v1_2/all_on/outcomes.csv": "2e0b3d590b01c5a06f8fd868db39f85878ff98ac5ffdac1d877f6a33fe1b8c05",
+    "v1_2_1/larger_quality.csv": "a45a16a9a2f8240a7da128482d46e15a37fef2d04c648ebcc9dc5fe957914558",
+    "v1_2_1/larger_resources.csv": "cc958c8e1f41a53302cf3bcb3a4b8ee5198d12d9d7587b60069c0dd40112ae1a",
+    "v1_2_1/training_diagnosis.csv": "1abae4e6367b172e74c94694ce70ffbe61be3728a1017073b59a6a70046f1f9b",
+    "v1_2_1/timing.csv": "a638f14e83d530faac002e5c7465c08158c9a84b9f114befd10878da80d36e0e",
+    "round4_20261019/deadline_instances.csv": "8b436ad806b3614c5b66da884e0d20bfb8837483b8a09879d87c797b75d82626",
+    "round4_20261019/deadline_summary.csv": "c9bc73519585032bc21f3815f85a557bd3412532cf922d4cb3ec9a1565231f41"
+  },
+  "bootstrap_resamples": 20000,
+  "bootstrap_seed": 20261017,
+  "assumptions": "unchanged Primary except specified crossed overhead/power/utilization",
+  "generated_utc": "2026-10-19T01:47:26.026510+00:00"
+}

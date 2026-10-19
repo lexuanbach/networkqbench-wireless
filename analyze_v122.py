@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Round-three paired analyses; all historical inputs are read only."""
 import argparse,json,hashlib
+from artifact_paths import output_directory
 from pathlib import Path
 from dataclasses import replace
 import numpy as np
@@ -23,7 +24,7 @@ def stats(g,column):
     lo,hi=paired_interval(g,column);return dict(mean=float(g[column].mean()),ci_low=float(lo),ci_high=float(hi),wins=int((g[column]<-1e-8).sum()),instances=len(g))
 
 
-def analysis(old,prev,out):
+def analysis(old,prev,out,campaign=ROOT/'results/v1_2_2'):
     data=pd.read_csv(old/'all_on/outcomes.csv');data=data[data.seed>=15].copy();primary=pd.read_csv(prev/'primary_instances.csv');summary=pd.read_csv(prev/'primary_summary.csv');q=primary[(primary.algorithm=='onehot_structured')&(primary.shots==64)].set_index(['size','seed']);stay=primary[primary.algorithm=='keep_incumbent'].set_index(['size','seed']);diff=(q.total_j-stay.total_j).rename('q_minus_keep_j').reset_index();diff.to_csv(out/'keep_paired.csv',index=False)
     results={'q_minus_keep':stats(diff,'q_minus_keep_j')}
     small=data[((data.algorithm=='onehot_structured')&(data.shots==64))|(data.algorithm=='milp')]
@@ -80,8 +81,8 @@ def analysis(old,prev,out):
         zp=per_instance(z,replace(DEFAULT,boundary=boundary,marginal_fraction=.001));zc=compare(zp);zc['boundary']=boundary;zs.append(zc)
     pd.concat(zs).to_csv(out/'zero_transpilation_summary.csv',index=False)
     (out/'diagnostics.json').write_text(json.dumps(results,indent=2))
-    if (out/'template_timing.csv').exists() and (out/'template_equivalence.csv').exists():
-        times=pd.read_csv(out/'template_timing.csv').groupby(['size','seed']).mean(numeric_only=True);offline=pd.read_csv(out/'template_offline.csv').groupby('size').total_s.mean();ledgers=[]
+    if (campaign/'template_timing.csv').exists() and (campaign/'template_equivalence.csv').exists():
+        times=pd.read_csv(campaign/'template_timing.csv').groupby(['size','seed']).mean(numeric_only=True);offline=pd.read_csv(campaign/'template_offline.csv').groupby('size').total_s.mean();ledgers=[]
         for mode in ['template','numeric']:
             raw=data.copy();raw=raw[((raw.algorithm=='onehot_structured')&(raw.shots==64))|raw.algorithm.isin(['milp','heuristic'])].copy()
             for (n,seed),ix in raw[raw.algorithm=='onehot_structured'].groupby(['size','seed']).groups.items():
@@ -98,5 +99,5 @@ def analysis(old,prev,out):
     (out/'analysis_manifest.json').write_text(json.dumps(manifest,indent=2));print(json.dumps(results,indent=2))
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--input',type=Path,default=ROOT/'results/v1_2');ap.add_argument('--previous',type=Path,default=ROOT/'results/v1_2_1');ap.add_argument('--output',type=Path,default=ROOT/'results/v1_2_2');a=ap.parse_args();a.output.mkdir(parents=True,exist_ok=True);analysis(a.input,a.previous,a.output)
+    ap=argparse.ArgumentParser();ap.add_argument('--input',type=Path,default=ROOT/'results/v1_2');ap.add_argument('--previous',type=Path,default=ROOT/'results/v1_2_1');ap.add_argument('--output',type=Path,default=ROOT/'output/analysis/v122');ap.add_argument('--campaign',type=Path,default=ROOT/'results/v1_2_2');a=ap.parse_args();a.output=output_directory(a.output);analysis(a.input,a.previous,a.output,a.campaign)
 if __name__=='__main__':main()

@@ -1,0 +1,14 @@
+{
+  "sparse_exhaustive_cases": 6,
+  "direct_fits": 32,
+  "training_separation": true,
+  "evaluation_caps": true,
+  "independent_quantum_event_replays": 11264,
+  "sparse_event_replays": 600,
+  "deadline_exhaustion_and_overruns": true,
+  "zero_compute_fallback": true,
+  "missing_bounds_preserved": true,
+  "round_pairing": true,
+  "common_profiles": true,
+  "campaign_source_hashes": true
+}

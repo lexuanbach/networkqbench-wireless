@@ -1,0 +1,52 @@
+{
+  "campaign": "AuditDerived",
+  "new_measurements": false,
+  "bootstrap_resamples": 20000,
+  "bootstrap_seed": 20261017,
+  "unit": "problem instance after averaging sampling repetitions and timing rounds",
+  "input_sha256": {
+    "results/round4_20261019/template_round_instances.csv": "5c73ae439cef8f353515838942bd56718b0d993f23bceac1dcaee47860c29d6b",
+    "results/v1_2_2/sensitivity_summary.csv": "d35aa191ebe61d6f35311ac418348d008ed9ee85af7d2f05321c92f2f976e027",
+    "results/round5_20261019/crossed_overheads.csv": "d4f12e767855a814ac809e1bf228939dd7b672d983027239a309c09afa9c62a6",
+    "results/v1_2_2/sensitivity_all.csv": "417d1a0120c491cb4d5745488b9567df81a33d4adce613464a2f48f0df020411",
+    "results/v1_2_1/sleep_consolidation.csv": "755cc83eb9b6e1cecda9b2dcc506215b1732e1eaf1d0df87fa135483035ccc9c",
+    "results/v1_2/all_on/sensitivity.csv": "2b0f3c7932e0b976b9a90b114f5d4b9bb40d89f2330a98b91b0a2916a081b304",
+    "results/v1_2/all_on/policies.csv": "767dd5f631b2aba0a001959f029d4f677a0cc5c47c95249aaf32136d59643630",
+    "results/v1_2/noise/probabilities.csv": "8324e74b316c9516956de0e1405adef6c2db2b23e8aee37de2618a17689550a2",
+    "results/v1_2/all_on/instances.csv": "be3a149f031c6822ae7de66618a43837d77708bbc5f905322bd83896e2534518",
+    "results/v1_2_2/diagnostics.json": "01f46345c14990f97e48bc3010a4069da81500a9e8db4c66fc1d753db4b7a5e1"
+  },
+  "source_sha256": "f21b003a2b24890acb3a43c7a3f4e54f6fd918055321819c99c16a7b81b16fd9",
+  "portable_projections": [
+    {
+      "source": "results/round4_20261019/analysis_manifest.json",
+      "source_sha256": "ed870526bcd05ff06908963bfaddb75bf56283d53d912789cef80fedf67fbe5e",
+      "projection": "portable_manifests/round4_20261019/analysis_manifest.json"
+    },
+    {
+      "source": "results/v1_2_1/demand_manifest.json",
+      "source_sha256": "7cf09de870f48d829ed68bd0d039eaee2f377691be7bd8ea829b7be04300d084",
+      "projection": "portable_manifests/v1_2_1/demand_manifest.json"
+    },
+    {
+      "source": "results/v1_2_1/larger_manifest.json",
+      "source_sha256": "253961961d7a4465fb0e3f2b786b0b1f298e8180d74760b7b913954551752049",
+      "projection": "portable_manifests/v1_2_1/larger_manifest.json"
+    },
+    {
+      "source": "results/v1_2_1/scaling_manifest.json",
+      "source_sha256": "0e9c47170427f652a87d2f5207e778fe7940270433325b2075ca9f1ce1c0aea2",
+      "projection": "portable_manifests/v1_2_1/scaling_manifest.json"
+    },
+    {
+      "source": "results/v1_2_1/timing_manifest.json",
+      "source_sha256": "a032d91b76d288181f1610db46df0536b5012c385afee2adbcee413ab4310f53",
+      "projection": "portable_manifests/v1_2_1/timing_manifest.json"
+    },
+    {
+      "source": "results/v1_2_1/training_manifest.json",
+      "source_sha256": "35743223436565c282a6cddd6ec91d2e51e141c4adc15a64c458616797690c1b",
+      "projection": "portable_manifests/v1_2_1/training_manifest.json"
+    }
+  ]
+}

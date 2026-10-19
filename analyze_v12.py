@@ -9,7 +9,7 @@ from energy_v12 import *
 from energy_model import PROFILES,minimum_shots
 ROOT=Path(__file__).resolve().parent;OUT=ROOT/'results/v1_2'
 DEFAULT=Scenario()
-LABELS={'milp':'HiGHS MILP','local_search':'Local search','heuristic':'Greedy placement','classical_uniform_full':'Classical uniform full','classical_uniform_onehot':'Classical uniform one-hot','quantum_uniform_full':'Quantum uniform full','quantum_uniform_onehot':'Quantum uniform one-hot','qaoa_online':'Online QAOA','qaoa_transfer':'Transferred QAOA','onehot_transfer':'One-hot dense p=1','onehot_structured':'One-hot structured p=1','onehot_p2':'One-hot structured p=2'}
+LABELS={'milp':'HiGHS MILP','local_search':'Local search','heuristic':'Greedy placement','classical_uniform_full':'Classical uniform full','classical_uniform_onehot':'Classical uniform one-hot','quantum_uniform_full':'Quantum uniform full','quantum_uniform_onehot':'Quantum uniform one-hot','qaoa_online':'Online QAOA','qaoa_transfer':'Standard-X transfer','onehot_transfer':'Dense QAOA','onehot_structured':'Structured QAOA','onehot_p2':'Structured QAOA p=2'}
 KEY=['workload','size','seed','algorithm','shots']
 METRICS=['compute_j','preparation_j','optimization_j','communication_j','postprocessing_j','offline_j','service_j','network_j','transition_j','total_j','quality','optimal','feasible','timely','useful','accepted','applied_quality','delay_loss_j','quality_loss_j','fallback_loss_j']
 
@@ -189,7 +189,14 @@ def policies(data,pi,folder):
 
 
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--skip-sweep',action='store_true');a=ap.parse_args()
+ global OUT
+ from artifact_paths import output_directory
+ import shutil
+
+ ap=argparse.ArgumentParser();ap.add_argument('--skip-sweep',action='store_true');ap.add_argument('--input',type=Path,default=OUT);ap.add_argument('--output',type=Path,default=ROOT/'output/analysis/v12');a=ap.parse_args()
+ OUT=output_directory(a.output)
+ if OUT == a.input.resolve():raise ValueError('Input and output must differ')
+ shutil.copytree(a.input,OUT,dirs_exist_ok=True)
  for name in ['all_on','sleep_0','sleep_10','sleep_50']:
   folder=OUT/name
   if not (folder/'complete.json').exists():raise RuntimeError('incomplete experiment '+name)

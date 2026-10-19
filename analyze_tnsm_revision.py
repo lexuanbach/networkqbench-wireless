@@ -5,6 +5,8 @@ sensitivity. Reads stored CSVs only."""
 
 from __future__ import annotations
 
+import argparse
+from artifact_paths import output_directory
 from pathlib import Path
 
 import numpy as np
@@ -73,8 +75,7 @@ def weight_grid():
     macro("WeightGridChanged", len(changed))
     if changed:
         pd.DataFrame(changed, columns=["w_deadline", "w_infeasible",
-                                       "task", "profile"]).to_csv(
-            RESULTS / "tnsm_weight_grid_changes.csv", index=False)
+                                       "task", "profile"]).to_csv(DERIVED / "tnsm_weight_grid_changes.csv", index=False)
 
 
 def seed_cluster_se():
@@ -106,6 +107,17 @@ def abilene_blocks():
 
 
 def main() -> int:
+    global RESULTS, RES, OUTPUT, TABLES, TAB, FIGURES, DERIVED
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--input', type=Path, default=ROOT/'results')
+    ap.add_argument('--output', type=Path, default=ROOT/'output/legacy/analyze_tnsm_revision')
+    a = ap.parse_args()
+    RESULTS = RES = a.input
+    OUTPUT = output_directory(a.output)
+    TABLES = TAB = output_directory(OUTPUT/'tables')
+    FIGURES = output_directory(OUTPUT/'figures')
+    DERIVED = output_directory(OUTPUT/'derived')
+
     weight_grid()
     seed_cluster_se()
     abilene_blocks()

@@ -1,0 +1,1 @@
+Figure 1 drawing helpers and the selected original icon/font assets, bundled to remove the external plotting dependency. Fonts and icons retain their licenses in the corresponding directories. The renderer modifies the original layout and annotations; experimental values come from the frozen primary records.

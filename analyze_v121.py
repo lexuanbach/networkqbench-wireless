@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Derive paired revision tables from frozen inputs and separately measured additions."""
 import argparse,json
+from artifact_paths import output_directory
 from dataclasses import replace
 import numpy as np,pandas as pd
 from revision_v121 import *
@@ -91,29 +92,29 @@ def static(out):
     (out/'diagnostics.json').write_text(json.dumps(details,indent=2))
 
 
-def additions(out):
-    if (out/'training_diagnosis.csv').exists():
-        d=pd.read_csv(out/'training_diagnosis.csv');d.groupby(['workload','size','depth','split'])[['uniform','fitted','transferred']].mean().to_csv(out/'training_summary.csv')
-        raw=pd.read_csv(out/'aligned_samples.csv');p=raw.groupby(['workload','size','seed','algorithm','shots'],as_index=False).mean(numeric_only=True)
+def additions(out, campaign=RESULTS):
+    if (campaign/'training_diagnosis.csv').exists():
+        d=pd.read_csv(campaign/'training_diagnosis.csv');d.groupby(['workload','size','depth','split'])[['uniform','fitted','transferred']].mean().to_csv(out/'training_summary.csv')
+        raw=pd.read_csv(campaign/'aligned_samples.csv');p=raw.groupby(['workload','size','seed','algorithm','shots'],as_index=False).mean(numeric_only=True)
         summaries=[]
         for family,g in p.groupby('workload'):
             old=pd.read_csv(FROZEN/family/'primary_instances.csv');old=old[(old.seed>=15)&old.algorithm.isin(['milp','heuristic'])]
             x=compare(pd.concat([old,g]));x['workload']=family;summaries.append(x)
         pd.concat(summaries).to_csv(out/'aligned_summary.csv',index=False)
-    if (out/'timing.csv').exists():
-        d=pd.read_csv(out/'timing.csv');d['excess_j']=0.
+    if (campaign/'timing.csv').exists():
+        d=pd.read_csv(campaign/'timing.csv');d['excess_j']=0.
         for rep,ix in d.groupby('round').groups.items():
             g=d.loc[ix];base=g[g.algorithm=='milp'].set_index(['size','seed']);d.loc[ix,'excess_j']=g.total_j.to_numpy()-base.loc[list(zip(g['size'],g.seed)),'total_j'].to_numpy()
         d.to_csv(out/'timing_paired.csv',index=False)
         rounds=d.groupby(['round','algorithm','shots'])[['runtime_s','excess_j']].mean().reset_index();rounds.to_csv(out/'timing_rounds.csv',index=False)
         # CIs resample instances after averaging timing rounds, not 600 pseudoreplicates.
         avg=d.groupby(['size','seed','algorithm','shots'],as_index=False).mean(numeric_only=True);compare(avg).to_csv(out/'timing_summary.csv',index=False)
-    if (out/'larger_quality.csv').exists():
-        q=pd.read_csv(out/'larger_quality.csv');q.groupby(['size','shots']).mean(numeric_only=True).to_csv(out/'larger_summary.csv')
-    if (out/'scaling.csv').exists():
-        d=pd.read_csv(out/'scaling.csv');d.groupby(['nodes','functions']).agg(cases=('seed','size'),exact=('exact','sum'),feasible=('feasible','sum'),median_build_s=('construction_s','median'),median_solve_s=('solve_s','median'),median_total_s=('runtime_s','median'),median_greedy_s=('greedy_s','median'),median_gap=('mip_gap','median'),mean_milp_compute_j=('milp_compute_j','mean'),mean_greedy_compute_j=('greedy_compute_j','mean')).to_csv(out/'scaling_summary.csv')
+    if (campaign/'larger_quality.csv').exists():
+        q=pd.read_csv(campaign/'larger_quality.csv');q.groupby(['size','shots']).mean(numeric_only=True).to_csv(out/'larger_summary.csv')
+    if (campaign/'scaling.csv').exists():
+        d=pd.read_csv(campaign/'scaling.csv');d.groupby(['nodes','functions']).agg(cases=('seed','size'),exact=('exact','sum'),feasible=('feasible','sum'),median_build_s=('construction_s','median'),median_solve_s=('solve_s','median'),median_total_s=('runtime_s','median'),median_greedy_s=('greedy_s','median'),median_gap=('mip_gap','median'),mean_milp_compute_j=('milp_compute_j','mean'),mean_greedy_compute_j=('greedy_compute_j','mean')).to_csv(out/'scaling_summary.csv')
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--output',type=Path,default=RESULTS);a=ap.parse_args();a.output.mkdir(parents=True,exist_ok=True)
-    static(a.output);additions(a.output);print('Revision analysis complete')
+    ap=argparse.ArgumentParser();ap.add_argument('--campaign',type=Path,default=RESULTS);ap.add_argument('--output',type=Path,default=ROOT/'output/analysis/v121');a=ap.parse_args();a.output=output_directory(a.output)
+    static(a.output);additions(a.output,a.campaign);print('Revision analysis complete')
 if __name__=='__main__':main()

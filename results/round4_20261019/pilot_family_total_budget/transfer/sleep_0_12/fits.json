@@ -1,0 +1,74 @@
+[
+  {
+    "theta": [
+      1.4348077437808948,
+      2.1207718479041233
+    ],
+    "objective": "expectation",
+    "objective_value": 0.20946964658290615,
+    "training_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "family_evaluations": 98,
+    "instance_evaluations": 1470,
+    "historical_instance_budget": 1532,
+    "max_family_evaluations": 102,
+    "iterations": 25,
+    "stopping_reason": "Optimization terminated successfully.",
+    "offline_s": 0.1922474999446422,
+    "optimum_informed": false,
+    "workload": "sleep_0",
+    "size": 12,
+    "method": "direct"
+  },
+  {
+    "theta": [
+      1.4473126549535382,
+      2.3738355618366453
+    ],
+    "objective": "useful_mass",
+    "objective_value": -0.17573538044579964,
+    "training_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "family_evaluations": 97,
+    "instance_evaluations": 1455,
+    "historical_instance_budget": 1457,
+    "max_family_evaluations": 97,
+    "iterations": 23,
+    "stopping_reason": "Maximum number of function evaluations has been exceeded.",
+    "offline_s": 0.1879269580822438,
+    "optimum_informed": true,
+    "workload": "sleep_0",
+    "size": 12,
+    "method": "direct"
+  }
+]

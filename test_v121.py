@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Independent small-instance and accounting regression checks for revision 1.2.1."""
+from artifact_paths import validation_path
 import json
 from itertools import product
 from dataclasses import replace
@@ -58,5 +59,5 @@ def main():
         p=per_instance(frozen[frozen.algorithm.isin(['milp',r.algorithm])],sc);g=p[(p.algorithm==r.algorithm)&(p.shots==r.shots)]
         assert abs(g.excess_j.mean()-r.excess_j)<1e-6
     report=dict(sparse_exact_checks=count,event_replays=checks,timeout_check=True,zero_compute_baseline=True,training_split=True,paired_comparators=True,ledger_reconciliation=True,component_interpolation=True)
-    (RESULTS/'validation.json').write_text(json.dumps(report,indent=2));print(json.dumps(report))
+    validation_path('test_v121').write_text(json.dumps(report,indent=2));print(json.dumps(report))
 if __name__=='__main__':main()

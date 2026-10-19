@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Independent audit of stored sustainability results and phase accounting."""
 from pathlib import Path
+from artifact_paths import validation_path
 import json
 import numpy as np
 import pandas as pd
@@ -63,7 +64,7 @@ def main():
             "independent_applied_energy_replays":len(raw),"scenario_summaries":len(scenario),
             "policy_decisions_verified":len(decisions),"training_membership":"0--14 only",
             "status":"passed"}
-    (path/"validation.json").write_text(json.dumps(report,indent=2)+"\n")
+    validation_path('validate_energy_results').write_text(json.dumps(report,indent=2)+"\n")
     print(json.dumps(report,indent=2))
 
 if __name__=="__main__":main()

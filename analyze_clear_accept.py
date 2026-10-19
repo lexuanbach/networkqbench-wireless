@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+import argparse
+from artifact_paths import output_directory
 import json
 from pathlib import Path
 
@@ -70,6 +72,17 @@ def write_table(path: Path, header: str, rows: list[str], spec: str):
 
 
 def main() -> int:
+    global RESULTS, RES, OUTPUT, TABLES, TAB, FIGURES, DERIVED
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--input', type=Path, default=ROOT/'results')
+    ap.add_argument('--output', type=Path, default=ROOT/'output/legacy/analyze_clear_accept')
+    a = ap.parse_args()
+    RESULTS = RES = a.input
+    OUTPUT = output_directory(a.output)
+    TABLES = TAB = output_directory(OUTPUT/'tables')
+    FIGURES = output_directory(OUTPUT/'figures')
+    DERIVED = output_directory(OUTPUT/'derived')
+
     TABLES.mkdir(parents=True, exist_ok=True)
     FIGURES.mkdir(parents=True, exist_ok=True)
     old = pd.read_csv(RESULTS / "raw_results.csv")
@@ -86,7 +99,7 @@ def main() -> int:
         instances=("seed", "size"), optimal_rate=("optimal", "mean"),
         feasible_rate=("feasible", "mean"), mean_gap=("gap", "mean"),
         median_solver_s=("runtime_s", "median"))
-    summary.to_csv(RESULTS / "clearaccept_baseline_summary.csv", index=False)
+    summary.to_csv(DERIVED / "clearaccept_baseline_summary.csv", index=False)
 
     rows = []
     for algorithm in algorithms:
@@ -107,7 +120,7 @@ def main() -> int:
     h16 = hard[hard.n_vars == 16].groupby("algorithm", as_index=False).agg(
         instances=("seed", "size"), optimal_rate=("optimal", "mean"),
         mean_gap=("gap2", "mean"), median_solver_s=("runtime_s", "median"))
-    h16.to_csv(RESULTS / "clearaccept_hardness_n16_summary.csv", index=False)
+    h16.to_csv(DERIVED / "clearaccept_hardness_n16_summary.csv", index=False)
     rows = []
     hard_order = ["milp", "task_specific", "local_search", "qaoa_warm", "qaoa", "mean_field", "annealing"]
     for algorithm in hard_order:
@@ -140,7 +153,7 @@ def main() -> int:
         mean_optimal_rate=("optimal_rate", "mean"),
         between_instance_sd=("optimal_rate", "std"),
         mean_feasible_rate=("feasible_rate", "mean"), mean_gap=("mean_gap", "mean"))
-    shot_summary.to_csv(RESULTS / "clearaccept_shot_summary.csv", index=False)
+    shot_summary.to_csv(DERIVED / "clearaccept_shot_summary.csv", index=False)
     rows = [f"{int(r.shots)} & {100*r.mean_optimal_rate:.1f}\\% & "
             f"{100*r.between_instance_sd:.1f} pp & {100*r.mean_feasible_rate:.1f}\\% & {r.mean_gap:.3f} " + ROW_END
             for r in shot_summary.itertuples()]
@@ -153,7 +166,7 @@ def main() -> int:
         windows=("seed", "size"), optimal_rate=("optimal", "mean"),
         next_cochannel_load=("next_cochannel_load", "mean"),
         deadline_miss=("deadline_miss", "mean"))
-    trace_summary.to_csv(RESULTS / "clearaccept_netdata_5g_summary.csv", index=False)
+    trace_summary.to_csv(DERIVED / "clearaccept_netdata_5g_summary.csv", index=False)
     rows = [f"{label(r.algorithm)} & {100*r.optimal_rate:.1f}\\% & "
             f"{r.next_cochannel_load:.3f} & {100*r.deadline_miss:.1f}\\% " + ROW_END
             for r in trace_summary.sort_values("next_cochannel_load").itertuples()]
@@ -301,7 +314,7 @@ def main() -> int:
         "public_queue_replay": queue_summary.to_dict("records"),
         "public_queue_statistics": queue_stats,
     }
-    (RESULTS / "clearaccept_analysis.json").write_text(json.dumps(report, indent=2))
+    (DERIVED / "clearaccept_analysis.json").write_text(json.dumps(report, indent=2))
     print(json.dumps(report, indent=2))
     return 0
 

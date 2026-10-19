@@ -1,0 +1,25 @@
+{
+  "milp_round_mean_min_j": 0.5628640994351978,
+  "milp_round_mean_max_j": 0.8159411803353578,
+  "primary_max_j": 1.2676541926339249,
+  "primary_max_size": 9,
+  "primary_max_seed": 29,
+  "original_scaling_mean_utilization": 0.07282522597347947,
+  "applied_by_servers": {
+    "20": 10,
+    "50": 11,
+    "100": 9
+  },
+  "winning_deadline_cells": [
+    {
+      "nodes": 20,
+      "functions": 4,
+      "deadline_s": 0.8,
+      "minus_greedy_j": -647.2102502173977,
+      "greedy_low": -1227.5756834471365,
+      "greedy_high": -154.57901841679097
+    }
+  ],
+  "server0_max_demand": 45,
+  "server0_max_utilization": 37
+}

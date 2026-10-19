@@ -1,0 +1,392 @@
+[
+  {
+    "mode": "forward",
+    "seed": 0,
+    "theta": [
+      0.0,
+      0.0
+    ],
+    "calls": 52,
+    "cap": 53,
+    "iterations": 1,
+    "reason": "Optimization terminated successfully.",
+    "simulation_s": 0.006491374922916293
+  },
+  {
+    "mode": "forward",
+    "seed": 1,
+    "theta": [
+      4.824748783142291,
+      2.3751660936145536
+    ],
+    "calls": 94,
+    "cap": 95,
+    "iterations": 24,
+    "reason": "Optimization terminated successfully.",
+    "simulation_s": 0.012614625040441751
+  },
+  {
+    "mode": "forward",
+    "seed": 2,
+    "theta": [
+      0.347894220267125,
+      2.206151940530222
+    ],
+    "calls": 124,
+    "cap": 125,
+    "iterations": 38,
+    "reason": "Optimization terminated successfully.",
+    "simulation_s": 0.01615058397874236
+  },
+  {
+    "mode": "forward",
+    "seed": 3,
+    "theta": [
+      30.576187721808285,
+      0.8672692362779806
+    ],
+    "calls": 124,
+    "cap": 125,
+    "iterations": 40,
+    "reason": "Maximum number of iterations has been exceeded.",
+    "simulation_s": 0.01705650007352233
+  },
+  {
+    "mode": "forward",
+    "seed": 4,
+    "theta": [
+      0.3201686946097181,
+      2.201386940043354
+    ],
+    "calls": 122,
+    "cap": 123,
+    "iterations": 40,
+    "reason": "Maximum number of iterations has been exceeded.",
+    "simulation_s": 0.015414082910865545
+  },
+  {
+    "mode": "forward",
+    "seed": 5,
+    "theta": [
+      0.3198315594780726,
+      2.2005709746526714
+    ],
+    "calls": 121,
+    "cap": 122,
+    "iterations": 40,
+    "reason": "Maximum number of iterations has been exceeded.",
+    "simulation_s": 0.015382500132545829
+  },
+  {
+    "mode": "forward",
+    "seed": 6,
+    "theta": [
+      -0.0005527343750000001,
+      1.8330632135008298
+    ],
+    "calls": 74,
+    "cap": 75,
+    "iterations": 12,
+    "reason": "Optimization terminated successfully.",
+    "simulation_s": 0.009629250038415194
+  },
+  {
+    "mode": "forward",
+    "seed": 7,
+    "theta": [
+      5.414015759505364,
+      2.3588005643033427
+    ],
+    "calls": 95,
+    "cap": 96,
+    "iterations": 24,
+    "reason": "Optimization terminated successfully.",
+    "simulation_s": 0.01131241605617106
+  },
+  {
+    "mode": "forward",
+    "seed": 8,
+    "theta": [
+      4.80865276993261,
+      2.3747702957859453
+    ],
+    "calls": 100,
+    "cap": 101,
+    "iterations": 27,
+    "reason": "Optimization terminated successfully.",
+    "simulation_s": 0.012285875156521797
+  },
+  {
+    "mode": "forward",
+    "seed": 9,
+    "theta": [
+      0.2908575007915496,
+      2.1964903550598347
+    ],
+    "calls": 123,
+    "cap": 124,
+    "iterations": 40,
+    "reason": "Maximum number of iterations has been exceeded.",
+    "simulation_s": 0.015273791970685124
+  },
+  {
+    "mode": "forward",
+    "seed": 10,
+    "theta": [
+      4.986766227117117,
+      2.355931832071173
+    ],
+    "calls": 98,
+    "cap": 99,
+    "iterations": 26,
+    "reason": "Optimization terminated successfully.",
+    "simulation_s": 0.01128845801576972
+  },
+  {
+    "mode": "forward",
+    "seed": 11,
+    "theta": [
+      -0.3981585073377852,
+      2.0709817272181787
+    ],
+    "calls": 129,
+    "cap": 130,
+    "iterations": 40,
+    "reason": "Maximum number of iterations has been exceeded.",
+    "simulation_s": 0.01534662488847971
+  },
+  {
+    "mode": "forward",
+    "seed": 12,
+    "theta": [
+      0.3198315594780726,
+      2.2005709746526714
+    ],
+    "calls": 121,
+    "cap": 122,
+    "iterations": 40,
+    "reason": "Maximum number of iterations has been exceeded.",
+    "simulation_s": 0.014322124887257814
+  },
+  {
+    "mode": "forward",
+    "seed": 13,
+    "theta": [
+      0.31470914209185286,
+      2.199220460738739
+    ],
+    "calls": 127,
+    "cap": 128,
+    "iterations": 40,
+    "reason": "Maximum number of iterations has been exceeded.",
+    "simulation_s": 0.01484691584482789
+  },
+  {
+    "mode": "forward",
+    "seed": 14,
+    "theta": [
+      2.7194665815768513,
+      1.1572487798604194
+    ],
+    "calls": 123,
+    "cap": 124,
+    "iterations": 39,
+    "reason": "Optimization terminated successfully.",
+    "simulation_s": 0.01386599987745285
+  },
+  {
+    "mode": "reverse",
+    "seed": 0,
+    "theta": [
+      0.0,
+      0.0
+    ],
+    "calls": 52,
+    "cap": 53,
+    "iterations": 1,
+    "reason": "Optimization terminated successfully.",
+    "simulation_s": 0.005481624975800514
+  },
+  {
+    "mode": "reverse",
+    "seed": 1,
+    "theta": [
+      -0.000521484375,
+      2.375478820097193
+    ],
+    "calls": 74,
+    "cap": 95,
+    "iterations": 13,
+    "reason": "Optimization terminated successfully.",
+    "simulation_s": 0.008974957978352904
+  },
+  {
+    "mode": "reverse",
+    "seed": 2,
+    "theta": [
+      0.2908575007915496,
+      2.1964903550598347
+    ],
+    "calls": 123,
+    "cap": 125,
+    "iterations": 40,
+    "reason": "Maximum number of iterations has been exceeded.",
+    "simulation_s": 0.015469207894057035
+  },
+  {
+    "mode": "reverse",
+    "seed": 3,
+    "theta": [
+      20.60496920103579,
+      1.4182201123712028
+    ],
+    "calls": 125,
+    "cap": 125,
+    "iterations": 38,
+    "reason": "Maximum number of function evaluations has been exceeded.",
+    "simulation_s": 0.014976416015997529
+  },
+  {
+    "mode": "reverse",
+    "seed": 4,
+    "theta": [
+      0.3201686946097181,
+      2.201386940043354
+    ],
+    "calls": 122,
+    "cap": 123,
+    "iterations": 40,
+    "reason": "Maximum number of iterations has been exceeded.",
+    "simulation_s": 0.013783792033791542
+  },
+  {
+    "mode": "reverse",
+    "seed": 5,
+    "theta": [
+      0.3198315594780726,
+      2.2005709746526714
+    ],
+    "calls": 121,
+    "cap": 122,
+    "iterations": 40,
+    "reason": "Maximum number of iterations has been exceeded.",
+    "simulation_s": 0.015602249884977937
+  },
+  {
+    "mode": "reverse",
+    "seed": 6,
+    "theta": [
+      -6.25e-05,
+      2.6254738605000414
+    ],
+    "calls": 70,
+    "cap": 75,
+    "iterations": 10,
+    "reason": "Optimization terminated successfully.",
+    "simulation_s": 0.007859625155106187
+  },
+  {
+    "mode": "reverse",
+    "seed": 7,
+    "theta": [
+      -0.0005296134948730468,
+      2.0734472479360093
+    ],
+    "calls": 80,
+    "cap": 96,
+    "iterations": 15,
+    "reason": "Optimization terminated successfully.",
+    "simulation_s": 0.008580166148021817
+  },
+  {
+    "mode": "reverse",
+    "seed": 8,
+    "theta": [
+      -0.0007714843749999999,
+      2.375478820097193
+    ],
+    "calls": 76,
+    "cap": 101,
+    "iterations": 13,
+    "reason": "Optimization terminated successfully.",
+    "simulation_s": 0.008352166973054409
+  },
+  {
+    "mode": "reverse",
+    "seed": 9,
+    "theta": [
+      0.347894220267125,
+      2.206151940530222
+    ],
+    "calls": 124,
+    "cap": 124,
+    "iterations": 38,
+    "reason": "Maximum number of function evaluations has been exceeded.",
+    "simulation_s": 0.014021624810993671
+  },
+  {
+    "mode": "reverse",
+    "seed": 10,
+    "theta": [
+      -0.022620361328125,
+      2.0575065167797435
+    ],
+    "calls": 99,
+    "cap": 99,
+    "iterations": 26,
+    "reason": "Maximum number of function evaluations has been exceeded.",
+    "simulation_s": 0.011539040831848979
+  },
+  {
+    "mode": "reverse",
+    "seed": 11,
+    "theta": [
+      4.889366268123991,
+      2.350643266713443
+    ],
+    "calls": 96,
+    "cap": 130,
+    "iterations": 25,
+    "reason": "Optimization terminated successfully.",
+    "simulation_s": 0.010208541993051767
+  },
+  {
+    "mode": "reverse",
+    "seed": 12,
+    "theta": [
+      0.3198315594780726,
+      2.2005709746526714
+    ],
+    "calls": 121,
+    "cap": 122,
+    "iterations": 40,
+    "reason": "Maximum number of iterations has been exceeded.",
+    "simulation_s": 0.01455266703851521
+  },
+  {
+    "mode": "reverse",
+    "seed": 13,
+    "theta": [
+      0.31470914209185286,
+      2.199220460738739
+    ],
+    "calls": 127,
+    "cap": 128,
+    "iterations": 40,
+    "reason": "Maximum number of iterations has been exceeded.",
+    "simulation_s": 0.0146545828320086
+  },
+  {
+    "mode": "reverse",
+    "seed": 14,
+    "theta": [
+      2.7194665815768513,
+      1.1572487798604194
+    ],
+    "calls": 123,
+    "cap": 124,
+    "iterations": 39,
+    "reason": "Optimization terminated successfully.",
+    "simulation_s": 0.013504291884601116
+  }
+]

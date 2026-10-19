@@ -1,0 +1,101 @@
+{
+  "campaign": "Round4Deadline",
+  "started_utc": "2026-10-19T00:51:36.111694+00:00",
+  "finished_utc": "2026-10-19T00:56:40.360923+00:00",
+  "environment": {
+    "python": "3.14.6",
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "qiskit": "2.3.1"
+  },
+  "parameters": {
+    "seed": 20261020,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "configurations": [
+      [
+        20,
+        4
+      ],
+      [
+        20,
+        8
+      ],
+      [
+        50,
+        4
+      ],
+      [
+        50,
+        8
+      ],
+      [
+        50,
+        10
+      ],
+      [
+        50,
+        20
+      ],
+      [
+        100,
+        4
+      ],
+      [
+        100,
+        8
+      ],
+      [
+        100,
+        20
+      ],
+      [
+        100,
+        40
+      ]
+    ],
+    "deadlines": [
+      0.1,
+      0.4,
+      0.8
+    ],
+    "reference_limit": 30.0,
+    "deadline_boundary": "model construction + solve + validation; physical inputs available; late computation charged",
+    "incumbent": "concentrated feasible server 0"
+  },
+  "source_sha256": {
+    "round4.py": "feccc1df32838e2ac1b73cc7ba70fcedda50872f48daedba21578dfe9d65d6d7",
+    "run_round4.py": "3c3deddd00162972e9a78390ae4d0ab7daaff5c932e145e466cef812cb70063f",
+    "energy_v12.py": "1960b26bc47091c4577f572d7a8c303f3cb582476c4f1fad5ccc162b45ef8359",
+    "revision_v121.py": "a21b9cb0739de29b8754a5703caf7b37462bc690ce1f75bb81ce0e552f2bad28",
+    "analyze_v12.py": "58479a6b7a0d1351c2feb36b44926852a42019b6b1d2faa6b8c0c48130f312ed"
+  },
+  "input_sha256": {
+    "results/v1_2_1/scaling.csv": "3d70f33ac342c6192e68a7451d5c7e0219e20fb4d795602f2660d46a02b503a2"
+  },
+  "evidence": "Local wall times measured; quantum quality simulated; all joules modeled",
+  "assumptions": {
+    "host_w": 50,
+    "qpu_w": 20000,
+    "reuse": 100,
+    "horizon_s": 60,
+    "migration_j": 10,
+    "queue_s": 0.01,
+    "submit_s": 0.0005,
+    "roundtrip_s": 0.002,
+    "target": "grid4x4",
+    "durations": "unchanged declared scenario values",
+    "timing": "sequential campaigns on one host"
+  }
+}

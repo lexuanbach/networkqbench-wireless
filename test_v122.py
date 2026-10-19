@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Independent event, equivalence, pairing, timeout-bound and preservation audits."""
+from artifact_paths import validation_path
 import hashlib,json
 from pathlib import Path
 from dataclasses import replace
@@ -31,5 +32,5 @@ def main():
     preserved=json.loads((D/'historical_sha256.json').read_text())
     for name,h in preserved.items():assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==h,name
     report=dict(template_equivalence_cases=len(audits),template_probability_error_max=float(audits.max_probability_error.max()),fresh_template_rechecks=2,timing_records=len(times),independent_event_replays=replays,keep_pairing=True,crossing_replayed=True,shared_profile=True,keep_zero_charges=True,ledger_reconciled=True,timeout_bounds=True,training_split=True,historical_files_unchanged=len(preserved))
-    (D/'validation.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))
+    validation_path('test_v122').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))
 if __name__=='__main__':main()

@@ -2,6 +2,7 @@
 """Audit stored experiments independently of the vectorized analysis."""
 from pathlib import Path
 from dataclasses import replace
+from artifact_paths import validation_path
 import json,hashlib
 import numpy as np,pandas as pd
 from energy_v12 import *
@@ -88,5 +89,5 @@ def main():
   report['noise_conditions']=240;report['noise_sampling_batches']=m['sampling_batches']
  else:report['noise_status']='pending'
  report['status']='passed' if 'noise_status' not in report else 'partial; noise pending'
- (OUT/'validation.json').write_text(json.dumps(report,indent=2));print(json.dumps(report,indent=2))
+ validation_path('validate_v12').write_text(json.dumps(report,indent=2));print(json.dumps(report,indent=2))
 if __name__=='__main__':main()

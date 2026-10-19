@@ -1,0 +1,83 @@
+{
+  "stage": "scaling",
+  "elapsed_s": 391.5409347501118,
+  "python": "3.14.6",
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "parameters": {
+    "output": "artifact/results/v1_2_1",
+    "stages": [
+      "training",
+      "demand",
+      "larger",
+      "scaling",
+      "timing"
+    ],
+    "training_objective": "useful_mass",
+    "demand_range": [
+      0.2,
+      0.5
+    ],
+    "servers": [
+      20,
+      50,
+      100
+    ],
+    "functions": [
+      4,
+      8
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "time_limit": 30.0
+  },
+  "training_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "heldout_seeds": [
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "evidence": "local wall times measured; quantum quality simulated; all energy modeled",
+  "source_sha256": {
+    "run_v121.py": "eb0cb0be00becbb09717884c2dc0404c9cad09f34dfb6e6b30b67ebd68ae60a0",
+    "revision_v121.py": "a21b9cb0739de29b8754a5703caf7b37462bc690ce1f75bb81ce0e552f2bad28",
+    "energy_v12.py": "1960b26bc47091c4577f572d7a8c303f3cb582476c4f1fad5ccc162b45ef8359"
+  }
+}

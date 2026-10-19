@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 from pathlib import Path
+import argparse
+from artifact_paths import output_directory
 import json
 
 import matplotlib.pyplot as plt
@@ -43,6 +45,17 @@ def wilson_interval(successes: int, total: int, z: float = 1.959963984540054):
 
 
 def main() -> int:
+    global RESULTS, RES, OUTPUT, TABLES, TAB, FIGURES, DERIVED
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--input', type=Path, default=ROOT/'results')
+    ap.add_argument('--output', type=Path, default=ROOT/'output/legacy/analyze_results')
+    a = ap.parse_args()
+    RESULTS = RES = a.input
+    OUTPUT = output_directory(a.output)
+    TABLES = TAB = output_directory(OUTPUT/'tables')
+    FIGURES = output_directory(OUTPUT/'figures')
+    DERIVED = output_directory(OUTPUT/'derived')
+
     FIGURES.mkdir(parents=True, exist_ok=True)
     TABLES.mkdir(parents=True, exist_ok=True)
     df = pd.read_csv(RESULTS / "raw_results.csv")
@@ -71,7 +84,7 @@ def main() -> int:
             "mean_utility": g.utility.mean(),
         })
     summary = pd.DataFrame(summary_rows)
-    summary.to_csv(RESULTS / "summary_by_task_algorithm.csv", index=False)
+    summary.to_csv(DERIVED / "summary_by_task_algorithm.csv", index=False)
 
     profile = df.groupby(["task", "algorithm", "profile"], as_index=False).agg(
         mean_utility=("utility", "mean"),
@@ -80,7 +93,7 @@ def main() -> int:
         optimal_rate=("optimal", "mean"),
         feasible_rate=("feasible", "mean"),
     )
-    profile.to_csv(RESULTS / "operational_profiles.csv", index=False)
+    profile.to_csv(DERIVED / "operational_profiles.csv", index=False)
 
     # Paired QAOA vs strongest practical baseline on static penalized loss.
     paired = static[static.algorithm.isin(["qaoa", "local_search"])].pivot_table(
@@ -103,7 +116,7 @@ def main() -> int:
             "wilcoxon_stat": float(stat),
             "p_value": float(p),
         })
-    pd.DataFrame(tests).to_csv(RESULTS / "paired_tests.csv", index=False)
+    pd.DataFrame(tests).to_csv(DERIVED / "paired_tests.csv", index=False)
 
     # Figure 1: optimal-solution rate by task.
     alg_order = ["exact", "local_search", "mean_field", "annealing", "random", "qaoa"]
@@ -227,7 +240,7 @@ def main() -> int:
             mean_utility=("utility", "mean"),
             mean_delay_s=("delay_s", "mean"),
         )
-        rec_summary.to_csv(RESULTS / "recovery_summary.csv", index=False)
+        rec_summary.to_csv(DERIVED / "recovery_summary.csv", index=False)
         nominal = rec_summary[rec_summary.profile == "nominal"]
         fig, ax1 = plt.subplots(figsize=(1.55, 1.45))
         ax1.plot(nominal.shots, nominal.optimal_rate, "o-", ms=2.5, lw=1,
@@ -252,7 +265,7 @@ def main() -> int:
             "transfer_best_optimal_rate_nominal": float(best.optimal_rate),
             "transfer_best_on_time_rate_nominal": float(1-best.deadline_miss_rate),
         })
-    (RESULTS / "key_results.json").write_text(json.dumps(key, indent=2))
+    (DERIVED / "key_results.json").write_text(json.dumps(key, indent=2))
     print(json.dumps(key, indent=2))
     return 0
 

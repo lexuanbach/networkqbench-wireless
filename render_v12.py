@@ -6,6 +6,7 @@ import numpy as np,pandas as pd
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from paper_plot_style import save_figure
 from matplotlib.patches import FancyBboxPatch
 from analyze_v12 import LABELS,OUT
 from energy_v12 import workload,decode,score
@@ -149,14 +150,14 @@ def figures(s,grid):
  a.barh(names,[r.compute_j for r in rs],color=[COLORS[x[0]] for x in chosen]);a.set_xscale('log');a.set_xlabel('Mean computation energy (J)');a.set_title('(a) Matched 64-shot comparisons',loc='left');a.invert_yaxis()
  for j,r in enumerate(rs[:-1]):b.errorbar(r.excess_j,j,xerr=[[max(0,r.excess_j-r.ci_low_j)],[max(0,r.ci_high_j-r.excess_j)]],fmt='o',color=COLORS[chosen[j][0]],capsize=2)
  b.set_yticks(range(5),names[:5]);b.invert_yaxis();b.axvline(0,color='#888',lw=.6);b.set_xlabel('Extra total energy versus MILP (J)');b.set_title('(b) Paired means and 95% intervals',loc='left')
- fig.savefig(DEST/'fig1_overview.pdf',bbox_inches='tight',metadata={'CreationDate':None,'ModDate':None});plt.close(fig)
+ save_figure(fig,DEST/'fig1_overview.pdf',bbox_inches='tight',metadata={'CreationDate':None,'ModDate':None});plt.close(fig)
  f=pd.read_csv(OUT/'frontier.csv');fig,ax=plt.subplots(1,2,figsize=(7.2,2.7),layout='constrained')
  for alg in ['onehot_transfer','onehot_structured','onehot_p2','quantum_uniform_onehot']:
   g=f[f.algorithm==alg];ax[0].scatter(g.time_ratio,g.required_j,s=13,alpha=.7,label=LABELS[alg],color=COLORS[alg]);budgets=np.geomspace(.01,1e5,200)
   ax[1].plot(budgets,[np.mean(g.admissible&(g.required_j<=v))*100 for v in budgets],label=LABELS[alg],color=COLORS[alg])
  ax[0].axvline(1,c='black',ls='--',lw=.8);ax[0].set(xscale='log',yscale='log',xlabel='Required arrival / deadline',ylabel='Required computation energy (J)',title='(a) Per-instance frontier corners')
- ax[1].set(xscale='log',xlabel='Computation budget (J)',ylabel='Joint-feasible instances (%)',title='(b) Deadline-limited coverage');ax[1].legend(loc='lower right',fontsize=6)
- fig.savefig(DEST/'frontier_cases.pdf',metadata={'CreationDate':None,'ModDate':None});plt.close(fig)
+ ax[1].set(xscale='log',xlabel='Computation budget (J)',ylabel='Joint-feasible instances (%)',title='(b) Deadline-limited coverage');fig.legend(*ax[1].get_legend_handles_labels(),loc='outside upper center',ncol=4,fontsize=6.5,frameon=False)
+ save_figure(fig,DEST/'frontier_cases.pdf',metadata={'CreationDate':None,'ModDate':None});plt.close(fig)
  fig,ax=plt.subplots(1,2,figsize=(7.2,3.6),layout='constrained')
  for alg in ['classical_uniform_full','quantum_uniform_full','classical_uniform_onehot','quantum_uniform_onehot','onehot_transfer','onehot_structured','onehot_p2','qaoa_transfer','qaoa_online']:
   g=s[s.algorithm==alg].sort_values('shots');ax[0].errorbar(100*g.useful,g.compute_j,xerr=np.maximum(0,100*np.array([g.useful-g.useful_ci_low,g.useful_ci_high-g.useful])),fmt='o-',ms=3,elinewidth=.5,capsize=1,color=COLORS[alg],label=LABELS[alg])
@@ -169,7 +170,7 @@ def figures(s,grid):
  for alg in ['onehot_transfer','onehot_structured','onehot_p2','quantum_uniform_onehot']:
   g=c[c.algorithm==alg].groupby('size').shot_s;med=g.median();ax[1].plot(med.index,med*1e6,'o-',color=COLORS[alg],label=LABELS[alg]);ax[1].fill_between(med.index,g.quantile(.25)*1e6,g.quantile(.75)*1e6,color=COLORS[alg],alpha=.15)
  ax[1].set(yscale='log',xlabel='Assignment variables',ylabel='Scheduled shot duration (µs)',title='(b) Complete grid-target circuits');ax[1].legend(fontsize=6)
- fig.savefig(DEST/'quality_energy.pdf',metadata={'CreationDate':None,'ModDate':None});plt.close(fig)
+ save_figure(fig,DEST/'quality_energy.pdf',metadata={'CreationDate':None,'ModDate':None});plt.close(fig)
  fig,ax=plt.subplots(1,2,figsize=(7.2,3.0),layout='constrained')
  g=pd.read_csv(OUT/'horizon_intervals.csv')
  for alg in ['milp','classical_uniform_onehot','quantum_uniform_onehot','onehot_structured','onehot_transfer']:
@@ -179,11 +180,11 @@ def figures(s,grid):
  for col,label,color in [('compute_j','Computation','#0072b2'),('delay_loss_j','Arrival','#e69f00'),('quality_loss_j','Placement quality','#009e73'),('fallback_loss_j','Fallback/rejection','#cc79a7'),('transition_j','Transitions','#999999')]:
   values=np.array([dec[(dec.algorithm==a)&(dec.shots==64)][col].mean()/1000 for a in algs]);ax[1].bar(np.arange(3),values,bottom=base,label=label,color=color);base+=values
  ax[1].set_xticks(range(3),['Q uniform','Structured','Dense 1h']);ax[1].set(ylabel='Extra total energy versus MILP (kJ)',title='(b) Additive decomposition, 64 shots');ax[1].legend(fontsize=6,loc='upper left')
- fig.savefig(DEST/'net_energy.pdf',metadata={'CreationDate':None,'ModDate':None});plt.close(fig)
+ save_figure(fig,DEST/'net_energy.pdf',metadata={'CreationDate':None,'ModDate':None});plt.close(fig)
  pol=pd.read_csv(OUT/'all_on/policy_summary.csv').set_index('policy');names=['always_classical','always_quantum_selected','deadline_only','energy_aware','quantum_with_backup'];labels=['Classical','Selected Q','Deadline','Energy','Q + backup'];p=pol.loc[names]
  fig,ax=plt.subplots(1,2,figsize=(7.2,2.8),layout='constrained');bars=ax[0].bar(labels,p.excess_j,color='#3579a8',yerr=np.maximum(0,np.array([p.excess_j-p.ci_low_j,p.ci_high_j-p.excess_j])),capsize=2,error_kw={'elinewidth':.7});ax[0].set_yscale('symlog',linthresh=.1);ax[0].bar_label(bars,labels=[fmt(v,2) for v in p.excess_j],padding=3,fontsize=6);ax[0].set(ylabel='Extra total energy versus direct MILP (J)',title='(a) Calibration and lookup included');ax[0].tick_params(axis='x',labelsize=6.5)
  x=np.arange(5);ax[1].bar(x-.18,p.useful,width=.36,label='Useful candidate',color='#3579a8');ax[1].bar(x+.18,p.invoked_quantum,width=.36,label='Quantum invocation',color='#e69f00');ax[1].set_xticks(x,labels,fontsize=6.5);ax[1].set(ylim=(0,1.22),ylabel='Fraction',title='(b) Training-only policy evaluation');ax[1].legend(loc='upper center',ncol=2,fontsize=6)
- fig.savefig(DEST/'admission.pdf',metadata={'CreationDate':None,'ModDate':None});plt.close(fig)
+ save_figure(fig,DEST/'admission.pdf',metadata={'CreationDate':None,'ModDate':None});plt.close(fig)
 
 
 def macros(s,grid,write_headline=True):
@@ -209,13 +210,13 @@ def macros(s,grid,write_headline=True):
 
 
 def captions():
- text={'Overview': 'NetworkQBench-Wireless decision accounting. The cards trace one declared held-out placement case; the panels summarize all COUNT held-out cases in the primary allocated scenario. The incumbent is a previous optimum under higher demand, and a beneficial transition is required before actuation. Quantum and network joules are modeled. Bars and intervals are generated from stored records, with a size-stratified paired 95\\% interval for the total-energy contrast. Diagram and plotting code were prepared with OpenAI Codex assistance and are included in the artifact.', 'Frontier': 'Resource frontier for fixed transferred circuits and zero-layer controls. Each corner uses the instance-specific probability required for a 90\\% chance of 5\\%-quality output. The primary circuit target and operation-duration scenario are held fixed. Postprocessing overhead is frozen at its measured 64-shot reference for this diagnostic. The figure is noiseless and uses evaluation-only probabilities; separately matched noisy-target results appear in the supplement.', 'Quality': '(a) Mean computation energy versus useful-candidate rate for the four budgets, with structured-circuit budgets annotated. Full-space and one-hot uniform controls share ideal sample outcomes across classical and quantum implementations but have different execution costs. Horizontal intervals are size-stratified 95\\% instance bootstrap intervals. (b) Median complete-shot durations with interquartile bands across held-out instances; narrow bands can be difficult to distinguish from the median line. All resource comparisons use the same grid target.', 'Net': '(a) Net operating-plus-computation saving relative to matched MILP across constant-demand horizons. Positive values favor the displayed pipeline; shading gives paired 95\\% instance intervals. (b) Exact decomposition of the primary 64-shot contrast. Each term is a paired difference, so transition terms can be negative. Units are kJ; near-zero contrasts are retained in the numerical tables.', 'Admission': 'Training-only controllers in the primary scenario. (a) Total-energy contrasts and paired 95\\% intervals include calibration acquisition, amortized training, lookup, and every attempted computation. Values near zero are explicitly labeled. (b) Useful candidate and quantum-invocation rates. All controllers preserve the same benefit-aware fallback; retaining an already good incumbent is distinct from producing a useful candidate.'}
+ text={'Overview': 'NetworkQBench-Wireless decision accounting. The cards trace one declared held-out placement case; the panels summarize all COUNT held-out cases in the primary allocated scenario. The incumbent is a previous optimum under higher demand, and a beneficial transition is required before actuation. Quantum and network joules are modeled. Bars and intervals are generated from stored records, with a size-stratified paired 95\\% interval for the total-energy contrast. Diagram and plotting code were prepared with OpenAI Codex assistance and are included in the artifact.', 'Frontier': 'Resource frontier for fixed transferred circuits and zero-layer controls. Each point is one held-out instance and pipeline. Each corner uses the instance-specific probability required for a 90\\% chance of 5\\%-quality output. The primary circuit target and operation-duration scenario are held fixed. Postprocessing overhead is frozen at its measured 64-shot reference for this diagnostic. The figure is noiseless and uses evaluation-only probabilities. Separately matched noisy-target results appear in the supplement.', 'Quality': '(a) Mean computation energy versus useful-candidate rate for the four budgets, with structured-circuit budgets annotated. Full-space and one-hot uniform controls share ideal sample outcomes across classical and quantum implementations but have different execution costs. Horizontal intervals are size-stratified 95\\% instance bootstrap intervals. (b) Median complete-shot durations with interquartile bands across held-out instances; narrow bands can be difficult to distinguish from the median line. All resource comparisons use the same grid target.', 'Net': '(a) Net operating-plus-computation saving relative to matched MILP across constant-demand horizons. Positive values favor the displayed pipeline; shading gives paired 95\\% instance intervals. (b) Exact decomposition of the primary 64-shot contrast. Each term is a paired difference, so transition terms can be negative. Units are kJ; near-zero contrasts are retained in the numerical tables.', 'Admission': 'Training-only controllers in the primary scenario. (a) Total-energy contrasts and paired 95\\% intervals include calibration acquisition, amortized training, lookup, and every attempted computation. Values near zero are explicitly labeled. (b) Useful candidate and quantum-invocation rates. All controllers preserve the same benefit-aware fallback; retaining an already good incumbent is distinct from producing a useful candidate.'}
  count=int(pd.read_csv(OUT/'all_on/instances.csv').query('seed >= 15').shape[0])
  (DEST/'v12_captions.tex').write_text('\n'.join('\\newcommand{\\V'+key+'Caption}{'+value.replace('COUNT',str(count))+'}' for key,value in text.items())+'\n')
 
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--manuscript',type=Path);args=ap.parse_args();DEST.mkdir(parents=True,exist_ok=True)
- s=pd.read_csv(OUT/'all_on/primary_summary.csv');grid=tables(s);figures(s,grid);macros(s,grid);captions()
+ s=pd.read_csv(OUT/'all_on/primary_summary.csv');grid=tables(s);figures(s,grid);macros(s,grid,write_headline=False);captions()
  if args.manuscript:
   for p in DEST.iterdir():
    target=args.manuscript/('figures' if p.suffix=='.pdf' else 'tables');target.mkdir(parents=True,exist_ok=True);shutil.copy2(p,target/p.name)

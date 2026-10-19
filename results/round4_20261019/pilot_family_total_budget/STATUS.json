@@ -1,0 +1,7 @@
+{
+  "status": "superseded protocol pilot; excluded from final comparison",
+  "reason": "Summed-family evaluation cap did not guarantee each training instance remained below its own historical evaluation count.",
+  "replacement": "../transfer; common family calls capped at minimum historical per-seed count",
+  "selection_basis": "training-count protocol compliance, not held-out outcomes",
+  "source_snapshot": "artifact/source_snapshots/round4_transfer_family_total_budget"
+}

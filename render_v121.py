@@ -6,6 +6,7 @@ import numpy as np,pandas as pd
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from paper_plot_style import save_figure
 from matplotlib.patches import FancyBboxPatch
 from matplotlib.ticker import FuncFormatter,FixedLocator
 import render_v12 as old
@@ -76,7 +77,7 @@ def tables(dest,data):
 
 def figures(dest,data,s):
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':8,'axes.titlesize':9,'legend.fontsize':6.5,'pdf.fonttype':42,'axes.spines.top':False,'axes.spines.right':False})
-    def save(fig,name):fig.savefig(dest/name,bbox_inches='tight',metadata={'CreationDate':None,'ModDate':None});plt.close(fig)
+    def save(fig,name):save_figure(fig,dest/name,bbox_inches='tight',metadata={'CreationDate':None,'ModDate':None});plt.close(fig)
     # One case, with a successful illustration clearly separated from averages.
     ins=pd.read_csv(FROZEN/'all_on/instances.csv');case=ins[(ins.seed>=15)&(ins.incumbent_w-ins.optimum_w>1e-7)].sort_values(['size','seed']).iloc[0]
     pi=pd.read_csv(data/'primary_instances.csv');p=pi[(pi['size']==case['size'])&(pi.seed==case.seed)];mil=get(p,'milp');q=get(p,'onehot_structured',64)
@@ -101,16 +102,26 @@ def figures(dest,data,s):
     for k,algs in enumerate(groups):
         for alg in algs:
             g=s[s.algorithm==alg].sort_values('shots');ax[k].errorbar(100*g.useful,g.compute_j,xerr=np.maximum(0,100*np.array([g.useful-g.useful_ci_low,g.useful_ci_high-g.useful])),fmt='o-',ms=3,elinewidth=.5,capsize=1,color=COLORS[alg],label=LABELS[alg])
-            if alg=='onehot_structured':
-                for r in g.itertuples():ax[k].annotate(str(r.shots),(100*r.useful,r.compute_j),xytext=(3,3),textcoords='offset points',fontsize=5.7)
+            # Every quantum curve is parametric in the shot budget S, so each point carries its S.
+            # Per-budget offsets (dx, dy, ha) keep labels off the horizontal error bars and other lines.
+            offsets={'onehot_structured':{16:(-3,3,'right'),64:(-3,3,'right'),256:(4,0,'left'),1024:(3,3,'left')},
+                     'quantum_uniform_onehot':{16:(0,-4,'center'),64:(4,0,'left'),256:(4,0,'left'),1024:(4,0,'left')},
+                     'onehot_transfer':{16:(-3,3,'right'),64:(3,3,'left'),256:(-4,-2,'right'),1024:(3,3,'left')},
+                     'onehot_p2':{16:(-3,3,'right'),64:(-3,3,'right'),256:(-6,-3,'right'),1024:(-3,3,'right')}}.get(alg)
+            if k==1 and offsets:
+                for r in g.itertuples():
+                    dx,dy,ha=offsets[int(r.shots)]
+                    ax[k].annotate(str(r.shots),(100*r.useful,r.compute_j),xytext=(dx,dy),textcoords='offset points',ha=ha,va='bottom' if dy>0 else ('top' if dy<0 else 'center'),fontsize=5.4,color=COLORS[alg])
         if k==0:
             for alg in ['milp','heuristic']:
                 r=get(s,alg);ax[k].scatter(100*r.useful,r.compute_j,marker='s',s=15,color=COLORS[alg],label=LABELS[alg])
-        ax[k].set(yscale='log',xlabel='Useful candidates (%)',ylabel='Computation energy (J)',title=['(a) Classical controls','(b) Quantum configurations'][k]);ax[k].legend(loc='best',fontsize=5.6)
+        ax[k].set(yscale='log',xlabel='Useful candidates (%)',ylabel='Computation energy (J)',title=['(a) Classical controls','(b) Quantum configurations'][k])
+        if k==1:ax[k].set_ylim(2,1e5);ax[k].set_xlim(right=104.5);ax[k].legend(loc='upper right',fontsize=5.6)   # room for budget labels and the legend
+        else:ax[k].legend(loc='best',fontsize=5.6)
     circuits=pd.read_csv(FROZEN/'all_on/circuits.csv');circuits=circuits[circuits.seed>=15]
     for alg in groups[1]:
         g=circuits[circuits.algorithm==alg].groupby('size').shot_s;med=g.median();ax[2].plot(med.index,med*1e6,'o-',ms=3,color=COLORS[alg],label=LABELS[alg]);ax[2].fill_between(med.index,g.quantile(.25)*1e6,g.quantile(.75)*1e6,color=COLORS[alg],alpha=.12)
-    ax[2].set(yscale='log',xlabel='Assignment variables',ylabel='Shot duration (microseconds)',title='(c) Complete grid circuits');ax[2].set_xticks([6,8,9,12]);save(fig,'quality_energy.pdf')
+    ax[2].set(yscale='log',xlabel='Assignment variables',ylabel='Shot duration (microseconds)',title='(c) Complete grid circuits');ax[2].set_xticks([6,8,9,12]);ax[2].legend(loc='upper left',fontsize=5.6);save(fig,'quality_energy.pdf')
     # Consistent sign; symmetric-log ticks use explicit round numbers.
     fig,ax=plt.subplots(1,2,figsize=(7.4,3.1),layout='constrained');h=pd.read_csv(data/'horizon_intervals.csv')
     for alg in ['keep_incumbent','classical_uniform_onehot','quantum_uniform_onehot','onehot_structured','onehot_transfer']:
@@ -125,14 +136,14 @@ def figures(dest,data,s):
     # Invocation by size distinguishes policies without a near-constant quality panel.
     names=['always_classical','always_quantum_selected','deadline_only','energy_aware','quantum_with_backup'];labels=['Classical','Selected Q','Deadline','Energy','Q + backup']
     pol=pd.read_csv(FROZEN/'all_on/policy_summary.csv').set_index('policy').loc[names];ps=pd.read_csv(FROZEN/'all_on/policy_per_size.csv')
-    fig,ax=plt.subplots(1,2,figsize=(7.4,2.8),layout='constrained');b=ax[0].bar(labels,pol.excess_j,color='#3579a8',yerr=np.maximum(0,np.array([pol.excess_j-pol.ci_low_j,pol.ci_high_j-pol.excess_j])),capsize=2);ax[0].set_yscale('symlog',linthresh=.1);ax[0].bar_label(b,labels=[fmt(x) for x in pol.excess_j],fontsize=6,padding=3);ax[0].set(ylabel='Extra total energy vs. HiGHS (J)',title='(a) All controller costs included');ax[0].tick_params(axis='x',labelsize=6)
+    fig,ax=plt.subplots(1,2,figsize=(7.4,2.8),layout='constrained');b=ax[0].bar(labels,pol.excess_j,color='#3579a8',yerr=np.maximum(0,np.array([pol.excess_j-pol.ci_low_j,pol.ci_high_j-pol.excess_j])),capsize=2);ax[0].set_yscale('log');ax[0].set_ylim(bottom=.01);ax[0].bar_label(b,labels=[fmt(x) for x in pol.excess_j],fontsize=6,padding=3);ax[0].set(ylabel='Extra total energy vs. HiGHS (J)',title='(a) All controller costs included');ax[0].tick_params(axis='x',labelsize=6)
     matrix=np.array([[100*ps[(ps.policy==p)&(ps['size']==n)].invoked_quantum.iloc[0] for n in [6,8,9,12]] for p in names]);energy=np.array([[ps[(ps.policy==p)&(ps['size']==n)].excess_j.iloc[0] for n in [6,8,9,12]] for p in names]);ax[1].imshow(energy,cmap='Blues',vmin=0,vmax=200,aspect='auto')
     for j in range(5):
         for k in range(4):ax[1].text(k,j,f'{matrix[j,k]:.0f}% / {energy[j,k]:.2f} J',ha='center',va='center',color='white' if energy[j,k]>100 else 'black',fontsize=5.5)
     ax[1].set_xticks(range(4),[6,8,9,12]);ax[1].set_yticks(range(5),labels);ax[1].set(xlabel='Assignment variables',title='(b) Quantum invocation / extra energy');save(fig,'admission.pdf')
-    return {'Quality':r'(a) Classical and (b) quantum budget-quality comparisons, with at most four pipelines per panel. Structured budgets and paired 95\% instance intervals are shown; all budgets and other configurations are tabulated in the supplement. (c) Median complete-shot durations and interquartile bands on the same grid target.',
+    return {'Quality':r'(a) Classical and (b) quantum budget-quality comparisons, with at most four pipelines per panel. In (b), each point is one shot budget (16, 64, 256 or 1,024, as labeled), and lines join the budgets in increasing order. A curve turns left when longer runs miss more deadlines, because a useful candidate must be both good and timely. Bars are paired 95\% instance intervals, and other configurations are tabulated in the supplement. (c) Median complete-shot durations and interquartile bands on the same grid target.',
             'Net':r'(a) Total energy minus matched HiGHS across constant-demand horizons, including computing nothing. Positive values disfavor the displayed policy; bands are paired 95\% instance intervals. (b) Signed component differences at 64 shots, in joules, using the same sign convention. Transition differences are labeled because their bars are small.',
-            'Admission':r'Training-only controllers. (a) Total-energy contrasts and paired 95\% intervals include calibration, lookup, and attempted computation. (b) Quantum invocation fractions by size; each cell gives invocation percentage and mean energy excess, with color encoding the latter. No deadline-only fallback occurs in the primary cases. Useful-candidate and applied-quality rates remain in the supplement.'}
+            'Admission':r'Training-only controllers. (a) Total-energy contrasts and paired 95\% intervals include calibration, lookup, and attempted computation. (b) Quantum invocation fractions by size. Each cell gives invocation percentage and mean energy excess, with color encoding the latter. No deadline-only fallback occurs in the primary cases. Useful-candidate and applied-quality rates remain in the supplement.'}
 
 
 def macros(dest,data,s):
@@ -160,7 +171,7 @@ def macros(dest,data,s):
     fits=pd.read_csv(ROOT/'results/sustainability/fits.csv');fits=fits[fits.mixer=='x'];times=fits.simulation_s/fits.evals
     (dest/'v121_training_text.tex').write_text(f"For the standard-$X$ fits, recorded total fitting time divided by objective evaluations has mean {1e6*times.mean():.1f} and median {1e6*times.median():.1f}~$\\mu$s. This includes optimizer overhead and shows why 100~$\\mu$s should be read as an assumed host-update charge, not a measured exact-objective cost.\n")
     scaling=pd.read_csv(data/'scaling.csv');timeouts=int((scaling.status==1).sum());nofeasible=int((~scaling.feasible).sum())
-    text=f"HiGHS certifies {int(scaling.exact.sum())} of {len(scaling)} cases within its solver limit; {timeouts} stop at the time limit and {nofeasible} return no feasible incumbent. The largest measured construction-plus-solve time is {scaling.runtime_s.max():.2f}~s. This sweep exposes a computation budget that is much larger than in the primary tiny cases, but it does not test a quantum algorithm at those dimensions.\n"
+    text=f"HiGHS certifies {int(scaling.exact.sum())} of {len(scaling)} cases within its solver limit. {timeouts} stop at the time limit and {nofeasible} return no feasible incumbent. The largest measured construction-plus-solve time is {scaling.runtime_s.max():.2f}~s. This sweep exposes a computation budget that is much larger than in the primary tiny cases, but it does not test a quantum algorithm at those dimensions.\n"
     (dest/'v121_scaling_text.tex').write_text(text)
     (dest/'v121_numbers.tex').write_text(''.join('\\newcommand{\\R'+k+'}{'+str(v)+'}\n' for k,v in vals.items()))
 
